@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RepFlow — Training</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.31.0/dist/tabler-icons.min.css">
+<style>
+:root {
+  --bg0: #0A0A0A;
+  --bg1: #0F0F0F;
+  --bg2: #141414;
+  --bg3: #1C1C1C;
+  --bg4: #252525;
+  --border: rgba(255,255,255,0.055);
+  --border2: rgba(255,255,255,0.1);
+  --t1: #F0EBE3;
+  --t2: #888480;
+  --t3: #484542;
+  --accent: #C9A87A;
+  --accent-rgb: 201,168,122;
+  --accent-dim: rgba(201,168,122,0.09);
+  --accent-glow: rgba(201,168,122,0.12);
+  --sidebar-w: 230px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; overflow: hidden; }
+
+body {
+  font-family: 'Figtree', sans-serif;
+  background: var(--bg0);
+  color: var(--t1);
+  display: flex;
+  height: 100vh;
+}
+
+/* ─── SIDEBAR ─── */
+.sidebar {
+  width: var(--sidebar-w);
+  min-width: var(--sidebar-w);
+  background: var(--bg1);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 26px 16px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0 10px 34px;
+}
+.logo em { color: var(--accent); font-style: normal; }
+
+.nav { flex: 1; display: flex; flex-direction: column; gap: 1px; }
+
+.nav-item {
+  display: flex; align-items: center; gap: 11px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 13.5px; font-weight: 500;
+  color: var(--t2);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+.nav-item i { font-size: 18px; flex-shrink: 0; }
+.nav-item:hover { color: var(--t1); background: var(--bg2); }
+.nav-item.active { color: var(--accent); background: var(--accent-dim); }
+
+.nav-divider { height: 1px; background: var(--border); margin: 14px 10px; }
+
+.plan-card {
+  background: var(--accent-dim);
+  border: 1px solid rgba(var(--accent-rgb), 0.15);
+  border-radius: 10px;
+  padding: 14px 14px 12px;
+  margin-bottom: 14px;
+}
+.plan-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); font-weight: 700; margin-bottom: 4px; }
+.plan-name { font-size: 13px; font-weight: 600; color: var(--t1); margin-bottom: 10px; }
+.plan-bar-bg { height: 3px; background: var(--bg3); border-radius: 2px; }
+.plan-bar-fill { height: 3px; background: var(--accent); border-radius: 2px; width: 62%; }
+.plan-meta { font-size: 11px; color: var(--t3); margin-top: 6px; }
+
+.user-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.user-row:hover { border-color: var(--border2); }
+.avatar {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--accent-dim);
+  border: 1.5px solid var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; color: var(--accent); flex-shrink: 0;
+}
+.user-name { font-size: 13px; font-weight: 600; flex: 1; }
+.user-sub { font-size: 11px; color: var(--t3); margin-top: 1px; }
+
+/* ─── MAIN ─── */
+.main {
+  flex: 1; display: flex; flex-direction: column; overflow: hidden;
+  min-width: 0;
+}
+
+.topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 30px 14px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.greeting { font-size: 11px; color: var(--t3); text-transform: uppercase; letter-spacing: 1.2px; font-weight: 600; }
+.name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 30px; font-weight: 900; letter-spacing: -0.3px; margin-top: 1px;
+}
+
+.topbar-right { display: flex; align-items: center; gap: 10px; }
+
+.accent-picker {
+  display: flex; align-items: center; gap: 5px;
+  padding: 5px 10px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.ap-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--t3); padding-right: 3px; }
+.swatch {
+  width: 16px; height: 16px; border-radius: 50%; cursor: pointer;
+  transition: transform 0.15s; border: 1.5px solid transparent;
+}
+.swatch:hover { transform: scale(1.2); }
+.swatch.on { border-color: rgba(255,255,255,0.5); transform: scale(1.1); }
+
+.icon-btn {
+  width: 36px; height: 36px; border-radius: 8px;
+  background: var(--bg2); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; color: var(--t2); font-size: 17px; transition: all 0.15s;
+}
+.icon-btn:hover { color: var(--t1); border-color: var(--border2); }
+
+/* ─── SCREEN ─── */
+.screen { display: none; height: 100%; overflow-y: auto; padding: 26px 30px 40px; scrollbar-width: thin; scrollbar-color: var(--bg3) transparent; }
+.screen::-webkit-scrollbar { width: 4px; }
+.screen::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 3px; }
+.screen.active { display: block; }
+
+/* ─── HOME SCREEN ─── */
+.stats-row {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px;
+}
+.stat-mini {
+  background: var(--bg2); border: 1px solid var(--border); border-radius: 12px;
+  padding: 16px 18px; display: flex; align-items: center; gap: 12px;
+}
+.sm-icon {
+  width: 38px; height: 38px; border-radius: 9px;
+  background: var(--accent-dim); color: var(--accent);
+  display: flex; align-items: center; justify-content: center; font-size: 19px; flex-shrink: 0;
+}
+.sm-val {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 800; line-height: 1;
+}
+.sm-lbl { font-size: 11px; color: var(--t3); margin-top: 2px; }
+
+.workout-card {
+  background: var(--bg2); border: 1px solid var(--border); border-radius: 16px;
+  padding: 22px 24px; margin-bottom: 28px; position: relative; overflow: hidden;
+}
+.wc-glow {
+  position: absolute; right: -30px; top: -30px;
+  width: 140px; height: 140px; border-radius: 50%;
+  background: var(--accent-glow); pointer-events: none;
+}
+.wc-eyebrow { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent); font-weight: 700; margin-bottom: 7px; }
+.wc-title {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 30px; font-weight: 900;
+  letter-spacing: -0.3px; margin-bottom: 5px;
+}
+.wc-sub { font-size: 13px; color: var(--t2); margin-bottom: 18px; }
+.wc-row { display: flex; align-items: center; gap: 12px; }
+.wc-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 22px;
+  background: var(--accent); color: #0A0A0A;
+  border: none; border-radius: 9px;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 800;
+  letter-spacing: 0.8px; text-transform: uppercase; cursor: pointer; transition: opacity 0.2s;
+}
+.wc-btn:hover { opacity: 0.88; }
+.wc-pills { display: flex; gap: 6px; }
+.wc-pill {
+  padding: 5px 11px; border-radius: 5px;
+  font-size: 11px; font-weight: 600;
+  background: var(--bg3); color: var(--t3); border: 1px solid var(--border);
+}
+
+.section-hd {
+  display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 14px;
+}
+.section-title {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 19px; font-weight: 700; letter-spacing: 0.2px;
+}
+.section-link { font-size: 12px; color: var(--accent); cursor: pointer; }
+
+.ex-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 12px; margin-bottom: 30px;
+}
+.ex-card {
+  background: var(--bg2); border: 1px solid var(--border); border-radius: 12px;
+  overflow: hidden; cursor: pointer; transition: border-color 0.2s, transform 0.15s;
+}
+.ex-card:hover { border-color: var(--border2); transform: translateY(-2px); }
+.ex-img {
+  height: 96px; background: var(--bg3);
+  display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;
+}
+.ex-body { padding: 11px 12px; }
+.ex-name { font-size: 13px; font-weight: 600; margin-bottom: 7px; }
+.badge {
+  display: inline-block; font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.5px; padding: 3px 8px; border-radius: 4px;
+}
+.b-beg { background: rgba(60,190,110,0.1); color: #4DC87B; }
+.b-int { background: rgba(var(--accent-rgb),0.1); color: var(--accent); }
+.b-adv { background: rgba(220,80,70,0.1); color: #E06560; }
+
+/* Week bars */
+.week-row { display: flex; gap: 8px; align-items: flex-end; height: 52px; margin-bottom: 28px; }
+.day-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.day-bar-bg { width: 100%; flex: 1; background: var(--bg3); border-radius: 4px; display: flex; align-items: flex-end; }
+.day-bar-fill { width: 100%; background: var(--accent); border-radius: 4px; opacity: 0.8; transition: height 0.3s; }
+.day-lbl { font-size: 10px; color: var(--t3); font-weight: 600; }
+.day-col.today .day-lbl { color: var(--accent); }
+.day-col.today .day-bar-fill { opacity: 1; }
+
+/* ─── BROWSE SCREEN ─── */
+.search-wrap {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--bg2); border: 1px solid var(--border); border-radius: 10px;
+  padding: 0 14px; height: 44px; margin-bottom: 14px;
+}
+.search-wrap i { color: var(--t3); font-size: 18px; }
+.search-wrap input {
+  flex: 1; background: none; border: none; outline: none;
+  color: var(--t1); font-family: 'Figtree', sans-serif; font-size: 14px;
+}
+.search-wrap input::placeholder { color: var(--t3); }
+
+.chips { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 20px; }
+.chip {
+  padding: 7px 15px; border-radius: 7px; font-size: 13px; font-weight: 500;
+  border: 1px solid var(--border); cursor: pointer; transition: all 0.15s;
+  background: var(--bg2); color: var(--t2);
+}
+.chip:hover { border-color: var(--border2); color: var(--t1); }
+.chip.on { background: var(--accent-dim); border-color: rgba(var(--accent-rgb),0.3); color: var(--accent); }
+
+.browse-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px;
+}
+.browse-card {
+  background: var(--bg2); border: 1px solid var(--border); border-radius: 14px;
+  overflow: hidden; cursor: pointer; transition: border-color 0.2s, transform 0.15s;
+}
+.browse-card:hover { border-color: var(--border2); transform: translateY(-2px); }
+.bc-img {
+  height: 145px; background: var(--bg3);
+  display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;
+}
+.bc-body { padding: 14px 15px; }
+.bc-name { font-size: 14px; font-weight: 600; margin-bottom: 9px; }
+.bc-meta { display: flex; align-items: center; justify-content: space-between; }
+.equip-tag {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 11px; color: var(--t3); font-weight: 500;
+}
+.equip-tag i { font-size: 13px; }
+
+/* ─── DETAIL SCREEN ─── */
+.detail-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 28px; }
+
+.detail-hero {
+  height: 320px; background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 16px; display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden; margin-bottom: 0;
+}
+
+.detail-right { display: flex; flex-direction: column; gap: 0; }
+
+.detail-name {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 38px; font-weight: 900;
+  letter-spacing: -0.5px; line-height: 1.05; margin-bottom: 10px;
+}
+.tag-row { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 20px; }
+.tag {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 5px 12px; border-radius: 6px; font-size: 12px; font-weight: 600;
+  border: 1px solid var(--border); color: var(--t2); background: var(--bg2);
+}
+.tag i { font-size: 13px; }
+
+.stat-trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
+.stat-box {
+  background: var(--bg2); border: 1px solid var(--border); border-radius: 12px;
+  padding: 16px; text-align: center;
+}
+.stat-val {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 34px; font-weight: 900;
+  color: var(--accent); line-height: 1; margin-bottom: 4px;
+}
+.stat-lbl { font-size: 10px; color: var(--t3); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+
+.muscles-section { margin-bottom: 20px; }
+.ms-title { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--t3); font-weight: 700; margin-bottom: 8px; }
+.ms-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.ms-tag {
+  padding: 5px 12px; border-radius: 5px; font-size: 12px; font-weight: 600;
+  background: var(--bg2); border: 1px solid var(--border); color: var(--t2);
+}
+.ms-tag.primary { background: var(--accent-dim); border-color: rgba(var(--accent-rgb),0.2); color: var(--accent); }
+
+.steps-section { flex: 1; }
+.steps-title {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; margin-bottom: 12px;
+}
+.step {
+  display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border);
+}
+.step:last-child { border-bottom: none; }
+.step-n {
+  width: 24px; height: 24px; border-radius: 6px;
+  background: var(--accent-dim); border: 1px solid rgba(var(--accent-rgb),0.2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700; color: var(--accent); flex-shrink: 0; margin-top: 1px;
+}
+.step-t { font-size: 13.5px; color: var(--t2); line-height: 1.6; }
+
+.start-btn {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  width: 100%; padding: 16px;
+  background: var(--accent); color: #0A0A0A;
+  border: none; border-radius: 12px;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 900;
+  letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; transition: opacity 0.2s;
+  margin-top: 18px;
+}
+.start-btn:hover { opacity: 0.88; }
+
+/* DETAIL LEFT column includes hero + info below it */
+.detail-left { display: flex; flex-direction: column; gap: 16px; }
+
+.detail-info-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.detail-info-card {
+  background: var(--bg2); border: 1px solid var(--border); border-radius: 10px;
+  padding: 13px 14px;
+}
+.dic-label { font-size: 10px; color: var(--t3); text-transform: uppercase; letter-spacing: 0.8px; font-weight: 700; margin-bottom: 4px; }
+.dic-val { font-size: 14px; font-weight: 600; }
+
+/* SVG illustrations */
+.ill { width: 100%; height: 100%; }
+
+/* notification dot */
+.notif { position: relative; }
+.notif::after {
+  content: ''; position: absolute; top: 7px; right: 7px;
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent); border: 1.5px solid var(--bg1);
+}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="logo">Rep<em>Flow</em></div>
+
+  <nav class="nav">
+    <div class="nav-item active" onclick="showScreen('home',this)">
+      <i class="ti ti-layout-dashboard"></i> Dashboard
+    </div>
+    <div class="nav-item" onclick="showScreen('browse',this)">
+      <i class="ti ti-search"></i> Exercises
+    </div>
+    <div class="nav-item" onclick="showScreen('detail',this)">
+      <i class="ti ti-barbell"></i> Workouts
+    </div>
+    <div class="nav-item">
+      <i class="ti ti-chart-bar"></i> Progress
+    </div>
+    <div class="nav-divider"></div>
+    <div class="nav-item">
+      <i class="ti ti-calendar-event"></i> Schedule
+    </div>
+    <div class="nav-item notif">
+      <i class="ti ti-bell"></i> Notifications
+    </div>
+    <div class="nav-item">
+      <i class="ti ti-settings"></i> Settings
+    </div>
+  </nav>
+
+  <div class="plan-card">
+    <div class="plan-label">Current Plan</div>
+    <div class="plan-name">Strength Builder 8W</div>
+    <div class="plan-bar-bg"><div class="plan-bar-fill"></div></div>
+    <div class="plan-meta">Week 5 of 8 · 62% complete</div>
+  </div>
+
+  <div class="user-row">
+    <div class="avatar">SW</div>
+    <div>
+      <div class="user-name">Sawan</div>
+      <div class="user-sub">Pro Member · 14d streak</div>
+    </div>
+    <i class="ti ti-dots-vertical" style="color:var(--t3);font-size:16px;margin-left:auto"></i>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div>
+      <div class="greeting">Good morning</div>
+      <div class="name">Sawan Chaudhary</div>
+    </div>
+    <div class="topbar-right">
+      <div class="accent-picker">
+        <span class="ap-label">Accent</span>
+        <div class="swatch on" style="background:#C9A87A" onclick="setAccent('#C9A87A','201,168,122',this)" title="Sand Gold"></div>
+        <div class="swatch" style="background:#4895EF" onclick="setAccent('#4895EF','72,149,239',this)" title="Cobalt Blue"></div>
+        <div class="swatch" style="background:#F07830" onclick="setAccent('#F07830','240,120,48',this)" title="Ember"></div>
+        <div class="swatch" style="background:#A8A8A8" onclick="setAccent('#A8A8A8','168,168,168',this)" title="Platinum"></div>
+      </div>
+      <div class="icon-btn"><i class="ti ti-search"></i></div>
+      <div class="icon-btn notif"><i class="ti ti-bell"></i></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ HOME SCREEN ══════════════════ -->
+  <div class="screen active" id="screen-home">
+
+    <!-- Stats row -->
+    <div class="stats-row">
+      <div class="stat-mini">
+        <div class="sm-icon"><i class="ti ti-flame"></i></div>
+        <div>
+          <div class="sm-val">14</div>
+          <div class="sm-lbl">Day streak</div>
+        </div>
+      </div>
+      <div class="stat-mini">
+        <div class="sm-icon"><i class="ti ti-activity"></i></div>
+        <div>
+          <div class="sm-val">38</div>
+          <div class="sm-lbl">Workouts done</div>
+        </div>
+      </div>
+      <div class="stat-mini">
+        <div class="sm-icon"><i class="ti ti-clock"></i></div>
+        <div>
+          <div class="sm-val">4.2h</div>
+          <div class="sm-lbl">This week</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Today's workout -->
+    <div class="workout-card">
+      <div class="wc-glow"></div>
+      <div class="wc-eyebrow">Today · Push Day</div>
+      <div class="wc-title">Upper Body Strength</div>
+      <div class="wc-sub">6 exercises · 45 min · Intermediate</div>
+      <div class="wc-row">
+        <button class="wc-btn" onclick="showScreen('detail',null)">
+          <i class="ti ti-player-play" style="font-size:14px"></i> Start Workout
+        </button>
+        <div class="wc-pills">
+          <div class="wc-pill">Chest</div>
+          <div class="wc-pill">Shoulders</div>
+          <div class="wc-pill">Triceps</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Weekly progress -->
+    <div class="section-hd">
+      <div class="section-title">Weekly Activity</div>
+      <span class="section-link">Full history →</span>
+    </div>
+    <div class="week-row">
+      <div class="day-col"><div class="day-bar-bg"><div class="day-bar-fill" style="height:55%"></div></div><div class="day-lbl">M</div></div>
+      <div class="day-col"><div class="day-bar-bg"><div class="day-bar-fill" style="height:80%"></div></div><div class="day-lbl">T</div></div>
+      <div class="day-col"><div class="day-bar-bg"><div class="day-bar-fill" style="height:35%"></div></div><div class="day-lbl">W</div></div>
+      <div class="day-col"><div class="day-bar-bg"><div class="day-bar-fill" style="height:90%"></div></div><div class="day-lbl">T</div></div>
+      <div class="day-col today"><div class="day-bar-bg"><div class="day-bar-fill" style="height:40%"></div></div><div class="day-lbl">F</div></div>
+      <div class="day-col"><div class="day-bar-bg"><div class="day-bar-fill" style="height:0%"></div></div><div class="day-lbl">S</div></div>
+      <div class="day-col"><div class="day-bar-bg"><div class="day-bar-fill" style="height:0%"></div></div><div class="day-lbl">S</div></div>
+    </div>
+
+    <!-- Recommended exercises -->
+    <div class="section-hd">
+      <div class="section-title">Recommended For You</div>
+      <span class="section-link" onclick="showScreen('browse',null)">Browse all →</span>
+    </div>
+    <div class="ex-grid">
+      <div class="ex-card" onclick="showScreen('detail',null)">
+        <div class="ex-img">
+          <svg viewBox="0 0 155 96" xmlns="http://www.w3.org/2000/svg" class="ill">
+            <rect width="155" height="96" fill="#1C1C1C"/>
+            <circle cx="77" cy="42" r="22" fill="none" stroke="rgba(201,168,122,0.18)" stroke-width="1.5"/>
+            <line x1="42" y1="48" x2="112" y2="48" stroke="rgba(201,168,122,0.25)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="42" y1="48" x2="55" y2="36" stroke="rgba(201,168,122,0.2)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="112" y1="48" x2="99" y2="36" stroke="rgba(201,168,122,0.2)" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="77" cy="32" r="5" fill="rgba(201,168,122,0.25)"/>
+            <circle cx="77" cy="32" r="2.5" fill="rgba(201,168,122,0.5)"/>
+          </svg>
+        </div>
+        <div class="ex-body">
+          <div class="ex-name">Push-Up</div>
+          <span class="badge b-beg">Beginner</span>
+        </div>
+      </div>
+      <div class="ex-card" onclick="showScreen('detail',null)">
+        <div class="ex-img">
+          <svg viewBox="0 0 155 96" xmlns="http://www.w3.org/2000/svg" class="ill">
+            <rect width="155" height="96" fill="#1C1C1C"/>
+            <path d="M60 70 L77 28 L94 70" fill="none" stroke="rgba(201,168,122,0.22)" stroke-width="1.5" stroke-linejoin="round"/>
+            <line x1="50" y1="70" x2="105" y2="70" stroke="rgba(201,168,122,0.15)" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="77" cy="24" r="5" fill="rgba(201,168,122,0.3)"/>
+            <circle cx="77" cy="24" r="2.5" fill="rgba(201,168,122,0.6)"/>
+          </svg>
+        </div>
+        <div class="ex-body">
+          <div class="ex-name">Goblet Squat</div>
+          <span class="badge b-int">Intermediate</span>
+        </div>
+      </div>
+      <div class="ex-card" onclick="showScreen('detail',null)">
+        <div class="ex-img">
+          <svg viewBox="0 0 155 96" xmlns="http://www.w3.org/2000/svg" class="ill">
+            <rect width="155" height="96" fill="#1C1C1C"/>
+            <rect x="35" y="44" width="85" height="2" rx="1" fill="rgba(201,168,122,0.25)"/>
+            <circle cx="77" cy="36" r="5" fill="rgba(201,168,122,0.3)"/>
+            <circle cx="77" cy="36" r="2.5" fill="rgba(201,168,122,0.6)"/>
+            <line x1="35" y1="45" x2="52" y2="38" stroke="rgba(201,168,122,0.2)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="120" y1="45" x2="103" y2="38" stroke="rgba(201,168,122,0.2)" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="ex-body">
+          <div class="ex-name">Plank Hold</div>
+          <span class="badge b-beg">Beginner</span>
+        </div>
+      </div>
+      <div class="ex-card" onclick="showScreen('detail',null)">
+        <div class="ex-img">
+          <svg viewBox="0 0 155 96" xmlns="http://www.w3.org/2000/svg" class="ill">
+            <rect width="155" height="96" fill="#1C1C1C"/>
+            <path d="M55 65 L70 35 L77 50 L84 25 L99 65" fill="none" stroke="rgba(201,168,122,0.22)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+            <circle cx="77" cy="21" r="5" fill="rgba(201,168,122,0.3)"/>
+            <circle cx="77" cy="21" r="2.5" fill="rgba(201,168,122,0.6)"/>
+          </svg>
+        </div>
+        <div class="ex-body">
+          <div class="ex-name">Romanian Deadlift</div>
+          <span class="badge b-adv">Advanced</span>
+        </div>
+      </div>
+      <div class="ex-card" onclick="showScreen('detail',null)">
+        <div class="ex-img">
+          <svg viewBox="0 0 155 96" xmlns="http://www.w3.org/2000/svg" class="ill">
+            <rect width="155" height="96" fill="#1C1C1C"/>
+            <rect x="50" y="30" width="55" height="36" rx="6" fill="none" stroke="rgba(201,168,122,0.18)" stroke-width="1.5"/>
+            <rect x="58" y="38" width="39" height="20" rx="3" fill="rgba(201,168,122,0.08)"/>
+            <circle cx="77" cy="48" r="5" fill="rgba(201,168,122,0.3)"/>
+            <circle cx="77" cy="48" r="2.5" fill="rgba(201,168,122,0.6)"/>
+          </svg>
+        </div>
+        <div class="ex-body">
+          <div class="ex-name">Overhead Press</div>
+          <span class="badge b-int">Intermediate</span>
+        </div>
+      </div>
+      <div class="ex-card" onclick="showScreen('detail',null)">
+        <div class="ex-img">
+          <svg viewBox="0 0 155 96" xmlns="http://www.w3.org/2000/svg" class="ill">
+            <rect width="155" height="96" fill="#1C1C1C"/>
+            <path d="M50 60 Q65 30 77 40 Q89 50 105 25" fill="none" stroke="rgba(201,168,122,0.22)" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="77" cy="40" r="4" fill="rgba(201,168,122,0.25)"/>
+            <circle cx="105" cy="25" r="4" fill="rgba(201,168,122,0.4)"/>
+            <circle cx="50" cy="60" r="4" fill="rgba(201,168,122,0.15)"/>
+          </svg>
+        </div>
+        <div class="ex-body">
+          <div class="ex-name">Lateral Raise</div>
+          <span class="badge b-beg">Beginner</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════════ BROWSE SCREEN ══════════════════ -->
+  <div class="screen" id="screen-browse">
+
+    <div class="search-wrap">
+      <i class="ti ti-search"></i>
+      <input type="text" placeholder="Search exercises, muscles, equipment…">
+      <i class="ti ti-adjustments-horizontal" style="color:var(--t3);font-size:16px;cursor:pointer"></i>
+    </div>
+
+    <div class="chips">
+      <div class="chip on">All</div>
+      <div class="chip" onclick="toggleChip(this)">Bodyweight</div>
+      <div class="chip" onclick="toggleChip(this)">Dumbbells</div>
+      <div class="chip" onclick="toggleChip(this)">Kettlebell</div>
+      <div class="chip" onclick="toggleChip(this)">Barbell</div>
+      <div class="chip" onclick="toggleChip(this)">Resistance Band</div>
+      <div class="chip" onclick="toggleChip(this)">Machine</div>
+    </div>
+
+    <div class="browse-grid">
+
+      <div class="browse-card" onclick="showScreen('detail',null)">
+        <div class="bc-img">
+          <svg viewBox="0 0 210 145" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <rect width="210" height="145" fill="#1C1C1C"/>
+            <circle cx="105" cy="65" r="32" fill="none" stroke="rgba(201,168,122,0.16)" stroke-width="1.5"/>
+            <line x1="60" y1="72" x2="150" y2="72" stroke="rgba(201,168,122,0.22)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="60" y1="72" x2="78" y2="52" stroke="rgba(201,168,122,0.18)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="150" y1="72" x2="132" y2="52" stroke="rgba(201,168,122,0.18)" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="105" cy="48" r="7" fill="rgba(201,168,122,0.22)"/>
+            <circle cx="105" cy="48" r="3.5" fill="rgba(201,168,122,0.55)"/>
+          </svg>
+        </div>
+        <div class="bc-body">
+          <div class="bc-name">Incline Push-Up</div>
+          <div class="bc-meta">
+            <div class="equip-tag"><i class="ti ti-user"></i> Bodyweight</div>
+            <span class="badge b-beg">Beginner</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="browse-card" onclick="showScreen('detail',null)">
+        <div class="bc-img">
+          <svg viewBox="0 0 210 145" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <rect width="210" height="145" fill="#1C1C1C"/>
+            <path d="M80 100 L105 42 L130 100" fill="none" stroke="rgba(201,168,122,0.22)" stroke-width="1.5" stroke-linejoin="round"/>
+            <line x1="68" y1="100" x2="142" y2="100" stroke="rgba(201,168,122,0.15)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="68" y1="100" x2="78" y2="78" stroke="rgba(201,168,122,0.15)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="142" y1="100" x2="132" y2="78" stroke="rgba(201,168,122,0.15)" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="105" cy="37" r="7" fill="rgba(201,168,122,0.25)"/>
+            <circle cx="105" cy="37" r="3.5" fill="rgba(201,168,122,0.55)"/>
+          </svg>
+        </div>
+        <div class="bc-body">
+          <div class="bc-name">Goblet Squat</div>
+          <div class="bc-meta">
+            <div class="equip-tag"><i class="ti ti-barbell"></i> Kettlebell</div>
+            <span class="badge b-int">Intermediate</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="browse-card" onclick="showScreen('detail',null)">
+        <div class="bc-img">
+          <svg viewBox="0 0 210 145" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <rect width="210" height="145" fill="#1C1C1C"/>
+            <rect x="55" y="66" width="100" height="3" rx="1.5" fill="rgba(201,168,122,0.25)"/>
+            <circle cx="105" cy="55" r="7" fill="rgba(201,168,122,0.22)"/>
+            <circle cx="105" cy="55" r="3.5" fill="rgba(201,168,122,0.55)"/>
+            <line x1="55" y1="67" x2="74" y2="56" stroke="rgba(201,168,122,0.18)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="155" y1="67" x2="136" y2="56" stroke="rgba(201,168,122,0.18)" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="bc-body">
+          <div class="bc-name">Plank Hold</div>
+          <div class="bc-meta">
+            <div class="equip-tag"><i class="ti ti-user"></i> Bodyweight</div>
+            <span class="badge b-beg">Beginner</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="browse-card" onclick="showScreen('detail',null)">
+        <div class="bc-img">
+          <svg viewBox="0 0 210 145" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <rect width="210" height="145" fill="#1C1C1C"/>
+            <path d="M75 95 L100 50 L105 68 L110 35 L135 95" fill="none" stroke="rgba(201,168,122,0.22)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+            <circle cx="105" cy="30" r="7" fill="rgba(201,168,122,0.25)"/>
+            <circle cx="105" cy="30" r="3.5" fill="rgba(201,168,122,0.55)"/>
+            <line x1="65" y1="95" x2="145" y2="95" stroke="rgba(201,168,122,0.12)" stroke-width="1" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="bc-body">
+          <div class="bc-name">Romanian Deadlift</div>
+          <div class="bc-meta">
+            <div class="equip-tag"><i class="ti ti-barbell"></i> Barbell</div>
+            <span class="badge b-adv">Advanced</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="browse-card" onclick="showScreen('detail',null)">
+        <div class="bc-img">
+          <svg viewBox="0 0 210 145" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <rect width="210" height="145" fill="#1C1C1C"/>
+            <path d="M70 90 L105 45 L140 90" fill="none" stroke="rgba(201,168,122,0.2)" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M70 90 L55 68" stroke="rgba(201,168,122,0.18)" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M140 90 L155 68" stroke="rgba(201,168,122,0.18)" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="105" cy="40" r="7" fill="rgba(201,168,122,0.25)"/>
+            <circle cx="105" cy="40" r="3.5" fill="rgba(201,168,122,0.55)"/>
+            <rect x="94" y="62" width="22" height="10" rx="3" fill="rgba(201,168,122,0.12)"/>
+          </svg>
+        </div>
+        <div class="bc-body">
+          <div class="bc-name">Dumbbell Lunge</div>
+          <div class="bc-meta">
+            <div class="equip-tag"><i class="ti ti-barbell"></i> Dumbbells</div>
+            <span class="badge b-int">Intermediate</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="browse-card" onclick="showScreen('detail',null)">
+        <div class="bc-img">
+          <svg viewBox="0 0 210 145" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <rect width="210" height="145" fill="#1C1C1C"/>
+            <path d="M65 100 Q90 55 105 70 Q120 85 145 40" fill="none" stroke="rgba(201,168,122,0.22)" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="105" cy="70" r="5" fill="rgba(201,168,122,0.22)"/>
+            <circle cx="145" cy="40" r="7" fill="rgba(201,168,122,0.35)"/>
+            <circle cx="145" cy="40" r="3.5" fill="rgba(201,168,122,0.65)"/>
+            <circle cx="65" cy="100" r="5" fill="rgba(201,168,122,0.12)"/>
+          </svg>
+        </div>
+        <div class="bc-body">
+          <div class="bc-name">Lateral Raise</div>
+          <div class="bc-meta">
+            <div class="equip-tag"><i class="ti ti-barbell"></i> Dumbbells</div>
+            <span class="badge b-beg">Beginner</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════ DETAIL SCREEN ══════════════════ -->
+  <div class="screen" id="screen-detail">
+    <div class="detail-layout">
+
+      <!-- LEFT COLUMN -->
+      <div class="detail-left">
+        <div class="detail-hero">
+          <svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <rect width="420" height="320" fill="#161616"/>
+            <!-- Abstract push-up figure -->
+            <circle cx="210" cy="110" r="26" fill="none" stroke="rgba(201,168,122,0.22)" stroke-width="2"/>
+            <line x1="120" y1="168" x2="300" y2="168" stroke="rgba(201,168,122,0.28)" stroke-width="2" stroke-linecap="round"/>
+            <line x1="120" y1="168" x2="148" y2="140" stroke="rgba(201,168,122,0.22)" stroke-width="2" stroke-linecap="round"/>
+            <line x1="300" y1="168" x2="272" y2="140" stroke="rgba(201,168,122,0.22)" stroke-width="2" stroke-linecap="round"/>
+            <line x1="210" y1="136" x2="210" y2="168" stroke="rgba(201,168,122,0.18)" stroke-width="2" stroke-linecap="round"/>
+            <!-- Arc lines for movement -->
+            <path d="M148 140 Q140 120 155 108" fill="none" stroke="rgba(201,168,122,0.12)" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M272 140 Q280 120 265 108" fill="none" stroke="rgba(201,168,122,0.12)" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- Head -->
+            <circle cx="210" cy="95" r="10" fill="rgba(201,168,122,0.2)"/>
+            <circle cx="210" cy="95" r="5" fill="rgba(201,168,122,0.45)"/>
+            <!-- Subtle grid -->
+            <line x1="0" y1="240" x2="420" y2="240" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+            <line x1="0" y1="200" x2="420" y2="200" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+            <line x1="105" y1="0" x2="105" y2="320" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+            <line x1="210" y1="0" x2="210" y2="320" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+            <line x1="315" y1="0" x2="315" y2="320" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+            <!-- Exercise label -->
+            <text x="20" y="295" font-size="11" fill="rgba(201,168,122,0.4)" font-family="'Barlow Condensed',sans-serif" font-weight="700" letter-spacing="2">EXERCISE PREVIEW</text>
+          </svg>
+        </div>
+
+        <div class="detail-info-cards">
+          <div class="detail-info-card">
+            <div class="dic-label">Equipment</div>
+            <div class="dic-val" style="color:var(--accent)">Bodyweight</div>
+          </div>
+          <div class="detail-info-card">
+            <div class="dic-label">Category</div>
+            <div class="dic-val">Upper Body Push</div>
+          </div>
+          <div class="detail-info-card">
+            <div class="dic-label">Calories</div>
+            <div class="dic-val">~180 kcal</div>
+          </div>
+          <div class="detail-info-card">
+            <div class="dic-label">Added by</div>
+            <div class="dic-val">RepFlow Team</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="detail-right">
+        <div class="detail-name">Incline Push-Up</div>
+
+        <div class="tag-row">
+          <span class="tag"><i class="ti ti-user"></i> Bodyweight</span>
+          <span class="badge b-beg" style="padding:5px 12px;border-radius:6px;font-size:12px">Beginner</span>
+          <span class="tag"><i class="ti ti-clock"></i> 3 min</span>
+        </div>
+
+        <div class="stat-trio">
+          <div class="stat-box">
+            <div class="stat-val">4</div>
+            <div class="stat-lbl">Sets</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-val">12</div>
+            <div class="stat-lbl">Reps</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-val">60s</div>
+            <div class="stat-lbl">Rest</div>
+          </div>
+        </div>
+
+        <div class="muscles-section">
+          <div class="ms-title">Muscles Targeted</div>
+          <div class="ms-tags">
+            <span class="ms-tag primary">Chest</span>
+            <span class="ms-tag primary">Front Delts</span>
+            <span class="ms-tag">Triceps</span>
+            <span class="ms-tag">Core</span>
+            <span class="ms-tag">Serratus Anterior</span>
+          </div>
+        </div>
+
+        <div class="steps-section">
+          <div class="steps-title">Instructions</div>
+          <div class="step">
+            <div class="step-n">1</div>
+            <div class="step-t">Place your hands on an elevated surface (bench, box, or wall) slightly wider than shoulder-width apart.</div>
+          </div>
+          <div class="step">
+            <div class="step-n">2</div>
+            <div class="step-t">Step back so your body forms a straight line from head to heels. Engage your core throughout the movement.</div>
+          </div>
+          <div class="step">
+            <div class="step-n">3</div>
+            <div class="step-t">Slowly lower your chest toward the surface, keeping elbows at roughly 45° from your torso.</div>
+          </div>
+          <div class="step">
+            <div class="step-n">4</div>
+            <div class="step-t">Press back up to the starting position, fully extending your arms without locking your elbows.</div>
+          </div>
+        </div>
+
+        <button class="start-btn">
+          <i class="ti ti-player-play" style="font-size:16px"></i>
+          Start Exercise
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+function showScreen(id, navEl) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('screen-' + id).classList.add('active');
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  if (navEl) navEl.classList.add('active');
+  else {
+    const map = { home: 0, browse: 1, detail: 2 };
+    const items = document.querySelectorAll('.nav-item');
+    if (items[map[id]]) items[map[id]].classList.add('active');
+  }
+  document.querySelector('.screen.active').scrollTop = 0;
+}
+
+function setAccent(hex, rgb, el) {
+  document.querySelectorAll('.swatch').forEach(s => s.classList.remove('on'));
+  el.classList.add('on');
+  document.documentElement.style.setProperty('--accent', hex);
+  document.documentElement.style.setProperty('--accent-rgb', rgb);
+  document.documentElement.style.setProperty('--accent-dim', `rgba(${rgb},0.09)`);
+  document.documentElement.style.setProperty('--accent-glow', `rgba(${rgb},0.12)`);
+  // Update SVG stroke colors dynamically
+  const svgStrokes = document.querySelectorAll('[stroke]');
+  // For accent-colored SVG elements we update via CSS variable inheritance where possible
+}
+
+function toggleChip(el) {
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
+  el.classList.add('on');
+}
+</script>
+</body>
+</html>

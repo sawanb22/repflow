@@ -1,7 +1,22 @@
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="text-4xl font-bold">RepFlow</h1>
-    </main>
-  );
+import { redirect } from "next/navigation";
+import { getServerSupabase } from "@/lib/supabase-server";
+
+export default async function Home() {
+  const supabase = await getServerSupabase();
+
+  const { data: { user } } = await supabase.auth.getUser();
+
+  if (!user) redirect("/auth/login");
+
+  const { data: prefs, error } = await supabase
+    .from("user_preferences")
+    .select("onboarding_done")
+    .eq("user_id", user.id)
+    .single();
+
+  if (error && error.code !== "PGRST116") {
+    console.error("[page.tsx] prefs error:", error.message);
+  }
+
+  redirect(prefs?.onboarding_done ? "/home" : "/onboarding");
 }
