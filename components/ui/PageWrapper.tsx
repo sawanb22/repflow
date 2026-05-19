@@ -3,10 +3,10 @@ type Props = {
   wide?: boolean;
 };
 
-export function PageWrapper({ children, wide }: Props) {
+export function PageWrapper({ children }: Props) {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[#0A0A0A] px-4">
-      <div className={`w-full ${wide ? "max-w-md" : "max-w-sm"}`}>
+    <div className="flex min-h-screen bg-[#0A0A0A]">
+      <div className="w-full">
         {children}
       </div>
     </div>

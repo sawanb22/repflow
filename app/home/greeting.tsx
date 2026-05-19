@@ -1,23 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
 type Props = {
   email: string;
 };
 
+function getGreeting() {
+  const hour = new Date().getHours();
+  if (hour < 12) return "Good morning";
+  if (hour < 17) return "Good afternoon";
+  return "Good evening";
+}
+
 export function Greeting({ email }: Props) {
-  const [greeting, setGreeting] = useState("");
+  const greeting = getGreeting();
   const name = email.split("@")[0];
-
-  useEffect(() => {
-    const hour = new Date().getHours();
-    if (hour < 12) setGreeting("Good morning");
-    else if (hour < 17) setGreeting("Good afternoon");
-    else setGreeting("Good evening");
-  }, []);
-
-  if (!greeting) return null;
 
   return (
     <div>

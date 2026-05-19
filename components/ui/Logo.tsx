@@ -6,8 +6,8 @@ type Props = {
 };
 
 const containerSize = {
-  sm: "mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-[#C9A87A]",
-  lg: "mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-[#C9A87A]",
+  sm: "mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-accent)]",
+  lg: "mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-[var(--color-accent)]",
 };
 
 const iconSize = {

@@ -82,7 +82,14 @@
   --color-bg-4: var(--bg-4);
 }
 
-/* Base body */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   background: var(--bg-0);
   color: var(--color-text-primary);
@@ -91,10 +98,54 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body > div:first-child {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+body > div:first-child > div:first-child {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body > div:first-child > div:first-child > aside {
+  width: 230px;
+  min-width: 230px;
+  flex-shrink: 0;
+  height: 100vh;
+}
+
+body > div:first-child > div:first-child > main {
+  flex: 1;
+  min-width: 0;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+body > div:first-child > div:first-child > main > div {
+  max-width: none;
+  margin: 0;
+  padding: 26px 30px 40px;
+}
+
 /* Remove default outline, use :focus-visible with accent ring */
 *:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
+}
+
+/* Hide scrollbars while preserving scroll behavior */
+.progress-scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.progress-scrollbar-hidden::-webkit-scrollbar {
+  display: none;
 }
 
 /* Skeleton shimmer for loading states */

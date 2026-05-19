@@ -15,7 +15,7 @@ type Props = {
 };
 
 const variantClasses: Record<Variant, string> = {
-  primary: "bg-[#C9A87A] text-[#0A0A0A] hover:opacity-90 active:opacity-80 active:scale-[0.98] disabled:opacity-35",
+  primary: "bg-[var(--color-accent)] text-[#0A0A0A] hover:opacity-90 active:opacity-80 active:scale-[0.98] disabled:opacity-35",
   secondary: "border border-[rgba(255,255,255,0.10)] bg-transparent text-[#888480] hover:bg-[#141414] hover:border-[rgba(255,255,255,0.18)] hover:text-[#F0EBE3]",
   ghost: "text-[#888480] hover:text-[#F0EBE3]",
 };

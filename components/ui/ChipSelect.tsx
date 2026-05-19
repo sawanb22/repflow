@@ -22,9 +22,10 @@ export function ChipSelect({ options, selected, onToggle, error }: Props) {
               onClick={() => onToggle(opt.value)}
               className={`px-[15px] py-[7px] text-[13px] font-medium rounded-[7px] border transition-all duration-150 ${
                 isSelected
-                  ? "bg-[rgba(201,168,122,0.09)] border-[rgba(201,168,122,0.30)] text-[#C9A87A]"
+                  ? "bg-[var(--color-accent-dim)] text-[var(--color-accent)]"
                   : "bg-[#141414] border-[rgba(255,255,255,0.055)] text-[#888480] hover:border-[rgba(255,255,255,0.10)]"
               }`}
+              style={isSelected ? { borderColor: "rgba(var(--color-accent-rgb), 0.30)" } : undefined}
             >
               {opt.label}
             </button>

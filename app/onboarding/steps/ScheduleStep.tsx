@@ -19,17 +19,17 @@ export function ScheduleStep({ config, value, onChange, onNext, onBack, isFirst,
     <StepLayout config={config} onNext={onNext} onBack={onBack} isFirst={isFirst} isLast={isLast}>
       <div className="space-y-8">
         <div>
-          <p className="text-xs font-semibold text-[#888480] mb-3">DAYS PER WEEK</p>
-          <div className="flex gap-2">
+          <p className="mb-3 text-xs font-semibold text-[#888480]">DAYS PER WEEK</p>
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-7">
             {DAYS.map((d) => (
               <button
                 key={d}
                 type="button"
                 onClick={() => onChange("workout_days_per_week", d)}
-                className={`flex-1 py-3 text-xs font-semibold font-[family-name:var(--font-barlow-condensed)] transition-all duration-200 ${
+                className={`py-3 text-xs font-semibold font-[family-name:var(--font-barlow-condensed)] transition-all duration-200 ${
                   days === d
-                    ? "bg-[#C9A87A] text-[#0A0A0A]"
-                    : "bg-[#141414] border border-[rgba(255,255,255,0.055)] text-[#888480]"
+                    ? "bg-[var(--color-accent)] text-[#0A0A0A]"
+                    : "border border-[rgba(255,255,255,0.055)] bg-[#141414] text-[#888480]"
                 }`}
                 style={{ borderRadius: "9px" }}
               >
@@ -41,20 +41,20 @@ export function ScheduleStep({ config, value, onChange, onNext, onBack, isFirst,
         </div>
 
         <div>
-          <p className="text-xs font-semibold text-[#888480] mb-3">
-            <Clock className="h-3.5 w-3.5 inline mr-1.5" />
+          <p className="mb-3 text-xs font-semibold text-[#888480]">
+            <Clock className="mr-1.5 inline h-3.5 w-3.5" />
             WORKOUT DURATION
           </p>
-          <div className="flex gap-2">
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
             {DURATIONS.map((d) => (
               <button
                 key={d}
                 type="button"
                 onClick={() => onChange("workout_duration_min", d)}
-                className={`flex-1 py-3 text-xs font-semibold font-[family-name:var(--font-barlow-condensed)] transition-all duration-200 ${
+                className={`py-3 text-xs font-semibold font-[family-name:var(--font-barlow-condensed)] transition-all duration-200 ${
                   duration === d
-                    ? "bg-[#C9A87A] text-[#0A0A0A]"
-                    : "bg-[#141414] border border-[rgba(255,255,255,0.055)] text-[#888480]"
+                    ? "bg-[var(--color-accent)] text-[#0A0A0A]"
+                    : "border border-[rgba(255,255,255,0.055)] bg-[#141414] text-[#888480]"
                 }`}
                 style={{ borderRadius: "9px" }}
               >

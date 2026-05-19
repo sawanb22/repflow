@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import type { ReactNode } from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const IMAGE_EXTS = ["jpg", "png"] as const;
 
@@ -29,11 +29,9 @@ export function ExerciseMedia({
   mode = "video-first",
   fallback,
 }: Props) {
-  const [extIndex, setExtIndex] = useState(0);
-
-  useEffect(() => {
-    setExtIndex(0);
-  }, [slug, mode]);
+  const [failedSources, setFailedSources] = useState<Record<string, number>>({});
+  const sourceKey = `${slug}:${mode}`;
+  const extIndex = failedSources[sourceKey] ?? 0;
 
   if (mode === "video-first" && videoUrl) {
     return (
@@ -57,7 +55,10 @@ export function ExerciseMedia({
           fill
           sizes={sizes}
           className="object-cover"
-          onError={() => setExtIndex((index) => index + 1)}
+          onError={() => setFailedSources((current) => ({
+            ...current,
+            [sourceKey]: (current[sourceKey] ?? 0) + 1,
+          }))}
         />
       </div>
     );

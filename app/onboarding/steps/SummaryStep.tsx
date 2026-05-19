@@ -81,7 +81,11 @@ export function SummaryStep({ config, value, onBack, isFirst, isLast, onNext, su
               {goals.map((g) => {
                 const GI = goalIcons[g];
                 return (
-                  <span key={g} className="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-md bg-[rgba(201,168,122,0.09)] text-[#C9A87A] border border-[rgba(201,168,122,0.20)]">
+                  <span
+                    key={g}
+                    className="inline-flex items-center gap-1 rounded-md bg-[var(--color-accent-dim)] px-2 py-1 text-xs text-[var(--color-accent)]"
+                    style={{ border: "1px solid rgba(var(--color-accent-rgb), 0.20)" }}
+                  >
                     <GI className="h-3 w-3" /> {g.replace(/_/g, " ")}
                   </span>
                 );
@@ -92,7 +96,7 @@ export function SummaryStep({ config, value, onBack, isFirst, isLast, onNext, su
 
         {StyleIcon && style && (
           <div className={`${cardClassRounded} flex items-center gap-3`}>
-            <StyleIcon className="h-5 w-5 text-[#C9A87A]" />
+            <StyleIcon className="h-5 w-5 text-[var(--color-accent)]" />
             <div>
               <p className="text-[10px] font-semibold uppercase tracking-[1px] text-[#888480]">Training Style</p>
               <p className="text-sm font-semibold text-[#F0EBE3]">{styleLabels[style as TrainingStyle]}</p>
@@ -113,16 +117,16 @@ export function SummaryStep({ config, value, onBack, isFirst, isLast, onNext, su
           </div>
         )}
 
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           <div className={`${cardClassRounded} flex items-center gap-3`}>
-            <Target className="h-5 w-5 text-[#C9A87A]" />
+            <Target className="h-5 w-5 text-[var(--color-accent)]" />
             <div>
               <p className="text-[10px] font-semibold uppercase tracking-[1px] text-[#888480]">Schedule</p>
               <p className="text-sm font-semibold text-[#F0EBE3]">{days}x / week</p>
             </div>
           </div>
           <div className={`${cardClassRounded} flex items-center gap-3`}>
-            <Clock className="h-5 w-5 text-[#C9A87A]" />
+            <Clock className="h-5 w-5 text-[var(--color-accent)]" />
             <div>
               <p className="text-[10px] font-semibold uppercase tracking-[1px] text-[#888480]">Duration</p>
               <p className="text-sm font-semibold text-[#F0EBE3]">{duration} min</p>
@@ -132,7 +136,7 @@ export function SummaryStep({ config, value, onBack, isFirst, isLast, onNext, su
 
         {ExpIcon && exp && (
           <div className={`${cardClassRounded} flex items-center gap-3`}>
-            <ExpIcon className="h-5 w-5 text-[#C9A87A]" />
+            <ExpIcon className="h-5 w-5 text-[var(--color-accent)]" />
             <div>
               <p className="text-[10px] font-semibold uppercase tracking-[1px] text-[#888480]">Experience</p>
               <p className="text-sm font-semibold text-[#F0EBE3]">{expLabels[exp as ExperienceLevel]}</p>

@@ -1,7 +1,7 @@
 "use client";
 
 import type { ComponentType, SVGProps } from "react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { Dumbbell, Search, SlidersHorizontal, User } from "lucide-react";
 import { ExerciseMedia } from "@/components/ui/ExerciseMedia";
@@ -61,7 +61,16 @@ function ExerciseArtworkFallback() {
 
 export function BrowseContent({ equipment, exercises }: Props) {
   const [query, setQuery] = useState("");
+  const [debouncedQuery, setDebouncedQuery] = useState("");
   const [selectedChip, setSelectedChip] = useState<string>("all");
+
+  useEffect(() => {
+    const timeout = window.setTimeout(() => {
+      setDebouncedQuery(query);
+    }, 150);
+
+    return () => window.clearTimeout(timeout);
+  }, [query]);
 
   const equipmentById = useMemo(
     () => new Map(equipment.map((item) => [item.id, item])),
@@ -70,7 +79,7 @@ export function BrowseContent({ equipment, exercises }: Props) {
 
   const filteredExercises = useMemo(() => {
     const activeChip = filterChips.find((chip) => chip.key === selectedChip) ?? filterChips[0];
-    const normalizedQuery = normalize(query);
+    const normalizedQuery = normalize(debouncedQuery);
 
     return exercises.filter((exercise) => {
       const matchedEquipment = equipmentById.get(exercise.equipment_id ?? "") ?? null;
@@ -91,10 +100,10 @@ export function BrowseContent({ equipment, exercises }: Props) {
 
       return searchableText.includes(normalizedQuery);
     });
-  }, [equipmentById, exercises, query, selectedChip]);
+  }, [debouncedQuery, equipmentById, exercises, selectedChip]);
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-5">
+    <div className="px-8 py-6">
       <div
         className="mb-[14px] flex h-[44px] items-center gap-[10px] border bg-[var(--bg-2)] px-[14px]"
         style={{ border: "var(--border-subtle)", borderRadius: "10px" }}

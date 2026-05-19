@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Barlow_Condensed, Figtree } from "next/font/google";
+import { ThemeProvider } from '@/context/ThemeContext';
 import "./globals.css";
 
 const barlowCondensed = Barlow_Condensed({
@@ -28,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${barlowCondensed.variable} ${figtree.variable}`}>
-      <body className="min-h-screen antialiased">{children}</body>
+      <body className="min-h-screen antialiased"><ThemeProvider>{children}</ThemeProvider></body>
     </html>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { Flame, Dumbbell, Heart, StretchVertical, Brain } from "lucide-react";
-import { MultiSelectGrid } from "@/components/ui/MultiSelectGrid";
+import { OptionCard } from "@/components/ui/OptionCard";
 import { StepLayout } from "@/components/ui/StepLayout";
 import type { StepProps, Option } from "../types";
 import type { FitnessGoal } from "@/types/database";
@@ -19,17 +19,33 @@ export function GoalStep({ config, value, onChange, onNext, onBack, isFirst, isL
 
   return (
     <StepLayout config={config} onNext={onNext} onBack={onBack} isFirst={isFirst} isLast={isLast}>
-      <MultiSelectGrid
-        options={GOAL_OPTIONS}
-        selected={goals}
-        onToggle={(v) => {
-          const next = goals.includes(v)
-            ? goals.filter((g) => g !== v)
-            : [...goals, v];
-          onChange("fitness_goals", next);
-        }}
-        minSelect={1}
-      />
+      <div>
+        <div className="grid grid-cols-1 gap-3 min-[700px]:grid-cols-2 min-[700px]:gap-4">
+          {GOAL_OPTIONS.map((opt, index) => {
+            const isSelected = goals.includes(opt.value);
+
+            return (
+              <OptionCard
+                key={opt.value}
+                selected={isSelected}
+                icon={opt.icon}
+                label={opt.label}
+                description={opt.description}
+                onClick={() => {
+                  const next = goals.includes(opt.value)
+                    ? goals.filter((g) => g !== opt.value)
+                    : [...goals, opt.value];
+                  onChange("fitness_goals", next);
+                }}
+                className={`!p-5 ${index === GOAL_OPTIONS.length - 1 && GOAL_OPTIONS.length % 2 === 1 ? "min-[700px]:col-span-2" : ""}`}
+              />
+            );
+          })}
+        </div>
+        {goals.length < 1 && (
+          <p className="mt-2 text-xs text-[#484542]">Select at least 1</p>
+        )}
+      </div>
     </StepLayout>
   );
 }

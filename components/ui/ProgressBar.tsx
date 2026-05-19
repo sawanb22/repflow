@@ -10,19 +10,19 @@ type Props = {
 
 export function ProgressBar({ steps, current }: Props) {
   return (
-    <div className="w-full">
-      <div className="flex items-center justify-between">
+    <div className="progress-scrollbar-hidden w-full overflow-x-auto pb-1">
+      <div className="mx-auto flex min-w-[720px] max-w-5xl items-start px-1">
         {steps.map((step, i) => {
           const isCompleted = i < current;
           const isCurrent = i === current;
 
           return (
-            <div key={i} className="flex flex-col items-center gap-1.5 flex-1">
-              <div className="relative flex items-center w-full">
+            <div key={i} className="flex min-w-0 flex-1 flex-col items-center gap-2">
+              <div className="relative flex w-full items-center justify-center">
                 {i > 0 && (
-                  <div className="absolute right-1/2 top-1/2 -translate-y-1/2 h-0.5 w-full bg-[#141414]">
+                  <div className="absolute right-1/2 top-1/2 h-0.5 w-full -translate-y-1/2 bg-[#141414]">
                     <motion.div
-                      className="h-full bg-[#C9A87A] origin-left"
+                      className="h-full origin-left bg-[var(--color-accent)]"
                       initial={false}
                       animate={{ scaleX: isCompleted ? 1 : 0 }}
                       transition={{ duration: 0.4, ease: "easeOut" }}
@@ -32,12 +32,12 @@ export function ProgressBar({ steps, current }: Props) {
                 <motion.div
                   initial={false}
                   animate={{
-                    scale: isCurrent ? 1.1 : 1,
+                    scale: isCurrent ? 1.08 : 1,
                     borderColor: isCompleted || isCurrent
-                      ? "rgba(201,168,122,0.30)"
+                      ? "rgba(var(--color-accent-rgb), 0.30)"
                       : "rgba(255,255,255,0.055)",
                     backgroundColor: isCompleted
-                      ? "rgb(201,168,122)"
+                      ? "var(--color-accent)"
                       : "rgb(20,20,20)",
                   }}
                   className="relative z-10 flex h-7 w-7 items-center justify-center rounded-full border-2"
@@ -45,15 +45,15 @@ export function ProgressBar({ steps, current }: Props) {
                   {isCompleted ? (
                     <Check className="h-3.5 w-3.5 text-[#0A0A0A]" />
                   ) : (
-                    <span className={`text-[11px] font-bold font-[family-name:var(--font-barlow-condensed)] ${isCurrent ? "text-[#C9A87A]" : "text-[#484542]"}`}>
+                    <span className={`font-[family-name:var(--font-barlow-condensed)] text-[11px] font-bold ${isCurrent ? "text-[var(--color-accent)]" : "text-[#484542]"}`}>
                       {i + 1}
                     </span>
                   )}
                 </motion.div>
               </div>
               <span
-                className={`text-[10px] font-semibold text-center leading-tight font-[family-name:var(--font-figtree)] ${
-                  isCurrent ? "text-[#C9A87A]" : isCompleted ? "text-[#888480]" : "text-[#484542]"
+                className={`max-w-[88px] text-center font-[family-name:var(--font-figtree)] text-[10px] font-semibold leading-tight ${
+                  isCurrent ? "text-[var(--color-accent)]" : isCompleted ? "text-[#888480]" : "text-[#484542]"
                 }`}
               >
                 {step.label}
