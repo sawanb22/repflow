@@ -1,9 +1,13 @@
-import { ExerciseMedia } from "@/components/ui/ExerciseMedia";
+import { ExerciseMediaV2 } from "@/components/ui/ExerciseMediaV2";
+import { SmartTimer } from "@/components/ui/SmartTimer";
 import { getServerSupabase } from "@/lib/supabase-server";
 import Link from "next/link";
-import { ArrowLeft, Clock3, Play, Dumbbell } from "lucide-react";
+import { ArrowLeft, Clock3, Dumbbell } from "lucide-react";
 import type { Category, Exercise, Equipment } from "@/types/database";
 import { notFound } from "next/navigation";
+import { FavoriteToggle } from "@/app/home/favorite-toggle";
+import { StartExerciseButton } from "@/app/home/start-exercise-button";
+import { formatRestTimeLabel, parseRestTimeSeconds } from "@/lib/rest-time";
 
 const difficultyClasses: Record<string, string> = {
   beginner: "bg-[rgba(77,200,123,0.10)] text-[var(--color-success)]",
@@ -71,6 +75,10 @@ export default async function ExerciseDetailPage({
   const { slug } = await params;
   const supabase = await getServerSupabase();
 
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
   const { data: exercise } = await supabase
     .from("exercises")
     .select("*")
@@ -82,19 +90,23 @@ export default async function ExerciseDetailPage({
 
   const ex = exercise as Exercise;
 
-  const [{ data: equip }, { data: category }] = await Promise.all([
+  const [{ data: equip }, { data: category }, { data: favorite }] = await Promise.all([
     ex.equipment_id
       ? supabase.from("equipment").select("*").eq("id", ex.equipment_id).single()
       : Promise.resolve({ data: null }),
     ex.category_id
       ? supabase.from("categories").select("*").eq("id", ex.category_id).single()
       : Promise.resolve({ data: null }),
+    user
+      ? supabase.from("exercise_favorites").select("id").eq("user_id", user.id).eq("exercise_id", ex.id).maybeSingle()
+      : Promise.resolve({ data: null }),
   ]);
 
   const eq = equip as Equipment | null;
   const cat = category as Category | null;
   const mediaVideoUrl = ex.video_url ?? ex.video_url_side ?? ex.video_url_front;
-  const durationLabel = ex.reps.includes("sec") ? ex.reps : `${ex.rest_time * ex.sets}s`;
+  const restTimeSeconds = parseRestTimeSeconds(ex.rest_time);
+  const durationLabel = ex.reps.includes("sec") ? ex.reps : `${restTimeSeconds * ex.sets}s`;
   const caloriesLabel = `~${Math.max(120, ex.sets * 45)} kcal`;
 
   return (
@@ -110,13 +122,16 @@ export default async function ExerciseDetailPage({
 
       <div className="grid grid-cols-[1fr_1.1fr] gap-6">
         <div className="flex flex-col gap-3">
-          <ExerciseMedia
+          <ExerciseMediaV2
             slug={slug}
+            name={ex.name}
             videoUrl={mediaVideoUrl}
             alt={ex.name}
             className="h-[320px] border bg-[var(--bg-2)]"
             fallback={<ExerciseHeroArtworkFallback />}
           />
+
+          <SmartTimer defaultRestSeconds={restTimeSeconds} />
 
           <div className="grid grid-cols-2 gap-[10px]">
             <InfoCard label="Equipment" value={eq?.name ?? "Bodyweight"} accent />
@@ -161,7 +176,7 @@ export default async function ExerciseDetailPage({
             {[
               { value: String(ex.sets), label: "Sets" },
               { value: ex.reps, label: "Reps" },
-              { value: `${ex.rest_time}s`, label: "Rest" },
+              { value: formatRestTimeLabel(ex.rest_time), label: "Rest" },
             ].map((stat) => (
               <div
                 key={stat.label}
@@ -240,22 +255,10 @@ export default async function ExerciseDetailPage({
             </ol>
           </div>
 
-          <button
-            type="button"
-            className="mt-[18px] flex w-full items-center justify-center gap-[10px] bg-[var(--color-accent)] text-[#0A0A0A]"
-            style={{
-              padding: "16px",
-              borderRadius: "var(--radius-xl)",
-              fontFamily: "var(--font-barlow-condensed)",
-              fontSize: "18px",
-              fontWeight: 900,
-              letterSpacing: "1.5px",
-              textTransform: "uppercase",
-            }}
-          >
-            <Play className="h-4 w-4 fill-current" />
-            Start Exercise
-          </button>
+          <div className="mt-[18px] grid grid-cols-[1fr_140px] gap-3">
+            <StartExerciseButton exerciseId={ex.id} />
+            <FavoriteToggle exerciseId={ex.id} initialFavorite={Boolean(favorite)} />
+          </div>
         </div>
       </div>
     </div>

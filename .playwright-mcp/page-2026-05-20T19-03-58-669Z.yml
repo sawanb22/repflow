@@ -1,0 +1,83 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e4]: RepFlow
+      - navigation [ref=e5]:
+        - link "Dashboard" [ref=e6] [cursor=pointer]:
+          - /url: /home
+          - img [ref=e7]
+          - generic [ref=e12]: Dashboard
+        - link "Exercises" [ref=e13] [cursor=pointer]:
+          - /url: /home/browse
+          - img [ref=e14]
+          - generic [ref=e17]: Exercises
+        - link "Workouts" [ref=e18] [cursor=pointer]:
+          - /url: /home/plan
+          - img [ref=e19]
+          - generic [ref=e25]: Workouts
+        - link "Progress" [ref=e26] [cursor=pointer]:
+          - /url: /home/progress
+          - img [ref=e27]
+          - generic [ref=e29]: Progress
+        - link "Settings" [active] [ref=e31] [cursor=pointer]:
+          - /url: /home/settings
+          - img [ref=e32]
+          - generic [ref=e35]: Settings
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - generic [ref=e38]: Current Plan
+          - generic [ref=e39]: No active plan
+          - generic [ref=e41]: Create a plan to start tracking workouts
+        - link "BH Bhardwaj0sawan Beginner Member" [ref=e42] [cursor=pointer]:
+          - /url: /home/settings
+          - generic [ref=e43]: BH
+          - generic [ref=e44]:
+            - generic [ref=e45]: Bhardwaj0sawan
+            - generic [ref=e46]: Beginner Member
+          - img [ref=e47]
+    - main [ref=e51]:
+      - generic [ref=e463]:
+        - generic [ref=e464]:
+          - generic [ref=e465]: Settings
+          - heading "Profile & Account" [level=1] [ref=e466]
+          - paragraph [ref=e467]: Manage your name, workout setup, password, and account access.
+        - generic [ref=e468]:
+          - generic [ref=e469]:
+            - generic [ref=e470]:
+              - generic [ref=e471]:
+                - img [ref=e472]
+                - heading "Profile name" [level=2] [ref=e475]
+              - generic [ref=e476]:
+                - generic [ref=e477]: Display name
+                - textbox "Display name" [ref=e478]: bhardwaj0sawan@gmail.com
+              - button "Save name" [ref=e480]
+            - generic [ref=e481]:
+              - generic [ref=e482]:
+                - img [ref=e483]
+                - heading "Password" [level=2] [ref=e486]
+              - generic [ref=e487]:
+                - generic [ref=e488]: New password
+                - textbox "New password" [ref=e489]:
+                  - /placeholder: Minimum 6 characters
+                  - text: test@123
+              - button "Update password" [ref=e491]
+          - generic [ref=e492]:
+            - generic [ref=e493]:
+              - generic [ref=e494]: Workout preferences
+              - heading "Current setup" [level=2] [ref=e495]
+              - paragraph [ref=e496]: Home · 3 days / week · 30 min · Bodyweight
+              - button "Edit preferences" [ref=e498]
+            - generic [ref=e499]:
+              - generic [ref=e500]: Account actions
+              - generic [ref=e501]:
+                - button "Log out" [ref=e502]:
+                  - img [ref=e503]
+                  - text: Log out
+                - button "Delete account This flow is not live yet. Contact support before any permanent deletion." [ref=e506]:
+                  - img [ref=e507]
+                  - generic [ref=e509]:
+                    - generic [ref=e510]: Delete account
+                    - generic [ref=e511]: This flow is not live yet. Contact support before any permanent deletion.
+  - button "Open Next.js Dev Tools" [ref=e170] [cursor=pointer]:
+    - img [ref=e171]
+  - alert [ref=e174]

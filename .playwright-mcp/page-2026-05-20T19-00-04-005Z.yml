@@ -1,0 +1,60 @@
+- generic [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e29] [cursor=pointer]:
+    - img [ref=e30]
+  - alert [ref=e33]
+  - generic [ref=e38]:
+    - generic [ref=e39]:
+      - button "Change accent color" [ref=e42] [cursor=pointer]:
+        - generic [ref=e43]: Theme
+        - img [ref=e45]
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - img [ref=e172]
+          - generic [ref=e53]: goals?
+        - generic [ref=e54]:
+          - img [ref=e236]
+          - generic [ref=e59]: train?
+        - generic [ref=e60]:
+          - img [ref=e261]
+          - generic [ref=e65]: access?
+        - generic [ref=e66]:
+          - img [ref=e300]
+          - generic [ref=e71]: schedule?
+        - generic [ref=e72]:
+          - generic [ref=e76]: "5"
+          - generic [ref=e77]: level?
+        - generic [ref=e78]:
+          - generic [ref=e82]: "6"
+          - generic [ref=e83]: considerations?
+        - generic [ref=e84]:
+          - generic [ref=e88]: "7"
+          - generic [ref=e89]: Done
+    - generic [ref=e303]:
+      - generic [ref=e304]:
+        - heading "What's your experience level?" [level=2] [ref=e305]
+        - paragraph [ref=e306]: No ego, just honesty
+        - paragraph [ref=e307]: This sets your starting point. You can always progress.
+      - generic [ref=e309]:
+        - button "New to Fitness Starting fresh? Perfect. We'll guide you through every move." [active] [ref=e310] [cursor=pointer]:
+          - img [ref=e338]
+          - generic [ref=e311]:
+            - img [ref=e312]
+            - generic [ref=e315]: New to Fitness
+            - generic [ref=e316]: Starting fresh? Perfect. We'll guide you through every move.
+        - button "Some Experience You know the basics. Time to build on that foundation." [ref=e317] [cursor=pointer]:
+          - generic [ref=e318]:
+            - img [ref=e319]
+            - generic [ref=e322]: Some Experience
+            - generic [ref=e323]: You know the basics. Time to build on that foundation.
+        - button "Very Experienced You've been at this. Let's push your limits and optimize." [ref=e324] [cursor=pointer]:
+          - generic [ref=e325]:
+            - img [ref=e326]
+            - generic [ref=e328]: Very Experienced
+            - generic [ref=e329]: You've been at this. Let's push your limits and optimize.
+      - generic [ref=e330]:
+        - button "Back" [ref=e331]:
+          - img [ref=e332]
+          - text: Back
+        - button "Next" [ref=e334]:
+          - text: Next
+          - img [ref=e335]

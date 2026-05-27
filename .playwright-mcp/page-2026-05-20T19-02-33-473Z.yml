@@ -1,0 +1,136 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e4]: RepFlow
+      - navigation [ref=e5]:
+        - link "Dashboard" [ref=e6] [cursor=pointer]:
+          - /url: /home
+          - img [ref=e7]
+          - generic [ref=e12]: Dashboard
+        - link "Exercises" [ref=e13] [cursor=pointer]:
+          - /url: /home/browse
+          - img [ref=e14]
+          - generic [ref=e17]: Exercises
+        - link "Workouts" [ref=e18] [cursor=pointer]:
+          - /url: /home/plan
+          - img [ref=e19]
+          - generic [ref=e25]: Workouts
+        - link "Progress" [ref=e26] [cursor=pointer]:
+          - /url: /home/progress
+          - img [ref=e27]
+          - generic [ref=e29]: Progress
+        - link "Settings" [ref=e31] [cursor=pointer]:
+          - /url: /home/settings
+          - img [ref=e32]
+          - generic [ref=e35]: Settings
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - generic [ref=e38]: Current Plan
+          - generic [ref=e39]: No active plan
+          - generic [ref=e41]: Create a plan to start tracking workouts
+        - link "BH Bhardwaj0sawan Beginner Member" [ref=e42] [cursor=pointer]:
+          - /url: /home/settings
+          - generic [ref=e43]: BH
+          - generic [ref=e44]:
+            - generic [ref=e45]: Bhardwaj0sawan
+            - generic [ref=e46]: Beginner Member
+          - img [ref=e47]
+    - main [ref=e51]:
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - generic [ref=e55]: Weekly Plan
+            - heading "Create Your Weekly Plan" [level=1] [ref=e56]
+            - paragraph [ref=e57]: Auto-generate a plan from your preferences, then fine-tune rest days before you train.
+          - generic [ref=e58]:
+            - button "Generate Plan" [ref=e59]:
+              - img [ref=e60]
+              - text: Generate Plan
+            - button "Start Today" [disabled] [ref=e63]:
+              - img [ref=e64]
+              - text: Start Today
+        - generic [ref=e67]:
+          - generic [ref=e68]:
+            - generic [ref=e69]: Plan completion
+            - generic [ref=e70]: Your active plan is 0% complete for this week.
+          - generic [ref=e71]: 0%
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - generic [ref=e75]:
+              - generic [ref=e76]:
+                - generic [ref=e77]:
+                  - img [ref=e78]
+                  - heading "Monday" [level=2] [ref=e80]
+                - generic [ref=e81]: Rest and recover
+              - button "Rest Day" [disabled] [ref=e82]
+            - generic [ref=e84]:
+              - generic [ref=e85]: Rest Day
+              - generic [ref=e86]: Mobility, recovery, and light activity.
+          - generic [ref=e87]:
+            - generic [ref=e88]:
+              - generic [ref=e89]:
+                - generic [ref=e90]:
+                  - img [ref=e91]
+                  - heading "Tuesday" [level=2] [ref=e93]
+                - generic [ref=e94]: Rest and recover
+              - button "Rest Day" [disabled] [ref=e95]
+            - generic [ref=e97]:
+              - generic [ref=e98]: Rest Day
+              - generic [ref=e99]: Mobility, recovery, and light activity.
+          - generic [ref=e100]:
+            - generic [ref=e101]:
+              - generic [ref=e102]:
+                - generic [ref=e103]:
+                  - img [ref=e104]
+                  - heading "Wednesday" [level=2] [ref=e106]
+                - generic [ref=e107]: Rest and recover
+              - button "Rest Day" [disabled] [ref=e108]
+            - generic [ref=e110]:
+              - generic [ref=e111]: Rest Day
+              - generic [ref=e112]: Mobility, recovery, and light activity.
+          - generic [ref=e113]:
+            - generic [ref=e114]:
+              - generic [ref=e115]:
+                - generic [ref=e116]:
+                  - img [ref=e117]
+                  - heading "Thursday" [level=2] [ref=e119]
+                - generic [ref=e120]: Rest and recover
+              - button "Rest Day" [disabled] [ref=e121]
+            - generic [ref=e123]:
+              - generic [ref=e124]: Rest Day
+              - generic [ref=e125]: Mobility, recovery, and light activity.
+          - generic [ref=e126]:
+            - generic [ref=e127]:
+              - generic [ref=e128]:
+                - generic [ref=e129]:
+                  - img [ref=e130]
+                  - heading "Friday" [level=2] [ref=e132]
+                - generic [ref=e133]: Rest and recover
+              - button "Rest Day" [disabled] [ref=e134]
+            - generic [ref=e136]:
+              - generic [ref=e137]: Rest Day
+              - generic [ref=e138]: Mobility, recovery, and light activity.
+          - generic [ref=e139]:
+            - generic [ref=e140]:
+              - generic [ref=e141]:
+                - generic [ref=e142]:
+                  - img [ref=e143]
+                  - heading "Saturday" [level=2] [ref=e145]
+                - generic [ref=e146]: Rest and recover
+              - button "Rest Day" [disabled] [ref=e147]
+            - generic [ref=e149]:
+              - generic [ref=e150]: Rest Day
+              - generic [ref=e151]: Mobility, recovery, and light activity.
+          - generic [ref=e152]:
+            - generic [ref=e153]:
+              - generic [ref=e154]:
+                - generic [ref=e155]:
+                  - img [ref=e156]
+                  - heading "Sunday" [level=2] [ref=e158]
+                - generic [ref=e159]: Rest and recover
+              - button "Rest Day" [disabled] [ref=e160]
+            - generic [ref=e162]:
+              - generic [ref=e163]: Rest Day
+              - generic [ref=e164]: Mobility, recovery, and light activity.
+  - button "Open Next.js Dev Tools" [ref=e170] [cursor=pointer]:
+    - img [ref=e171]

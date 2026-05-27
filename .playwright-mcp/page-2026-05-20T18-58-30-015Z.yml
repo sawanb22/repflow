@@ -1,0 +1,69 @@
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e29] [cursor=pointer]:
+    - img [ref=e30]
+  - alert [ref=e33]
+  - generic [ref=e38]:
+    - generic [ref=e39]:
+      - button "Change accent color" [ref=e42] [cursor=pointer]:
+        - generic [ref=e43]: Theme
+        - img [ref=e45]
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - img [ref=e172]
+          - generic [ref=e53]: goals?
+        - generic [ref=e54]:
+          - generic [ref=e58]: "2"
+          - generic [ref=e59]: train?
+        - generic [ref=e60]:
+          - generic [ref=e64]: "3"
+          - generic [ref=e65]: access?
+        - generic [ref=e66]:
+          - generic [ref=e70]: "4"
+          - generic [ref=e71]: schedule?
+        - generic [ref=e72]:
+          - generic [ref=e76]: "5"
+          - generic [ref=e77]: level?
+        - generic [ref=e78]:
+          - generic [ref=e82]: "6"
+          - generic [ref=e83]: considerations?
+        - generic [ref=e84]:
+          - generic [ref=e88]: "7"
+          - generic [ref=e89]: Done
+    - generic [ref=e175]:
+      - generic [ref=e176]:
+        - heading "How do you like to train?" [level=2] [ref=e177]
+        - paragraph [ref=e178]: Pick your preferred environment
+        - paragraph [ref=e179]: This helps us recommend the right exercises for your space.
+      - generic [ref=e182]:
+        - button "Home Work out in your own space, no commute" [ref=e183] [cursor=pointer]:
+          - generic [ref=e184]:
+            - img [ref=e185]
+            - generic [ref=e188]: Home
+            - generic [ref=e189]: Work out in your own space, no commute
+        - button "Gym Full access to machines, weights, and classes" [ref=e190] [cursor=pointer]:
+          - generic [ref=e191]:
+            - img [ref=e192]
+            - generic [ref=e196]: Gym
+            - generic [ref=e197]: Full access to machines, weights, and classes
+        - button "Hybrid Best of both — mix home and gym sessions" [ref=e198] [cursor=pointer]:
+          - generic [ref=e199]:
+            - img [ref=e200]
+            - generic [ref=e206]: Hybrid
+            - generic [ref=e207]: Best of both — mix home and gym sessions
+        - button "Yoga Flexibility, balance, and mind-body connection" [ref=e208] [cursor=pointer]:
+          - generic [ref=e209]:
+            - img [ref=e210]
+            - generic [ref=e215]: Yoga
+            - generic [ref=e216]: Flexibility, balance, and mind-body connection
+        - button "Breathwork & Recovery Calm your nervous system, recover deeply" [ref=e217] [cursor=pointer]:
+          - generic [ref=e218]:
+            - img [ref=e219]
+            - generic [ref=e223]: Breathwork & Recovery
+            - generic [ref=e224]: Calm your nervous system, recover deeply
+      - generic [ref=e225]:
+        - button "Back" [ref=e226]:
+          - img [ref=e227]
+          - text: Back
+        - button "Next" [ref=e229]:
+          - text: Next
+          - img [ref=e230]

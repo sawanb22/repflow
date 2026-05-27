@@ -1,0 +1,70 @@
+- generic [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e29] [cursor=pointer]:
+    - img [ref=e30]
+  - alert [ref=e33]
+  - generic [ref=e38]:
+    - generic [ref=e39]:
+      - button "Change accent color" [ref=e42] [cursor=pointer]:
+        - generic [ref=e43]: Theme
+        - img [ref=e45]
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - generic [ref=e52]: "1"
+          - generic [ref=e53]: goals?
+        - generic [ref=e54]:
+          - generic [ref=e58]: "2"
+          - generic [ref=e59]: train?
+        - generic [ref=e60]:
+          - generic [ref=e64]: "3"
+          - generic [ref=e65]: access?
+        - generic [ref=e66]:
+          - generic [ref=e70]: "4"
+          - generic [ref=e71]: schedule?
+        - generic [ref=e72]:
+          - generic [ref=e76]: "5"
+          - generic [ref=e77]: level?
+        - generic [ref=e78]:
+          - generic [ref=e82]: "6"
+          - generic [ref=e83]: considerations?
+        - generic [ref=e84]:
+          - generic [ref=e88]: "7"
+          - generic [ref=e89]: Done
+    - generic [ref=e112]:
+      - generic [ref=e113]:
+        - heading "What are your goals?" [level=2] [ref=e114]
+        - paragraph [ref=e115]: Select all that apply
+        - paragraph [ref=e116]: We'll tailor your workouts to match what you want to achieve.
+      - generic [ref=e119]:
+        - button "Lose Fat Burn calories, shed weight, lean out" [active] [ref=e120] [cursor=pointer]:
+          - img [ref=e170]
+          - generic [ref=e121]:
+            - img [ref=e122]
+            - generic [ref=e124]: Lose Fat
+            - generic [ref=e125]: Burn calories, shed weight, lean out
+        - button "Build Muscle Get stronger, increase definition" [ref=e126] [cursor=pointer]:
+          - generic [ref=e127]:
+            - img [ref=e128]
+            - generic [ref=e134]: Build Muscle
+            - generic [ref=e135]: Get stronger, increase definition
+        - button "Stay Active Move daily, feel good, maintain health" [ref=e136] [cursor=pointer]:
+          - generic [ref=e137]:
+            - img [ref=e138]
+            - generic [ref=e140]: Stay Active
+            - generic [ref=e141]: Move daily, feel good, maintain health
+        - button "Improve Flexibility Better mobility, fewer injuries" [ref=e142] [cursor=pointer]:
+          - generic [ref=e143]:
+            - img [ref=e144]
+            - generic [ref=e147]: Improve Flexibility
+            - generic [ref=e148]: Better mobility, fewer injuries
+        - button "Reduce Stress Calm the mind, recover, recharge" [ref=e149] [cursor=pointer]:
+          - generic [ref=e150]:
+            - img [ref=e151]
+            - generic [ref=e159]: Reduce Stress
+            - generic [ref=e160]: Calm the mind, recover, recharge
+      - generic [ref=e162]:
+        - button "Back" [ref=e163]:
+          - img [ref=e164]
+          - text: Back
+        - button "Next" [ref=e166]:
+          - text: Next
+          - img [ref=e167]

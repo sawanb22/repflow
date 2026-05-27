@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -8,10 +7,10 @@ import { z } from "zod";
 import { Dumbbell } from "lucide-react";
 import { createClient } from "@/utils/supabase/client";
 import { debug } from "@/utils/debug";
+import { toast } from "@/lib/toast-store";
 import { PageWrapper } from "@/components/ui/PageWrapper";
 import { Logo } from "@/components/ui/Logo";
 import { FormInput } from "@/components/ui/FormInput";
-import { ErrorBanner } from "@/components/ui/ErrorBanner";
 import { Button } from "@/components/ui/Button";
 import { AuthLink } from "@/components/ui/AuthLink";
 
@@ -24,7 +23,6 @@ type LoginForm = z.infer<typeof loginSchema>;
 
 export default function LoginPage() {
   const router = useRouter();
-  const [error, setError] = useState<string | null>(null);
 
   const {
     register,
@@ -33,7 +31,6 @@ export default function LoginPage() {
   } = useForm<LoginForm>({ resolver: zodResolver(loginSchema) });
 
   const onSubmit = async (data: LoginForm) => {
-    setError(null);
     debug.info("Login", `Attempting sign-in for ${data.email}`);
 
     const supabase = createClient();
@@ -44,13 +41,13 @@ export default function LoginPage() {
 
     if (err) {
       debug.error("Login", `Sign-in failed: ${err.message}`, { status: err.status, code: err.code });
-      setError(`${err.message}${err.status ? ` (${err.status})` : ""}`);
+      toast.error(`${err.message}${err.status ? ` (${err.status})` : ""}`);
       return;
     }
 
     if (authData.user && !authData.user.email_confirmed_at) {
       debug.warn("Login", "Email not confirmed");
-      setError("Please confirm your email before signing in. Check your inbox.");
+      toast.info("Please confirm your email before signing in. Check your inbox.");
       await supabase.auth.signOut();
       return;
     }
@@ -85,10 +82,8 @@ export default function LoginPage() {
           error={errors.password?.message}
         />
 
-        {error && <ErrorBanner message={error} />}
-
-        <Button type="submit" disabled={isSubmitting} className="w-full">
-          {isSubmitting ? "Signing in..." : "Sign in"}
+        <Button type="submit" loading={isSubmitting} className="w-full">
+          Sign in
         </Button>
       </form>
 

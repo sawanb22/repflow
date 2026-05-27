@@ -1,0 +1,116 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e4]: RepFlow
+      - navigation [ref=e5]:
+        - link "Dashboard" [ref=e6] [cursor=pointer]:
+          - /url: /home
+          - img [ref=e7]
+          - generic [ref=e12]: Dashboard
+        - link "Exercises" [ref=e13] [cursor=pointer]:
+          - /url: /home/browse
+          - img [ref=e15]
+          - generic [ref=e18]: Exercises
+        - link "Workouts" [ref=e19] [cursor=pointer]:
+          - /url: /home/plan
+          - img [ref=e20]
+          - generic [ref=e26]: Workouts
+        - link "Progress" [ref=e27] [cursor=pointer]:
+          - /url: /home/progress
+          - img [ref=e28]
+          - generic [ref=e30]: Progress
+        - link "Settings" [ref=e32] [cursor=pointer]:
+          - /url: /home/settings
+          - img [ref=e33]
+          - generic [ref=e36]: Settings
+      - generic [ref=e37]:
+        - generic [ref=e38]:
+          - generic [ref=e39]: Current Plan
+          - generic [ref=e40]: Fat Loss Flow
+          - generic [ref=e43]: 3 days scheduled · 67% complete
+        - link "BH Bhardwaj0sawan Beginner Member" [ref=e44] [cursor=pointer]:
+          - /url: /home/settings
+          - generic [ref=e45]: BH
+          - generic [ref=e46]:
+            - generic [ref=e47]: Bhardwaj0sawan
+            - generic [ref=e48]: Beginner Member
+          - img [ref=e49]
+    - main [ref=e53]:
+      - generic [ref=e55]:
+        - link "Back to browse" [ref=e56] [cursor=pointer]:
+          - /url: /home/browse
+          - img [ref=e57]
+          - text: Back to browse
+        - generic [ref=e59]:
+          - generic [ref=e60]:
+            - img "Barbell Bench Press" [ref=e62]
+            - generic [ref=e63]:
+              - generic [ref=e64]:
+                - generic [ref=e65]: Equipment
+                - generic [ref=e66]: Barbell
+              - generic [ref=e67]:
+                - generic [ref=e68]: Category
+                - generic [ref=e69]: Gym Workout
+              - generic [ref=e70]:
+                - generic [ref=e71]: Calories
+                - generic [ref=e72]: ~180 kcal
+              - generic [ref=e73]:
+                - generic [ref=e74]: Added By
+                - generic [ref=e75]: RepFlow Team
+          - generic [ref=e76]:
+            - heading "Barbell Bench Press" [level=1] [ref=e77]
+            - generic [ref=e78]:
+              - generic [ref=e79]:
+                - img [ref=e80]
+                - text: Barbell
+              - generic [ref=e86]: intermediate
+              - generic [ref=e87]:
+                - img [ref=e88]
+                - text: 360s
+            - generic [ref=e91]:
+              - generic [ref=e92]:
+                - generic [ref=e93]: "4"
+                - generic [ref=e94]: Sets
+              - generic [ref=e95]:
+                - generic [ref=e96]: 6-10
+                - generic [ref=e97]: Reps
+              - generic [ref=e98]:
+                - generic [ref=e99]: 90s
+                - generic [ref=e100]: Rest
+            - generic [ref=e101]:
+              - generic [ref=e102]: Muscles Targeted
+              - generic [ref=e103]:
+                - generic [ref=e104]: Chest
+                - generic [ref=e105]: Shoulders
+                - generic [ref=e106]: Triceps
+                - generic [ref=e107]: Upper Chest
+                - generic [ref=e108]: Core
+            - generic [ref=e109]:
+              - heading "Instructions" [level=2] [ref=e110]
+              - list [ref=e111]:
+                - listitem [ref=e112]:
+                  - generic [ref=e113]: "1"
+                  - generic [ref=e114]: Lie flat on the bench with eyes under the bar
+                - listitem [ref=e115]:
+                  - generic [ref=e116]: "2"
+                  - generic [ref=e117]: Plant your feet firmly and grip the bar just outside shoulder width
+                - listitem [ref=e118]:
+                  - generic [ref=e119]: "3"
+                  - generic [ref=e120]: Unrack the bar and lower it to mid-chest with control
+                - listitem [ref=e121]:
+                  - generic [ref=e122]: "4"
+                  - generic [ref=e123]: Press the bar straight up until your elbows are locked out
+                - listitem [ref=e124]:
+                  - generic [ref=e125]: "5"
+                  - generic [ref=e126]: Keep your shoulder blades pinned to the bench the whole time
+            - generic [ref=e127]:
+              - button "Start Exercise" [ref=e129]:
+                - generic [ref=e130]:
+                  - img [ref=e131]
+                  - text: Start Exercise
+              - button "Add to favorites" [ref=e133]:
+                - generic [ref=e134]:
+                  - img [ref=e135]
+                  - text: Save
+  - button "Open Next.js Dev Tools" [ref=e142] [cursor=pointer]:
+    - img [ref=e143]

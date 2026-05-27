@@ -1,0 +1,109 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e4]: RepFlow
+      - navigation [ref=e5]:
+        - link "Dashboard" [ref=e6] [cursor=pointer]:
+          - /url: /home
+          - img [ref=e7]
+          - generic [ref=e12]: Dashboard
+        - link "Exercises" [ref=e13] [cursor=pointer]:
+          - /url: /home/browse
+          - img [ref=e14]
+          - generic [ref=e17]: Exercises
+        - link "Workouts" [ref=e18] [cursor=pointer]:
+          - /url: /home/plan
+          - img [ref=e19]
+          - generic [ref=e25]: Workouts
+        - link "Progress" [ref=e26] [cursor=pointer]:
+          - /url: /home/progress
+          - img [ref=e27]
+          - generic [ref=e29]: Progress
+        - link "Settings" [ref=e31] [cursor=pointer]:
+          - /url: /home/settings
+          - img [ref=e32]
+          - generic [ref=e35]: Settings
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - generic [ref=e38]: Current Plan
+          - generic [ref=e39]: No active plan
+          - generic [ref=e41]: Create a plan to start tracking workouts
+        - link "BH Bhardwaj0sawan Beginner Member" [ref=e42] [cursor=pointer]:
+          - /url: /home/settings
+          - generic [ref=e43]: BH
+          - generic [ref=e44]:
+            - generic [ref=e45]: Bhardwaj0sawan
+            - generic [ref=e46]: Beginner Member
+          - img [ref=e47]
+    - main [ref=e51]:
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - generic [ref=e55]:
+            - paragraph [ref=e56]: Good morning
+            - heading "bhardwaj0sawan" [level=1] [ref=e57]
+          - generic [ref=e58]:
+            - button "Change accent color" [ref=e60] [cursor=pointer]:
+              - generic [ref=e61]: Theme
+              - img [ref=e63]
+            - link "Open settings" [ref=e65] [cursor=pointer]:
+              - /url: /home/settings
+              - img [ref=e66]
+        - generic [ref=e69]:
+          - generic [ref=e70]:
+            - img [ref=e72]
+            - generic [ref=e74]:
+              - generic [ref=e75]: "1"
+              - generic [ref=e76]: Day streak
+          - generic [ref=e77]:
+            - img [ref=e79]
+            - generic [ref=e81]:
+              - generic [ref=e82]: "1"
+              - generic [ref=e83]: Workouts done
+          - generic [ref=e84]:
+            - img [ref=e86]
+            - generic [ref=e89]:
+              - generic [ref=e90]: 1m
+              - generic [ref=e91]: This week
+        - generic [ref=e94]:
+          - generic [ref=e95]: Today · No Active Plan
+          - heading "Build Your Weekly Plan" [level=2] [ref=e96]
+          - paragraph [ref=e97]: Auto-generate a weekly plan from your preferences
+          - generic [ref=e98]:
+            - button "Build Plan" [ref=e99]:
+              - img [ref=e100]
+              - text: Build Plan
+            - generic [ref=e102]:
+              - generic [ref=e103]: Lose Fat
+              - generic [ref=e104]: Home
+              - generic [ref=e105]: 3 Days / Week
+        - generic [ref=e106]:
+          - heading "Weekly Activity" [level=2] [ref=e107]
+          - link "Full history →" [ref=e108] [cursor=pointer]:
+            - /url: /home/progress
+        - generic [ref=e109]:
+          - generic [ref=e111]: F
+          - generic [ref=e113]: S
+          - generic [ref=e115]: S
+          - generic [ref=e117]: M
+          - generic [ref=e119]: T
+          - generic [ref=e121]: W
+          - generic [ref=e123]: T
+        - generic [ref=e124]:
+          - heading "Home Workouts For You" [level=2] [ref=e125]
+          - link "Browse all →" [ref=e126] [cursor=pointer]:
+            - /url: /home/browse
+        - generic [ref=e127]:
+          - link "Push-Up Push-Up beginner" [ref=e128] [cursor=pointer]:
+            - /url: /home/exercise/push-up
+            - img "Push-Up" [ref=e130]
+            - generic [ref=e131]:
+              - generic [ref=e132]: Push-Up
+              - generic [ref=e133]: beginner
+          - link "Plank Plank beginner" [ref=e134] [cursor=pointer]:
+            - /url: /home/exercise/plank
+            - img "Plank" [ref=e136]
+            - generic [ref=e137]:
+              - generic [ref=e138]: Plank
+              - generic [ref=e139]: beginner
+  - button "Open Next.js Dev Tools" [ref=e145] [cursor=pointer]:
+    - img [ref=e146]

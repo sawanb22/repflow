@@ -1,53 +1,100 @@
 import { getServerSupabase } from "@/lib/supabase-server";
+import { getDashboardData, getUserPreferences } from "@/lib/workout-data";
+import { getDayLabel, getWorkoutMinutesLabel, mapEquipment, mapGoal, mapWorkoutLocation } from "@/lib/workout-helpers";
 import { HomeContent } from "./home-content";
 
-function mapWorkoutLocation(trainingStyle: string | null, workoutLocation: string | null) {
-  if (trainingStyle === "home" || trainingStyle === "gym") return trainingStyle;
-  if (trainingStyle === "hybrid") return "both";
-  if (workoutLocation === "home" || workoutLocation === "gym" || workoutLocation === "both") return workoutLocation;
-  return "both";
+function titleCase(value: string) {
+  return value
+    .split(/[\s_-]+/)
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
 }
 
-function mapGoal(fitnessGoals: string[] | null | undefined, goal: string | null) {
-  const preferredGoal = fitnessGoals?.[0] ?? goal ?? "stay_active";
-  if (preferredGoal === "lose_fat" || preferredGoal === "build_muscle" || preferredGoal === "stay_active") return preferredGoal;
-  return "stay_active";
-}
-
-function mapEquipment(equipmentList: string[] | null | undefined, equipment: string | null) {
-  const preferredEquipment = equipmentList?.[0] ?? equipment ?? "nothing_yet";
-  if (
-    preferredEquipment === "bodyweight" ||
-    preferredEquipment === "nothing_yet" ||
-    preferredEquipment === "dumbbells" ||
-    preferredEquipment === "resistance_bands" ||
-    preferredEquipment === "kettlebell" ||
-    preferredEquipment === "jump_rope" ||
-    preferredEquipment === "full_gym"
-  ) {
-    return preferredEquipment;
+function formatWeeklyMinutes(minutes: number) {
+  if (minutes >= 60) {
+    const hours = minutes / 60;
+    return `${hours % 1 === 0 ? hours.toFixed(0) : hours.toFixed(1)}h`;
   }
-  return "nothing_yet";
+  return `${minutes}m`;
+}
+
+function getDifficultyLabel(difficulties: string[]) {
+  if (difficulties.includes("advanced")) return "Advanced";
+  if (difficulties.includes("intermediate")) return "Intermediate";
+  return "Beginner";
 }
 
 export default async function HomePage() {
   const supabase = await getServerSupabase();
 
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
 
-  const { data: prefs } = await supabase
-    .from("user_preferences")
-    .select("workout_location, goal, equipment, fitness_goals, training_style, equipment_list, workout_days_per_week, workout_duration_min, experience_level, limitations")
-    .eq("user_id", user!.id)
-    .maybeSingle();
+  const [prefs, dashboard] = await Promise.all([
+    getUserPreferences(supabase, user!.id),
+    getDashboardData(supabase, user!.id),
+  ]);
+
+  const workoutLocation = mapWorkoutLocation(prefs?.training_style ?? null, prefs?.workout_location ?? null);
+  const goal = mapGoal(prefs?.fitness_goals, prefs?.goal ?? null);
+  const equipment = mapEquipment(prefs?.equipment_list, prefs?.equipment ?? null);
+
+  const todayWorkoutPills = dashboard.todayExercises.length > 0
+    ? Array.from(
+      new Set(
+        dashboard.todayExercises
+          .flatMap((exercise) => exercise.primary_muscles)
+          .map((muscle) => titleCase(muscle)),
+      ),
+    ).slice(0, 3)
+    : [titleCase(goal), titleCase(workoutLocation), `${prefs?.workout_days_per_week ?? 3} Days / Week`];
+
+  const todayWorkoutMeta = !dashboard.activePlan
+    ? "Auto-generate a weekly plan from your preferences"
+    : dashboard.todayPlanDay.is_rest || dashboard.todayExercises.length === 0
+      ? `${dashboard.activePlan.name} · Recovery and reset`
+      : `${getWorkoutMinutesLabel(dashboard.todayPlanDay)} · ${getDifficultyLabel(dashboard.todayExercises.map((exercise) => exercise.difficulty))}`;
+
+  const todayWorkoutTitle = !dashboard.activePlan
+    ? "Build Your Weekly Plan"
+    : dashboard.todayPlanDay.is_rest || dashboard.todayExercises.length === 0
+      ? "Recovery Day"
+      : dashboard.activePlan.name;
+
+  const todayWorkoutEyebrow = dashboard.inProgressSession
+    ? "Today · In Progress"
+    : !dashboard.activePlan
+      ? "Today · No Active Plan"
+      : dashboard.todayPlanDay.is_rest || dashboard.todayExercises.length === 0
+        ? "Today · Rest Day"
+        : `Today · ${getDayLabel(dashboard.todayDayKey)}`;
 
   return (
     <HomeContent
       userEmail={user!.email!}
       preferences={{
-        workoutLocation: mapWorkoutLocation(prefs?.training_style ?? null, prefs?.workout_location ?? null),
-        goal: mapGoal(prefs?.fitness_goals, prefs?.goal ?? null),
-        equipment: mapEquipment(prefs?.equipment_list, prefs?.equipment ?? null),
+        workoutLocation,
+        goal,
+        equipment,
+      }}
+      dashboard={{
+        currentStreak: String(dashboard.streak?.current_streak ?? 0),
+        totalWorkouts: String(dashboard.streak?.total_workouts ?? dashboard.sessions.length),
+        thisWeek: formatWeeklyMinutes(dashboard.thisWeekMinutes),
+        weeklyActivity: dashboard.weeklyActivity,
+        planProgress: dashboard.planProgress,
+        todayWorkout: {
+          eyebrow: todayWorkoutEyebrow,
+          title: todayWorkoutTitle,
+          meta: todayWorkoutMeta,
+          pills: todayWorkoutPills,
+          activePlanId: dashboard.activePlan?.id ?? null,
+          sessionId: dashboard.inProgressSession?.id ?? null,
+          isRestDay: dashboard.todayPlanDay.is_rest || dashboard.todayExercises.length === 0,
+          planExercises: dashboard.todayPlanDay.exercises,
+        },
       }}
     />
   );

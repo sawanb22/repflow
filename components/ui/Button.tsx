@@ -1,4 +1,4 @@
-import { Loader2 } from "lucide-react";
+import { SkeletonButtonContent } from "@/components/ui/Skeleton";
 
 type Variant = "primary" | "secondary" | "ghost";
 type Size = "sm" | "md" | "lg" | "icon";
@@ -37,15 +37,18 @@ export function Button({
   loading,
   onClick,
 }: Props) {
+  const skeletonTone = variant === "primary" ? "contrast" : "surface";
+
   return (
     <button
       type={type}
       disabled={disabled || loading}
       onClick={onClick}
-      className={`font-[family-name:var(--font-barlow-condensed)] font-extrabold uppercase tracking-[0.8px] transition-all duration-200 inline-flex items-center justify-center gap-2 ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+      aria-busy={loading || undefined}
+      className={`relative font-[family-name:var(--font-barlow-condensed)] font-extrabold uppercase tracking-[0.8px] transition-all duration-200 inline-flex items-center justify-center gap-2 ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
     >
-      {loading && <Loader2 className="h-4 w-4 animate-spin" />}
-      {children}
+      <span className={loading ? "opacity-0" : undefined}>{children}</span>
+      {loading ? <SkeletonButtonContent withIcon tone={skeletonTone} /> : null}
     </button>
   );
 }

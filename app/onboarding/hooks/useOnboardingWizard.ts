@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -40,11 +40,45 @@ export function useOnboardingWizard() {
     mode: "onChange",
   });
 
-  const { trigger, getValues, setValue, formState: { isSubmitting } } = form;
+  const { trigger, getValues, setValue, reset, formState: { isSubmitting } } = form;
 
   const currentConfig = ONBOARDING_STEPS[step];
   const isFirst = step === 0;
   const isLast = step === ONBOARDING_STEPS.length - 1;
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const loadPreferences = async () => {
+      const supabase = createClient();
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) return;
+
+      const { data } = await supabase
+        .from("user_preferences")
+        .select("fitness_goals, training_style, equipment_list, workout_days_per_week, workout_duration_min, experience_level, limitations")
+        .eq("user_id", user.id)
+        .maybeSingle();
+
+      if (cancelled || !data) return;
+
+      reset({
+        fitness_goals: data.fitness_goals ?? [],
+        training_style: data.training_style ?? "",
+        equipment_list: data.equipment_list ?? [],
+        workout_days_per_week: data.workout_days_per_week ?? 3,
+        workout_duration_min: data.workout_duration_min ?? 30,
+        experience_level: data.experience_level ?? "",
+        limitations: data.limitations ?? [],
+      });
+    };
+
+    void loadPreferences();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [reset]);
 
   const goNext = useCallback(async () => {
     const fields = currentConfig.fields;

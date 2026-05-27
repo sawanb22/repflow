@@ -1,0 +1,75 @@
+- generic [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e440] [cursor=pointer]:
+    - generic [ref=e443]:
+      - text: Rendering
+      - generic [ref=e444]:
+        - generic [ref=e445]: .
+        - generic [ref=e446]: .
+        - generic [ref=e447]: .
+  - alert [ref=e33]
+  - generic [ref=e38]:
+    - generic [ref=e39]:
+      - button "Change accent color" [ref=e42] [cursor=pointer]:
+        - generic [ref=e43]: Theme
+        - img [ref=e45]
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - img [ref=e172]
+          - generic [ref=e53]: goals?
+        - generic [ref=e54]:
+          - img [ref=e236]
+          - generic [ref=e59]: train?
+        - generic [ref=e60]:
+          - img [ref=e261]
+          - generic [ref=e65]: access?
+        - generic [ref=e66]:
+          - img [ref=e300]
+          - generic [ref=e71]: schedule?
+        - generic [ref=e72]:
+          - img [ref=e341]
+          - generic [ref=e77]: level?
+        - generic [ref=e78]:
+          - img [ref=e385]
+          - generic [ref=e83]: considerations?
+        - generic [ref=e84]:
+          - generic [ref=e88]: "7"
+          - generic [ref=e89]: Done
+    - generic [ref=e388]:
+      - generic [ref=e389]:
+        - heading "Your profile is ready" [level=2] [ref=e390]
+        - paragraph [ref=e391]: Here's a quick look at your setup
+        - paragraph [ref=e392]: You can change any of this later in settings.
+      - generic [ref=e394]:
+        - generic [ref=e395]:
+          - paragraph [ref=e396]: Goals
+          - generic [ref=e398]:
+            - img [ref=e399]
+            - text: lose fat
+        - generic [ref=e401]:
+          - img [ref=e402]
+          - generic [ref=e405]:
+            - paragraph [ref=e406]: Training Style
+            - paragraph [ref=e407]: Home
+        - generic [ref=e408]:
+          - paragraph [ref=e409]: Equipment
+          - generic [ref=e411]: bodyweight
+        - generic [ref=e412]:
+          - generic [ref=e413]:
+            - img [ref=e414]
+            - generic [ref=e418]:
+              - paragraph [ref=e419]: Schedule
+              - paragraph [ref=e420]: 3x / week
+          - generic [ref=e421]:
+            - img [ref=e422]
+            - generic [ref=e425]:
+              - paragraph [ref=e426]: Duration
+              - paragraph [ref=e427]: 30 min
+        - generic [ref=e428]:
+          - img [ref=e429]
+          - generic [ref=e432]:
+            - paragraph [ref=e433]: Experience
+            - paragraph [ref=e434]: New to Fitness
+        - button "Start My Journey" [active] [ref=e435]
+      - button "Back" [ref=e437]:
+        - img [ref=e438]
+        - text: Back

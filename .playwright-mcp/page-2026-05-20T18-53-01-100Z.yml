@@ -1,0 +1,26 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - img [ref=e6]
+      - heading "Welcome back" [level=1] [ref=e12]
+      - paragraph [ref=e13]: Sign in to continue your journey
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - generic [ref=e16]: Email
+        - textbox "Email" [ref=e17]:
+          - /placeholder: you@example.com
+          - text: jackson1511185@gmail.com
+      - generic [ref=e18]:
+        - generic [ref=e19]: Password
+        - textbox "Password" [ref=e20]:
+          - /placeholder: ••••••••
+          - text: pass-sawan@test
+      - paragraph [ref=e35]: Invalid login credentials (400)
+      - button "Sign in" [ref=e21]
+    - paragraph [ref=e22]:
+      - text: Don't have an account?
+      - link "Sign up" [ref=e23] [cursor=pointer]:
+        - /url: /auth/signup
+  - button "Open Next.js Dev Tools" [ref=e29] [cursor=pointer]:
+    - img [ref=e30]
+  - alert [ref=e33]

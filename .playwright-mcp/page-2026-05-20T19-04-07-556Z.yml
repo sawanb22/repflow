@@ -1,0 +1,202 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e4]: RepFlow
+      - navigation [ref=e5]:
+        - link "Dashboard" [ref=e6] [cursor=pointer]:
+          - /url: /home
+          - img [ref=e7]
+          - generic [ref=e12]: Dashboard
+        - link "Exercises" [ref=e13] [cursor=pointer]:
+          - /url: /home/browse
+          - img [ref=e14]
+          - generic [ref=e17]: Exercises
+        - link "Workouts" [ref=e18] [cursor=pointer]:
+          - /url: /home/plan
+          - img [ref=e19]
+          - generic [ref=e25]: Workouts
+        - link "Progress" [active] [ref=e26] [cursor=pointer]:
+          - /url: /home/progress
+          - img [ref=e27]
+          - generic [ref=e29]: Progress
+        - link "Settings" [ref=e31] [cursor=pointer]:
+          - /url: /home/settings
+          - img [ref=e32]
+          - generic [ref=e35]: Settings
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - generic [ref=e38]: Current Plan
+          - generic [ref=e39]: No active plan
+          - generic [ref=e41]: Create a plan to start tracking workouts
+        - link "BH Bhardwaj0sawan Beginner Member" [ref=e42] [cursor=pointer]:
+          - /url: /home/settings
+          - generic [ref=e43]: BH
+          - generic [ref=e44]:
+            - generic [ref=e45]: Bhardwaj0sawan
+            - generic [ref=e46]: Beginner Member
+          - img [ref=e47]
+    - main [ref=e51]:
+      - generic [ref=e512]:
+        - generic [ref=e513]:
+          - generic [ref=e514]: Progress
+          - heading "Your Training Snapshot" [level=1] [ref=e515]
+          - paragraph [ref=e516]: Track consistency, workout volume, and your recent training history.
+        - generic [ref=e517]:
+          - generic [ref=e518]:
+            - img [ref=e520]
+            - generic [ref=e522]:
+              - generic [ref=e523]: "0"
+              - generic [ref=e524]: Current streak
+          - generic [ref=e525]:
+            - img [ref=e527]
+            - generic [ref=e533]:
+              - generic [ref=e534]: "0"
+              - generic [ref=e535]: Longest streak
+          - generic [ref=e536]:
+            - img [ref=e538]
+            - generic [ref=e542]:
+              - generic [ref=e543]: "0"
+              - generic [ref=e544]: Workouts done
+          - generic [ref=e545]:
+            - img [ref=e547]
+            - generic [ref=e550]:
+              - generic [ref=e551]: 0m
+              - generic [ref=e552]: This week
+        - generic [ref=e553]:
+          - generic [ref=e554]:
+            - heading "Weekly activity" [level=2] [ref=e555]
+            - generic [ref=e556]: Last 7 days
+          - generic [ref=e557]:
+            - generic [ref=e560]: F
+            - generic [ref=e563]: S
+            - generic [ref=e566]: S
+            - generic [ref=e569]: M
+            - generic [ref=e572]: T
+            - generic [ref=e575]: W
+            - generic [ref=e578]: T
+        - generic [ref=e579]:
+          - generic [ref=e580]:
+            - generic [ref=e581]:
+              - heading "Weekly completion heatmap" [level=2] [ref=e582]
+              - generic [ref=e583]: Last 12 weeks
+            - generic [ref=e584]:
+              - generic [ref=e585]:
+                - generic [ref=e586]: M
+                - generic [ref=e587]: T
+                - generic [ref=e588]: W
+                - generic [ref=e589]: T
+                - generic [ref=e590]: F
+                - generic [ref=e591]: S
+                - generic [ref=e592]: S
+              - generic [ref=e593]:
+                - generic [ref=e594]:
+                  - generic "2026-03-02 · 0 min" [ref=e595]
+                  - generic "2026-03-03 · 0 min" [ref=e596]
+                  - generic "2026-03-04 · 0 min" [ref=e597]
+                  - generic "2026-03-05 · 0 min" [ref=e598]
+                  - generic "2026-03-06 · 0 min" [ref=e599]
+                  - generic "2026-03-07 · 0 min" [ref=e600]
+                  - generic "2026-03-08 · 0 min" [ref=e601]
+                - generic [ref=e602]:
+                  - generic "2026-03-09 · 0 min" [ref=e603]
+                  - generic "2026-03-10 · 0 min" [ref=e604]
+                  - generic "2026-03-11 · 0 min" [ref=e605]
+                  - generic "2026-03-12 · 0 min" [ref=e606]
+                  - generic "2026-03-13 · 0 min" [ref=e607]
+                  - generic "2026-03-14 · 0 min" [ref=e608]
+                  - generic "2026-03-15 · 0 min" [ref=e609]
+                - generic [ref=e610]:
+                  - generic "2026-03-16 · 0 min" [ref=e611]
+                  - generic "2026-03-17 · 0 min" [ref=e612]
+                  - generic "2026-03-18 · 0 min" [ref=e613]
+                  - generic "2026-03-19 · 0 min" [ref=e614]
+                  - generic "2026-03-20 · 0 min" [ref=e615]
+                  - generic "2026-03-21 · 0 min" [ref=e616]
+                  - generic "2026-03-22 · 0 min" [ref=e617]
+                - generic [ref=e618]:
+                  - generic "2026-03-23 · 0 min" [ref=e619]
+                  - generic "2026-03-24 · 0 min" [ref=e620]
+                  - generic "2026-03-25 · 0 min" [ref=e621]
+                  - generic "2026-03-26 · 0 min" [ref=e622]
+                  - generic "2026-03-27 · 0 min" [ref=e623]
+                  - generic "2026-03-28 · 0 min" [ref=e624]
+                  - generic "2026-03-29 · 0 min" [ref=e625]
+                - generic [ref=e626]:
+                  - generic "2026-03-30 · 0 min" [ref=e627]
+                  - generic "2026-03-31 · 0 min" [ref=e628]
+                  - generic "2026-04-01 · 0 min" [ref=e629]
+                  - generic "2026-04-02 · 0 min" [ref=e630]
+                  - generic "2026-04-03 · 0 min" [ref=e631]
+                  - generic "2026-04-04 · 0 min" [ref=e632]
+                  - generic "2026-04-05 · 0 min" [ref=e633]
+                - generic [ref=e634]:
+                  - generic "2026-04-06 · 0 min" [ref=e635]
+                  - generic "2026-04-07 · 0 min" [ref=e636]
+                  - generic "2026-04-08 · 0 min" [ref=e637]
+                  - generic "2026-04-09 · 0 min" [ref=e638]
+                  - generic "2026-04-10 · 0 min" [ref=e639]
+                  - generic "2026-04-11 · 0 min" [ref=e640]
+                  - generic "2026-04-12 · 0 min" [ref=e641]
+                - generic [ref=e642]:
+                  - generic "2026-04-13 · 0 min" [ref=e643]
+                  - generic "2026-04-14 · 0 min" [ref=e644]
+                  - generic "2026-04-15 · 0 min" [ref=e645]
+                  - generic "2026-04-16 · 0 min" [ref=e646]
+                  - generic "2026-04-17 · 0 min" [ref=e647]
+                  - generic "2026-04-18 · 0 min" [ref=e648]
+                  - generic "2026-04-19 · 0 min" [ref=e649]
+                - generic [ref=e650]:
+                  - generic "2026-04-20 · 0 min" [ref=e651]
+                  - generic "2026-04-21 · 0 min" [ref=e652]
+                  - generic "2026-04-22 · 0 min" [ref=e653]
+                  - generic "2026-04-23 · 0 min" [ref=e654]
+                  - generic "2026-04-24 · 0 min" [ref=e655]
+                  - generic "2026-04-25 · 0 min" [ref=e656]
+                  - generic "2026-04-26 · 0 min" [ref=e657]
+                - generic [ref=e658]:
+                  - generic "2026-04-27 · 0 min" [ref=e659]
+                  - generic "2026-04-28 · 0 min" [ref=e660]
+                  - generic "2026-04-29 · 0 min" [ref=e661]
+                  - generic "2026-04-30 · 0 min" [ref=e662]
+                  - generic "2026-05-01 · 0 min" [ref=e663]
+                  - generic "2026-05-02 · 0 min" [ref=e664]
+                  - generic "2026-05-03 · 0 min" [ref=e665]
+                - generic [ref=e666]:
+                  - generic "2026-05-04 · 0 min" [ref=e667]
+                  - generic "2026-05-05 · 0 min" [ref=e668]
+                  - generic "2026-05-06 · 0 min" [ref=e669]
+                  - generic "2026-05-07 · 0 min" [ref=e670]
+                  - generic "2026-05-08 · 0 min" [ref=e671]
+                  - generic "2026-05-09 · 0 min" [ref=e672]
+                  - generic "2026-05-10 · 0 min" [ref=e673]
+                - generic [ref=e674]:
+                  - generic "2026-05-11 · 0 min" [ref=e675]
+                  - generic "2026-05-12 · 0 min" [ref=e676]
+                  - generic "2026-05-13 · 0 min" [ref=e677]
+                  - generic "2026-05-14 · 0 min" [ref=e678]
+                  - generic "2026-05-15 · 0 min" [ref=e679]
+                  - generic "2026-05-16 · 0 min" [ref=e680]
+                  - generic "2026-05-17 · 0 min" [ref=e681]
+                - generic [ref=e682]:
+                  - generic "2026-05-18 · 0 min" [ref=e683]
+                  - generic "2026-05-19 · 0 min" [ref=e684]
+                  - generic "2026-05-20 · 0 min" [ref=e685]
+                  - generic "2026-05-21 · 0 min" [ref=e686]
+                  - generic "2026-05-22 · 0 min" [ref=e687]
+                  - generic "2026-05-23 · 0 min" [ref=e688]
+                  - generic "2026-05-24 · 0 min" [ref=e689]
+            - paragraph [ref=e690]: Darker cells represent more completed workout time for that day across the last 12 weeks.
+          - generic [ref=e691]:
+            - generic [ref=e692]:
+              - heading "Active plan" [level=2] [ref=e693]
+              - link "Open plan →" [ref=e694] [cursor=pointer]:
+                - /url: /home/plan
+            - generic [ref=e695]: No active plan yet. Create one to start tracking structured progress.
+        - generic [ref=e696]:
+          - generic [ref=e697]:
+            - heading "Workout history" [level=2] [ref=e698]
+            - generic [ref=e699]: Most recent first
+          - generic [ref=e700]: Your completed workouts will show up here once you finish your first session.
+  - button "Open Next.js Dev Tools" [ref=e170] [cursor=pointer]:
+    - img [ref=e171]
+  - alert [ref=e174]

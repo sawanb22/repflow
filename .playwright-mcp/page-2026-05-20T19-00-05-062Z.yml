@@ -1,0 +1,69 @@
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e29] [cursor=pointer]:
+    - img [ref=e30]
+  - alert [ref=e33]
+  - generic [ref=e38]:
+    - generic [ref=e39]:
+      - button "Change accent color" [ref=e42] [cursor=pointer]:
+        - generic [ref=e43]: Theme
+        - img [ref=e45]
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - img [ref=e172]
+          - generic [ref=e53]: goals?
+        - generic [ref=e54]:
+          - img [ref=e236]
+          - generic [ref=e59]: train?
+        - generic [ref=e60]:
+          - img [ref=e261]
+          - generic [ref=e65]: access?
+        - generic [ref=e66]:
+          - img [ref=e300]
+          - generic [ref=e71]: schedule?
+        - generic [ref=e72]:
+          - img [ref=e341]
+          - generic [ref=e77]: level?
+        - generic [ref=e78]:
+          - generic [ref=e82]: "6"
+          - generic [ref=e83]: considerations?
+        - generic [ref=e84]:
+          - generic [ref=e88]: "7"
+          - generic [ref=e89]: Done
+    - generic [ref=e344]:
+      - generic [ref=e345]:
+        - heading "Any physical considerations?" [level=2] [ref=e346]
+        - paragraph [ref=e347]: Optional — skip if nothing applies
+        - paragraph [ref=e348]: This helps us keep you safe and suggest modifications.
+      - generic [ref=e351]:
+        - button "Knee Pain Discomfort or injury in knees" [ref=e352] [cursor=pointer]:
+          - generic [ref=e353]:
+            - generic [ref=e354]: Knee Pain
+            - generic [ref=e355]: Discomfort or injury in knees
+        - button "Back Pain Lower or upper back issues" [ref=e356] [cursor=pointer]:
+          - generic [ref=e357]:
+            - generic [ref=e358]: Back Pain
+            - generic [ref=e359]: Lower or upper back issues
+        - button "Shoulder Pain Rotator cuff, impingement" [ref=e360] [cursor=pointer]:
+          - generic [ref=e361]:
+            - generic [ref=e362]: Shoulder Pain
+            - generic [ref=e363]: Rotator cuff, impingement
+        - button "Limited Mobility Restricted range of motion" [ref=e364] [cursor=pointer]:
+          - generic [ref=e365]:
+            - generic [ref=e366]: Limited Mobility
+            - generic [ref=e367]: Restricted range of motion
+        - button "Recovering from Injury Post-surgery or recent injury" [ref=e368] [cursor=pointer]:
+          - generic [ref=e369]:
+            - generic [ref=e370]: Recovering from Injury
+            - generic [ref=e371]: Post-surgery or recent injury
+        - button "Pregnancy Prenatal-safe modifications" [ref=e372] [cursor=pointer]:
+          - generic [ref=e373]:
+            - generic [ref=e374]: Pregnancy
+            - generic [ref=e375]: Prenatal-safe modifications
+      - generic [ref=e376]:
+        - button "Back" [ref=e377]:
+          - img [ref=e378]
+          - text: Back
+        - button "Skip" [ref=e380]
+        - button "Next" [ref=e381]:
+          - text: Next
+          - img [ref=e382]

@@ -1,12 +1,11 @@
 "use client";
 
+import { motion } from "framer-motion";
 import type { ComponentType, SVGProps } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   BarChart3,
-  Bell,
-  CalendarDays,
   Dumbbell,
   LayoutDashboard,
   MoreVertical,
@@ -56,7 +55,7 @@ const navItems: NavItem[] = [
     label: "Workouts",
     href: "/home/plan",
     icon: Dumbbell,
-    isActive: (pathname) => pathname.startsWith("/home/plan"),
+    isActive: (pathname) => pathname.startsWith("/home/plan") || pathname.startsWith("/home/workout") || pathname.startsWith("/home/complete"),
   },
   {
     label: "Progress",
@@ -64,22 +63,9 @@ const navItems: NavItem[] = [
     icon: BarChart3,
     isActive: (pathname) => pathname.startsWith("/home/progress"),
   },
-  {
-    label: "Schedule",
-    href: "/home/schedule",
-    icon: CalendarDays,
-    isActive: (pathname) => pathname.startsWith("/home/schedule"),
-  },
 ];
 
 const secondaryNavItems: NavItem[] = [
-  {
-    label: "Notifications",
-    href: "/home/notifications",
-    icon: Bell,
-    isActive: (pathname) => pathname.startsWith("/home/notifications"),
-    showIndicator: true,
-  },
   {
     label: "Settings",
     href: "/home/settings",
@@ -101,9 +87,9 @@ const avatarBorder = "calc(var(--space-1) / 2 - var(--space-1) / 8) solid var(--
 
 function navItemClasses(active: boolean) {
   return [
-    "group relative flex items-center font-medium",
+    "group relative flex items-center font-medium overflow-hidden",
     active
-      ? "bg-[var(--color-accent-dim)] text-[var(--color-accent)]"
+      ? "text-[var(--color-accent)]"
       : "text-[var(--color-text-secondary)] hover:bg-[var(--bg-2)] hover:text-[var(--color-text-primary)]",
   ].join(" ");
 }
@@ -125,12 +111,24 @@ function SidebarNavLink({ item, pathname }: { item: NavItem; pathname: string })
         transition: "var(--transition-fast)",
       }}
     >
-      <Icon className="shrink-0" style={{ width: "18px", height: "18px" }} />
-      <span>{item.label}</span>
+      {active ? (
+        <motion.span
+          layoutId="sidebar-active-indicator"
+          aria-hidden="true"
+          className="absolute inset-0"
+          style={{
+            borderRadius: mediumRadius,
+            background: "var(--color-accent-dim)",
+          }}
+          transition={{ duration: 0.15, ease: "easeOut" }}
+        />
+      ) : null}
+      <Icon className="relative z-[1] shrink-0" style={{ width: "18px", height: "18px" }} />
+      <span className="relative z-[1]">{item.label}</span>
       {item.showIndicator ? (
         <span
           aria-hidden="true"
-          className="absolute"
+          className="absolute z-[1]"
           style={{
             top: "calc(var(--space-2) - var(--space-1) / 4)",
             right: "calc(var(--space-3) - var(--space-1) / 4)",

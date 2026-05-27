@@ -1,0 +1,107 @@
+- generic [ref=e2]:
+  - complementary [ref=e3]:
+    - generic [ref=e4]: RepFlow
+    - navigation [ref=e5]:
+      - link "Dashboard" [ref=e6] [cursor=pointer]:
+        - /url: /home
+        - img [ref=e8]
+        - generic [ref=e13]: Dashboard
+      - link "Exercises" [ref=e14] [cursor=pointer]:
+        - /url: /home/browse
+        - img [ref=e15]
+        - generic [ref=e18]: Exercises
+      - link "Workouts" [ref=e19] [cursor=pointer]:
+        - /url: /home/plan
+        - img [ref=e20]
+        - generic [ref=e26]: Workouts
+      - link "Progress" [ref=e27] [cursor=pointer]:
+        - /url: /home/progress
+        - img [ref=e28]
+        - generic [ref=e30]: Progress
+      - link "Settings" [ref=e32] [cursor=pointer]:
+        - /url: /home/settings
+        - img [ref=e33]
+        - generic [ref=e36]: Settings
+    - generic [ref=e37]:
+      - generic [ref=e38]:
+        - generic [ref=e39]: Current Plan
+        - generic [ref=e40]: No active plan
+        - generic [ref=e42]: Create a plan to start tracking workouts
+      - link "BH Bhardwaj0sawan Beginner Member" [ref=e43] [cursor=pointer]:
+        - /url: /home/settings
+        - generic [ref=e44]: BH
+        - generic [ref=e45]:
+          - generic [ref=e46]: Bhardwaj0sawan
+          - generic [ref=e47]: Beginner Member
+        - img [ref=e48]
+  - main [ref=e52]:
+    - generic [ref=e54]:
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - paragraph [ref=e57]: Good morning
+          - heading "bhardwaj0sawan" [level=1] [ref=e58]
+        - generic [ref=e59]:
+          - button "Change accent color" [ref=e61] [cursor=pointer]:
+            - generic [ref=e62]: Theme
+            - img [ref=e64]
+          - link "Open settings" [ref=e66] [cursor=pointer]:
+            - /url: /home/settings
+            - img [ref=e67]
+      - generic [ref=e70]:
+        - generic [ref=e71]:
+          - img [ref=e73]
+          - generic [ref=e75]:
+            - generic [ref=e76]: "1"
+            - generic [ref=e77]: Day streak
+        - generic [ref=e78]:
+          - img [ref=e80]
+          - generic [ref=e82]:
+            - generic [ref=e83]: "1"
+            - generic [ref=e84]: Workouts done
+        - generic [ref=e85]:
+          - img [ref=e87]
+          - generic [ref=e90]:
+            - generic [ref=e91]: 1m
+            - generic [ref=e92]: This week
+      - generic [ref=e95]:
+        - generic [ref=e96]: Today · No Active Plan
+        - heading "Build Your Weekly Plan" [level=2] [ref=e97]
+        - paragraph [ref=e98]: Auto-generate a weekly plan from your preferences
+        - generic [ref=e99]:
+          - button "Build Plan" [ref=e100]:
+            - generic [ref=e101]:
+              - img [ref=e102]
+              - text: Build Plan
+          - generic [ref=e104]:
+            - generic [ref=e105]: Lose Fat
+            - generic [ref=e106]: Home
+            - generic [ref=e107]: 3 Days / Week
+      - generic [ref=e108]:
+        - heading "Weekly Activity" [level=2] [ref=e109]
+        - link "Full history →" [ref=e110] [cursor=pointer]:
+          - /url: /home/progress
+      - generic [ref=e111]:
+        - generic [ref=e113]: S
+        - generic [ref=e115]: S
+        - generic [ref=e117]: M
+        - generic [ref=e119]: T
+        - generic [ref=e121]: W
+        - generic [ref=e123]: T
+        - generic [ref=e125]: F
+      - generic [ref=e126]:
+        - heading "Home Workouts For You" [level=2] [ref=e127]
+        - link "Browse all →" [ref=e128] [cursor=pointer]:
+          - /url: /home/browse
+      - generic [ref=e129]:
+        - link "Push-Up Push-Up beginner" [ref=e130] [cursor=pointer]:
+          - /url: /home/exercise/push-up
+          - img "Push-Up" [ref=e132]
+          - generic [ref=e133]:
+            - generic [ref=e134]: Push-Up
+            - generic [ref=e135]: beginner
+        - link "Plank Plank beginner" [ref=e136] [cursor=pointer]:
+          - /url: /home/exercise/plank
+          - img "Plank" [ref=e138]
+          - generic [ref=e139]:
+            - generic [ref=e140]: Plank
+            - generic [ref=e141]: beginner

@@ -2,9 +2,23 @@
 
 import Image from "next/image";
 import type { ReactNode } from "react";
-import { useState } from "react";
 
-const IMAGE_EXTS = ["jpg", "png"] as const;
+const LOCAL_PNG_SLUGS = [
+  "banded-hip-extension",
+  "banded-pull-apart",
+  "banded-squat",
+  "bicep-curl",
+  "bodyweight-squat",
+  "boxer-step-jump-rope",
+  "dumbbell-goblet-squat",
+  "dumbbell-romanian-deadlift",
+  "high-knees-jump-rope",
+  "jump-rope-basic",
+  "kettlebell-goblet-squat",
+  "kettlebell-high-pull",
+  "kettlebell-swing",
+  "plank",
+];
 
 type Props = {
   slug: string;
@@ -29,16 +43,15 @@ export function ExerciseMedia({
   mode = "video-first",
   fallback,
 }: Props) {
-  const [failedSources, setFailedSources] = useState<Record<string, number>>({});
-  const sourceKey = `${slug}:${mode}`;
-  const extIndex = failedSources[sourceKey] ?? 0;
-
   if (mode === "video-first" && videoUrl) {
     return (
       <div className={frameClassName(className)}>
         <video
           src={videoUrl}
-          controls
+          autoPlay
+          loop
+          muted
+          playsInline
           className="h-full w-full object-cover"
           preload="metadata"
         />
@@ -46,19 +59,16 @@ export function ExerciseMedia({
     );
   }
 
-  if (extIndex < IMAGE_EXTS.length) {
+  if (LOCAL_PNG_SLUGS.includes(slug)) {
     return (
       <div className={frameClassName(className)}>
         <Image
-          src={`/exercises/${slug}.${IMAGE_EXTS[extIndex]}`}
+          src={`/exercises/${slug}.png`}
           alt={alt}
           fill
           sizes={sizes}
           className="object-cover"
-          onError={() => setFailedSources((current) => ({
-            ...current,
-            [sourceKey]: (current[sourceKey] ?? 0) + 1,
-          }))}
+          priority={false}
         />
       </div>
     );

@@ -1,0 +1,121 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e4]: RepFlow
+      - navigation [ref=e5]:
+        - link "Dashboard" [ref=e6] [cursor=pointer]:
+          - /url: /home
+          - img [ref=e7]
+          - generic [ref=e12]: Dashboard
+        - link "Exercises" [ref=e13] [cursor=pointer]:
+          - /url: /home/browse
+          - img [ref=e14]
+          - generic [ref=e17]: Exercises
+        - link "Workouts" [ref=e18] [cursor=pointer]:
+          - /url: /home/plan
+          - img [ref=e19]
+          - generic [ref=e25]: Workouts
+        - link "Progress" [ref=e26] [cursor=pointer]:
+          - /url: /home/progress
+          - img [ref=e27]
+          - generic [ref=e29]: Progress
+        - link "Settings" [ref=e31] [cursor=pointer]:
+          - /url: /home/settings
+          - img [ref=e32]
+          - generic [ref=e35]: Settings
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - generic [ref=e38]: Current Plan
+          - generic [ref=e39]: No active plan
+          - generic [ref=e41]: Create a plan to start tracking workouts
+        - link "BH Bhardwaj0sawan Beginner Member" [ref=e42] [cursor=pointer]:
+          - /url: /home/settings
+          - generic [ref=e43]: BH
+          - generic [ref=e44]:
+            - generic [ref=e45]: Bhardwaj0sawan
+            - generic [ref=e46]: Beginner Member
+          - img [ref=e47]
+    - main [ref=e51]:
+      - generic [ref=e148]:
+        - link "Back to plan" [ref=e149] [cursor=pointer]:
+          - /url: /home/plan
+          - img [ref=e150]
+          - text: Back to plan
+        - generic [ref=e152]:
+          - generic [ref=e153]:
+            - generic [ref=e154]: Active Workout
+            - heading "Banded Hip Extension" [level=1] [ref=e155]
+            - paragraph [ref=e156]: Exercise 1 of 1
+          - generic [ref=e157]:
+            - generic [ref=e158]: 0/1
+            - generic [ref=e159]: Exercises complete
+        - generic [ref=e162]:
+          - generic [ref=e163]:
+            - img "Banded Hip Extension" [ref=e165]
+            - generic [ref=e166]:
+              - generic [ref=e167]:
+                - generic [ref=e168]: "3"
+                - generic [ref=e169]: Sets
+              - generic [ref=e170]:
+                - generic [ref=e171]: 10 steps each way
+                - generic [ref=e172]: Reps
+              - generic [ref=e173]:
+                - generic [ref=e174]: 45s
+                - generic [ref=e175]: Rest
+          - generic [ref=e176]:
+            - generic [ref=e177]:
+              - generic [ref=e178]:
+                - generic [ref=e179]:
+                  - generic [ref=e180]: Set tracker
+                  - generic [ref=e181]: Tap a set to mark progress and trigger the rest timer.
+                - img [ref=e182]
+              - generic [ref=e185]:
+                - button "Set 1 10 steps each way" [ref=e186]:
+                  - generic [ref=e187]: Set 1
+                  - generic [ref=e188]: 10 steps each way
+                - button "Set 2 10 steps each way" [ref=e189]:
+                  - generic [ref=e190]: Set 2
+                  - generic [ref=e191]: 10 steps each way
+                - button "Set 3 10 steps each way" [ref=e192]:
+                  - generic [ref=e193]: Set 3
+                  - generic [ref=e194]: 10 steps each way
+            - generic [ref=e195]:
+              - generic [ref=e196]:
+                - generic [ref=e197]:
+                  - img [ref=e198]
+                  - generic [ref=e201]: Rest timer
+                - generic [ref=e202]: 45s
+                - generic [ref=e203]:
+                  - button "Restart" [ref=e204]:
+                    - img [ref=e205]
+                    - text: Restart
+                  - button "Clear" [ref=e207]:
+                    - img [ref=e208]
+                    - text: Clear
+              - generic [ref=e210]:
+                - generic [ref=e212]: Next exercise
+                - generic [ref=e213]: This is the last exercise. Finish strong and complete the workout.
+            - generic [ref=e214]:
+              - generic [ref=e215]: Optional tracking
+              - generic [ref=e216]:
+                - generic [ref=e217]:
+                  - generic [ref=e218]: Reps done
+                  - textbox [ref=e219]: 10 steps each way
+                - generic [ref=e220]:
+                  - generic [ref=e221]: Weight
+                  - textbox "Optional" [ref=e222]
+            - generic [ref=e223]:
+              - button "Skip to Finish" [ref=e224]:
+                - img [ref=e225]
+                - text: Skip to Finish
+              - button "Complete Workout" [ref=e227]:
+                - img [ref=e228]
+                - text: Complete Workout
+  - button "Open Next.js Dev Tools" [ref=e230] [cursor=pointer]:
+    - generic [ref=e233]:
+      - text: Rendering
+      - generic [ref=e234]:
+        - generic [ref=e235]: .
+        - generic [ref=e236]: .
+        - generic [ref=e237]: .
+  - alert [ref=e139]

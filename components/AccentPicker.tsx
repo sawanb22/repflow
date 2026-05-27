@@ -18,8 +18,6 @@ export function AccentPicker() {
     return () => document.removeEventListener('mousedown', handler);
   }, []);
 
-  const currentAccent = ACCENTS[accent];
-
   return (
     <div ref={ref} style={{ position: 'relative' }}>
 
@@ -53,7 +51,7 @@ export function AccentPicker() {
           width: '14px',
           height: '14px',
           borderRadius: '50%',
-          background: currentAccent.hex,
+          background: 'var(--color-accent)',
           border: '1.5px solid rgba(255,255,255,0.25)',
           display: 'inline-block',
           flexShrink: 0,

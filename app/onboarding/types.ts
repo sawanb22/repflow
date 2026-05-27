@@ -1,3 +1,4 @@
+import type { ComponentType } from "react";
 import type { LucideIcon } from "lucide-react";
 import type { FitnessGoal, TrainingStyle, ExperienceLevel, Limitation } from "@/types/database";
 
@@ -26,7 +27,7 @@ export interface StepConfig {
   description?: string;
   fields: string[];
   skippable?: boolean;
-  component: React.ComponentType<StepProps>;
+  component: ComponentType<StepProps>;
 }
 
 export interface StepProps {

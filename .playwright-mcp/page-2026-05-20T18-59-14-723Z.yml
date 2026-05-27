@@ -1,0 +1,50 @@
+- generic [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e29] [cursor=pointer]:
+    - img [ref=e30]
+  - alert [ref=e33]
+  - generic [ref=e38]:
+    - generic [ref=e39]:
+      - button "Change accent color" [ref=e42] [cursor=pointer]:
+        - generic [ref=e43]: Theme
+        - img [ref=e45]
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - img [ref=e172]
+          - generic [ref=e53]: goals?
+        - generic [ref=e54]:
+          - img [ref=e236]
+          - generic [ref=e59]: train?
+        - generic [ref=e60]:
+          - generic [ref=e64]: "3"
+          - generic [ref=e65]: access?
+        - generic [ref=e66]:
+          - generic [ref=e70]: "4"
+          - generic [ref=e71]: schedule?
+        - generic [ref=e72]:
+          - generic [ref=e76]: "5"
+          - generic [ref=e77]: level?
+        - generic [ref=e78]:
+          - generic [ref=e82]: "6"
+          - generic [ref=e83]: considerations?
+        - generic [ref=e84]:
+          - generic [ref=e88]: "7"
+          - generic [ref=e89]: Done
+    - generic [ref=e239]:
+      - generic [ref=e240]:
+        - heading "What equipment can you access?" [level=2] [ref=e241]
+        - paragraph [ref=e242]: Select everything you have
+        - paragraph [ref=e243]: Even just your body is enough — we'll work with what you've got.
+      - generic [ref=e246]:
+        - button "Bodyweight Only" [active] [ref=e247]
+        - button "Dumbbells" [ref=e248]
+        - button "Resistance Bands" [ref=e249]
+        - button "Kettlebell" [ref=e250]
+        - button "Jump Rope" [ref=e251]
+        - button "Full Gym" [ref=e252]
+      - generic [ref=e253]:
+        - button "Back" [ref=e254]:
+          - img [ref=e255]
+          - text: Back
+        - button "Next" [ref=e257]:
+          - text: Next
+          - img [ref=e258]

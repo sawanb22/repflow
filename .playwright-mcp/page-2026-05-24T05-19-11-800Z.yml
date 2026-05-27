@@ -1,0 +1,661 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e4]: RepFlow
+      - navigation [ref=e5]:
+        - link "Dashboard" [ref=e6] [cursor=pointer]:
+          - /url: /home
+          - img [ref=e7]
+          - generic [ref=e12]: Dashboard
+        - link "Exercises" [ref=e13] [cursor=pointer]:
+          - /url: /home/browse
+          - img [ref=e15]
+          - generic [ref=e18]: Exercises
+        - link "Workouts" [ref=e19] [cursor=pointer]:
+          - /url: /home/plan
+          - img [ref=e20]
+          - generic [ref=e26]: Workouts
+        - link "Progress" [ref=e27] [cursor=pointer]:
+          - /url: /home/progress
+          - img [ref=e28]
+          - generic [ref=e30]: Progress
+        - link "Settings" [ref=e32] [cursor=pointer]:
+          - /url: /home/settings
+          - img [ref=e33]
+          - generic [ref=e36]: Settings
+      - generic [ref=e37]:
+        - generic [ref=e38]:
+          - generic [ref=e39]: Current Plan
+          - generic [ref=e40]: Fat Loss Flow
+          - generic [ref=e43]: 3 days scheduled · 67% complete
+        - link "BH Bhardwaj0sawan Beginner Member" [ref=e44] [cursor=pointer]:
+          - /url: /home/settings
+          - generic [ref=e45]: BH
+          - generic [ref=e46]:
+            - generic [ref=e47]: Bhardwaj0sawan
+            - generic [ref=e48]: Beginner Member
+          - img [ref=e49]
+    - main [ref=e53]:
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - button "Home" [pressed] [ref=e57] [cursor=pointer]
+          - button "Gym" [ref=e58] [cursor=pointer]
+          - button "Both" [ref=e59] [cursor=pointer]
+        - generic [ref=e60]:
+          - img [ref=e61]
+          - textbox "Search exercises" [ref=e64]:
+            - /placeholder: Search exercises, muscles, equipment…
+          - img [ref=e65] [cursor=pointer]
+        - generic [ref=e66]:
+          - button "All" [pressed] [ref=e67]
+          - button "Bodyweight" [ref=e68]
+          - button "Dumbbells" [ref=e69]
+          - button "Kettlebell" [ref=e70]
+          - button "Barbell" [ref=e71]
+          - button "Resistance Band" [ref=e72]
+          - button "Cable" [ref=e73]
+          - button "Machine" [ref=e74]
+        - generic [ref=e75]:
+          - link "Alternating Foot Jump Rope Jump Rope intermediate" [ref=e76] [cursor=pointer]:
+            - /url: /home/exercise/alternating-foot-jump-rope
+            - img [ref=e78]
+            - generic [ref=e85]:
+              - generic [ref=e86]: Alternating Foot Jump Rope
+              - generic [ref=e87]:
+                - generic [ref=e88]:
+                  - img [ref=e89]
+                  - text: Jump Rope
+                - generic [ref=e95]: intermediate
+          - link "Banded Bicep Curl Resistance Band beginner" [ref=e96] [cursor=pointer]:
+            - /url: /home/exercise/banded-bicep-curl
+            - img [ref=e98]
+            - generic [ref=e105]:
+              - generic [ref=e106]: Banded Bicep Curl
+              - generic [ref=e107]:
+                - generic [ref=e108]:
+                  - img [ref=e109]
+                  - text: Resistance Band
+                - generic [ref=e115]: beginner
+          - link "Banded Chest Press Resistance Band intermediate" [ref=e116] [cursor=pointer]:
+            - /url: /home/exercise/banded-chest-press
+            - img [ref=e118]
+            - generic [ref=e125]:
+              - generic [ref=e126]: Banded Chest Press
+              - generic [ref=e127]:
+                - generic [ref=e128]:
+                  - img [ref=e129]
+                  - text: Resistance Band
+                - generic [ref=e135]: intermediate
+          - link "Banded Glute Bridge Resistance Band intermediate" [ref=e136] [cursor=pointer]:
+            - /url: /home/exercise/banded-glute-bridge
+            - img [ref=e138]
+            - generic [ref=e145]:
+              - generic [ref=e146]: Banded Glute Bridge
+              - generic [ref=e147]:
+                - generic [ref=e148]:
+                  - img [ref=e149]
+                  - text: Resistance Band
+                - generic [ref=e155]: intermediate
+          - link "Banded Hip Extension Banded Hip Extension Resistance Bands beginner" [ref=e156] [cursor=pointer]:
+            - /url: /home/exercise/banded-hip-extension
+            - img "Banded Hip Extension" [ref=e158]
+            - generic [ref=e159]:
+              - generic [ref=e160]: Banded Hip Extension
+              - generic [ref=e161]:
+                - generic [ref=e162]:
+                  - img [ref=e163]
+                  - text: Resistance Bands
+                - generic [ref=e169]: beginner
+          - link "Banded Lateral Walk Resistance Band intermediate" [ref=e170] [cursor=pointer]:
+            - /url: /home/exercise/banded-lateral-walk
+            - img [ref=e172]
+            - generic [ref=e179]:
+              - generic [ref=e180]: Banded Lateral Walk
+              - generic [ref=e181]:
+                - generic [ref=e182]:
+                  - img [ref=e183]
+                  - text: Resistance Band
+                - generic [ref=e189]: intermediate
+          - link "Banded Overhead Press Resistance Band beginner" [ref=e190] [cursor=pointer]:
+            - /url: /home/exercise/banded-overhead-press
+            - img [ref=e192]
+            - generic [ref=e199]:
+              - generic [ref=e200]: Banded Overhead Press
+              - generic [ref=e201]:
+                - generic [ref=e202]:
+                  - img [ref=e203]
+                  - text: Resistance Band
+                - generic [ref=e209]: beginner
+          - link "Banded Pull-Apart Banded Pull-Apart Resistance Bands beginner" [ref=e210] [cursor=pointer]:
+            - /url: /home/exercise/banded-pull-apart
+            - img "Banded Pull-Apart" [ref=e212]
+            - generic [ref=e213]:
+              - generic [ref=e214]: Banded Pull-Apart
+              - generic [ref=e215]:
+                - generic [ref=e216]:
+                  - img [ref=e217]
+                  - text: Resistance Bands
+                - generic [ref=e223]: beginner
+          - link "Banded Seated Row Resistance Band beginner" [ref=e224] [cursor=pointer]:
+            - /url: /home/exercise/banded-seated-row
+            - img [ref=e226]
+            - generic [ref=e233]:
+              - generic [ref=e234]: Banded Seated Row
+              - generic [ref=e235]:
+                - generic [ref=e236]:
+                  - img [ref=e237]
+                  - text: Resistance Band
+                - generic [ref=e243]: beginner
+          - link "Banded Squat Banded Squat Bodyweight beginner" [ref=e244] [cursor=pointer]:
+            - /url: /home/exercise/banded-squat
+            - img "Banded Squat" [ref=e246]
+            - generic [ref=e247]:
+              - generic [ref=e248]: Banded Squat
+              - generic [ref=e249]:
+                - generic [ref=e250]:
+                  - img [ref=e251]
+                  - text: Bodyweight
+                - generic [ref=e254]: beginner
+          - link "Banded Triceps Pushdown Resistance Band beginner" [ref=e255] [cursor=pointer]:
+            - /url: /home/exercise/banded-triceps-pushdown
+            - img [ref=e257]
+            - generic [ref=e264]:
+              - generic [ref=e265]: Banded Triceps Pushdown
+              - generic [ref=e266]:
+                - generic [ref=e267]:
+                  - img [ref=e268]
+                  - text: Resistance Band
+                - generic [ref=e274]: beginner
+          - link "Bear Crawl None intermediate" [ref=e275] [cursor=pointer]:
+            - /url: /home/exercise/bear-crawl
+            - img [ref=e277]
+            - generic [ref=e284]:
+              - generic [ref=e285]: Bear Crawl
+              - generic [ref=e286]:
+                - generic [ref=e287]:
+                  - img [ref=e288]
+                  - text: None
+                - generic [ref=e294]: intermediate
+          - link "Bicep Curl Bicep Curl Bodyweight advanced" [ref=e295] [cursor=pointer]:
+            - /url: /home/exercise/bicep-curl
+            - img "Bicep Curl" [ref=e297]
+            - generic [ref=e298]:
+              - generic [ref=e299]: Bicep Curl
+              - generic [ref=e300]:
+                - generic [ref=e301]:
+                  - img [ref=e302]
+                  - text: Bodyweight
+                - generic [ref=e305]: advanced
+          - link "Bodyweight Squat Bodyweight Squat Bodyweight beginner" [ref=e306] [cursor=pointer]:
+            - /url: /home/exercise/bodyweight-squat
+            - img "Bodyweight Squat" [ref=e308]
+            - generic [ref=e309]:
+              - generic [ref=e310]: Bodyweight Squat
+              - generic [ref=e311]:
+                - generic [ref=e312]:
+                  - img [ref=e313]
+                  - text: Bodyweight
+                - generic [ref=e316]: beginner
+          - link "Boxer Step Jump Rope Boxer Step Jump Rope Bodyweight intermediate" [ref=e317] [cursor=pointer]:
+            - /url: /home/exercise/boxer-step-jump-rope
+            - img "Boxer Step Jump Rope" [ref=e319]
+            - generic [ref=e320]:
+              - generic [ref=e321]: Boxer Step Jump Rope
+              - generic [ref=e322]:
+                - generic [ref=e323]:
+                  - img [ref=e324]
+                  - text: Bodyweight
+                - generic [ref=e327]: intermediate
+          - link "Burpees Burpees None advanced" [ref=e328] [cursor=pointer]:
+            - /url: /home/exercise/burpees
+            - img "Burpees" [ref=e330]
+            - generic [ref=e331]:
+              - generic [ref=e332]: Burpees
+              - generic [ref=e333]:
+                - generic [ref=e334]:
+                  - img [ref=e335]
+                  - text: None
+                - generic [ref=e341]: advanced
+          - link "Chin-up Chin-up Pull-up Bar intermediate" [ref=e342] [cursor=pointer]:
+            - /url: /home/exercise/chin-up
+            - img "Chin-up" [ref=e344]
+            - generic [ref=e345]:
+              - generic [ref=e346]: Chin-up
+              - generic [ref=e347]:
+                - generic [ref=e348]:
+                  - img [ref=e349]
+                  - text: Pull-up Bar
+                - generic [ref=e355]: intermediate
+          - link "Double Unders Double Unders Jump Rope advanced" [ref=e356] [cursor=pointer]:
+            - /url: /home/exercise/double-unders
+            - img "Double Unders" [ref=e358]
+            - generic [ref=e359]:
+              - generic [ref=e360]: Double Unders
+              - generic [ref=e361]:
+                - generic [ref=e362]:
+                  - img [ref=e363]
+                  - text: Jump Rope
+                - generic [ref=e369]: advanced
+          - link "Dumbbell Bent Over Row Dumbbell Bent Over Row Dumbbells intermediate" [ref=e370] [cursor=pointer]:
+            - /url: /home/exercise/dumbbell-bent-over-row
+            - img "Dumbbell Bent Over Row" [ref=e372]
+            - generic [ref=e373]:
+              - generic [ref=e374]: Dumbbell Bent Over Row
+              - generic [ref=e375]:
+                - generic [ref=e376]:
+                  - img [ref=e377]
+                  - text: Dumbbells
+                - generic [ref=e383]: intermediate
+          - link "Dumbbell Calf Raise Dumbbell Calf Raise Dumbbells beginner" [ref=e384] [cursor=pointer]:
+            - /url: /home/exercise/dumbbell-calf-raise
+            - img "Dumbbell Calf Raise" [ref=e386]
+            - generic [ref=e387]:
+              - generic [ref=e388]: Dumbbell Calf Raise
+              - generic [ref=e389]:
+                - generic [ref=e390]:
+                  - img [ref=e391]
+                  - text: Dumbbells
+                - generic [ref=e397]: beginner
+          - link "Dumbbell Floor Press Dumbbell Floor Press Dumbbells beginner" [ref=e398] [cursor=pointer]:
+            - /url: /home/exercise/dumbbell-floor-press
+            - img "Dumbbell Floor Press" [ref=e400]
+            - generic [ref=e401]:
+              - generic [ref=e402]: Dumbbell Floor Press
+              - generic [ref=e403]:
+                - generic [ref=e404]:
+                  - img [ref=e405]
+                  - text: Dumbbells
+                - generic [ref=e411]: beginner
+          - link "Dumbbell Forward Lunge Dumbbell Forward Lunge Dumbbells beginner" [ref=e412] [cursor=pointer]:
+            - /url: /home/exercise/dumbbell-forward-lunge
+            - img "Dumbbell Forward Lunge" [ref=e414]
+            - generic [ref=e415]:
+              - generic [ref=e416]: Dumbbell Forward Lunge
+              - generic [ref=e417]:
+                - generic [ref=e418]:
+                  - img [ref=e419]
+                  - text: Dumbbells
+                - generic [ref=e425]: beginner
+          - link "Dumbbell Goblet Squat Dumbbell Goblet Squat Dumbbells intermediate" [ref=e426] [cursor=pointer]:
+            - /url: /home/exercise/dumbbell-goblet-squat
+            - img "Dumbbell Goblet Squat" [ref=e428]
+            - generic [ref=e429]:
+              - generic [ref=e430]: Dumbbell Goblet Squat
+              - generic [ref=e431]:
+                - generic [ref=e432]:
+                  - img [ref=e433]
+                  - text: Dumbbells
+                - generic [ref=e439]: intermediate
+          - link "Dumbbell Lateral Raise Dumbbell Lateral Raise Dumbbells intermediate" [ref=e440] [cursor=pointer]:
+            - /url: /home/exercise/dumbbell-lateral-raise
+            - img "Dumbbell Lateral Raise" [ref=e442]
+            - generic [ref=e443]:
+              - generic [ref=e444]: Dumbbell Lateral Raise
+              - generic [ref=e445]:
+                - generic [ref=e446]:
+                  - img [ref=e447]
+                  - text: Dumbbells
+                - generic [ref=e453]: intermediate
+          - link "Dumbbell Overhead Press Dumbbell Overhead Press Dumbbells intermediate" [ref=e454] [cursor=pointer]:
+            - /url: /home/exercise/dumbbell-overhead-press
+            - img "Dumbbell Overhead Press" [ref=e456]
+            - generic [ref=e457]:
+              - generic [ref=e458]: Dumbbell Overhead Press
+              - generic [ref=e459]:
+                - generic [ref=e460]:
+                  - img [ref=e461]
+                  - text: Dumbbells
+                - generic [ref=e467]: intermediate
+          - link "Dumbbell Renegade Row Dumbbell Renegade Row Dumbbells advanced" [ref=e468] [cursor=pointer]:
+            - /url: /home/exercise/dumbbell-renegade-row
+            - img "Dumbbell Renegade Row" [ref=e470]
+            - generic [ref=e471]:
+              - generic [ref=e472]: Dumbbell Renegade Row
+              - generic [ref=e473]:
+                - generic [ref=e474]:
+                  - img [ref=e475]
+                  - text: Dumbbells
+                - generic [ref=e481]: advanced
+          - link "Dumbbell Reverse Fly Dumbbell Reverse Fly Dumbbells intermediate" [ref=e482] [cursor=pointer]:
+            - /url: /home/exercise/dumbbell-reverse-fly
+            - img "Dumbbell Reverse Fly" [ref=e484]
+            - generic [ref=e485]:
+              - generic [ref=e486]: Dumbbell Reverse Fly
+              - generic [ref=e487]:
+                - generic [ref=e488]:
+                  - img [ref=e489]
+                  - text: Dumbbells
+                - generic [ref=e495]: intermediate
+          - link "Dumbbell Romanian Deadlift Dumbbell Romanian Deadlift Dumbbells intermediate" [ref=e496] [cursor=pointer]:
+            - /url: /home/exercise/dumbbell-romanian-deadlift
+            - img "Dumbbell Romanian Deadlift" [ref=e498]
+            - generic [ref=e499]:
+              - generic [ref=e500]: Dumbbell Romanian Deadlift
+              - generic [ref=e501]:
+                - generic [ref=e502]:
+                  - img [ref=e503]
+                  - text: Dumbbells
+                - generic [ref=e509]: intermediate
+          - link "Dumbbell Shrugs Dumbbell Shrugs Dumbbells beginner" [ref=e510] [cursor=pointer]:
+            - /url: /home/exercise/dumbbell-shrugs
+            - img "Dumbbell Shrugs" [ref=e512]
+            - generic [ref=e513]:
+              - generic [ref=e514]: Dumbbell Shrugs
+              - generic [ref=e515]:
+                - generic [ref=e516]:
+                  - img [ref=e517]
+                  - text: Dumbbells
+                - generic [ref=e523]: beginner
+          - link "Dumbbell Step-up Dumbbell Step-up Dumbbells intermediate" [ref=e524] [cursor=pointer]:
+            - /url: /home/exercise/dumbbell-step-up
+            - img "Dumbbell Step-up" [ref=e526]
+            - generic [ref=e527]:
+              - generic [ref=e528]: Dumbbell Step-up
+              - generic [ref=e529]:
+                - generic [ref=e530]:
+                  - img [ref=e531]
+                  - text: Dumbbells
+                - generic [ref=e537]: intermediate
+          - link "Dumbbell Thruster Dumbbell Thruster Dumbbells advanced" [ref=e538] [cursor=pointer]:
+            - /url: /home/exercise/dumbbell-thruster
+            - img "Dumbbell Thruster" [ref=e540]
+            - generic [ref=e541]:
+              - generic [ref=e542]: Dumbbell Thruster
+              - generic [ref=e543]:
+                - generic [ref=e544]:
+                  - img [ref=e545]
+                  - text: Dumbbells
+                - generic [ref=e551]: advanced
+          - link "Dumbbell Triceps Extension Dumbbell Triceps Extension Dumbbells beginner" [ref=e552] [cursor=pointer]:
+            - /url: /home/exercise/dumbbell-triceps-extension
+            - img "Dumbbell Triceps Extension" [ref=e554]
+            - generic [ref=e555]:
+              - generic [ref=e556]: Dumbbell Triceps Extension
+              - generic [ref=e557]:
+                - generic [ref=e558]:
+                  - img [ref=e559]
+                  - text: Dumbbells
+                - generic [ref=e565]: beginner
+          - link "Forward Lunges Forward Lunges None beginner" [ref=e566] [cursor=pointer]:
+            - /url: /home/exercise/forward-lunges
+            - img "Forward Lunges" [ref=e568]
+            - generic [ref=e569]:
+              - generic [ref=e570]: Forward Lunges
+              - generic [ref=e571]:
+                - generic [ref=e572]:
+                  - img [ref=e573]
+                  - text: None
+                - generic [ref=e579]: beginner
+          - link "Glute Bridge Glute Bridge None beginner" [ref=e580] [cursor=pointer]:
+            - /url: /home/exercise/glute-bridge
+            - img "Glute Bridge" [ref=e582]
+            - generic [ref=e583]:
+              - generic [ref=e584]: Glute Bridge
+              - generic [ref=e585]:
+                - generic [ref=e586]:
+                  - img [ref=e587]
+                  - text: None
+                - generic [ref=e593]: beginner
+          - link "Hanging Leg Raise Hanging Leg Raise Pull-up Bar advanced" [ref=e594] [cursor=pointer]:
+            - /url: /home/exercise/hanging-leg-raise
+            - img "Hanging Leg Raise" [ref=e596]
+            - generic [ref=e597]:
+              - generic [ref=e598]: Hanging Leg Raise
+              - generic [ref=e599]:
+                - generic [ref=e600]:
+                  - img [ref=e601]
+                  - text: Pull-up Bar
+                - generic [ref=e607]: advanced
+          - link "High Knees Jump Rope High Knees Jump Rope Dumbbells intermediate" [ref=e608] [cursor=pointer]:
+            - /url: /home/exercise/high-knees-jump-rope
+            - img "High Knees Jump Rope" [ref=e610]
+            - generic [ref=e611]:
+              - generic [ref=e612]: High Knees Jump Rope
+              - generic [ref=e613]:
+                - generic [ref=e614]:
+                  - img [ref=e615]
+                  - text: Dumbbells
+                - generic [ref=e621]: intermediate
+          - link "Jump Rope Basic Jump Rope Basic Jump Rope beginner" [ref=e622] [cursor=pointer]:
+            - /url: /home/exercise/jump-rope-basic
+            - img "Jump Rope Basic" [ref=e624]
+            - generic [ref=e625]:
+              - generic [ref=e626]: Jump Rope Basic
+              - generic [ref=e627]:
+                - generic [ref=e628]:
+                  - img [ref=e629]
+                  - text: Jump Rope
+                - generic [ref=e635]: beginner
+          - link "Kettlebell Clean and Press Kettlebell Clean and Press Kettlebell advanced" [ref=e636] [cursor=pointer]:
+            - /url: /home/exercise/kettlebell-clean-and-press
+            - img "Kettlebell Clean and Press" [ref=e638]
+            - generic [ref=e639]:
+              - generic [ref=e640]: Kettlebell Clean and Press
+              - generic [ref=e641]:
+                - generic [ref=e642]:
+                  - img [ref=e643]
+                  - text: Kettlebell
+                - generic [ref=e649]: advanced
+          - link "Kettlebell Figure 8 Kettlebell Figure 8 Kettlebell intermediate" [ref=e650] [cursor=pointer]:
+            - /url: /home/exercise/kettlebell-figure-8
+            - img "Kettlebell Figure 8" [ref=e652]
+            - generic [ref=e653]:
+              - generic [ref=e654]: Kettlebell Figure 8
+              - generic [ref=e655]:
+                - generic [ref=e656]:
+                  - img [ref=e657]
+                  - text: Kettlebell
+                - generic [ref=e663]: intermediate
+          - link "Kettlebell Goblet Squat Kettlebell Goblet Squat Kettlebell beginner" [ref=e664] [cursor=pointer]:
+            - /url: /home/exercise/kettlebell-goblet-squat
+            - img "Kettlebell Goblet Squat" [ref=e666]
+            - generic [ref=e667]:
+              - generic [ref=e668]: Kettlebell Goblet Squat
+              - generic [ref=e669]:
+                - generic [ref=e670]:
+                  - img [ref=e671]
+                  - text: Kettlebell
+                - generic [ref=e677]: beginner
+          - link "Kettlebell Halo Kettlebell Halo Kettlebell intermediate" [ref=e678] [cursor=pointer]:
+            - /url: /home/exercise/kettlebell-halo
+            - img "Kettlebell Halo" [ref=e680]
+            - generic [ref=e681]:
+              - generic [ref=e682]: Kettlebell Halo
+              - generic [ref=e683]:
+                - generic [ref=e684]:
+                  - img [ref=e685]
+                  - text: Kettlebell
+                - generic [ref=e691]: intermediate
+          - link "Kettlebell High Pull Kettlebell High Pull Bodyweight beginner" [ref=e692] [cursor=pointer]:
+            - /url: /home/exercise/kettlebell-high-pull
+            - img "Kettlebell High Pull" [ref=e694]
+            - generic [ref=e695]:
+              - generic [ref=e696]: Kettlebell High Pull
+              - generic [ref=e697]:
+                - generic [ref=e698]:
+                  - img [ref=e699]
+                  - text: Bodyweight
+                - generic [ref=e702]: beginner
+          - link "Kettlebell Reverse Lunge Kettlebell Reverse Lunge Kettlebell intermediate" [ref=e703] [cursor=pointer]:
+            - /url: /home/exercise/kettlebell-reverse-lunge
+            - img "Kettlebell Reverse Lunge" [ref=e705]
+            - generic [ref=e706]:
+              - generic [ref=e707]: Kettlebell Reverse Lunge
+              - generic [ref=e708]:
+                - generic [ref=e709]:
+                  - img [ref=e710]
+                  - text: Kettlebell
+                - generic [ref=e716]: intermediate
+          - link "Kettlebell Snatch Kettlebell Snatch Kettlebell advanced" [ref=e717] [cursor=pointer]:
+            - /url: /home/exercise/kettlebell-snatch
+            - img "Kettlebell Snatch" [ref=e719]
+            - generic [ref=e720]:
+              - generic [ref=e721]: Kettlebell Snatch
+              - generic [ref=e722]:
+                - generic [ref=e723]:
+                  - img [ref=e724]
+                  - text: Kettlebell
+                - generic [ref=e730]: advanced
+          - link "Kettlebell Swing Kettlebell Swing Kettlebell intermediate" [ref=e731] [cursor=pointer]:
+            - /url: /home/exercise/kettlebell-swing
+            - img "Kettlebell Swing" [ref=e733]
+            - generic [ref=e734]:
+              - generic [ref=e735]: Kettlebell Swing
+              - generic [ref=e736]:
+                - generic [ref=e737]:
+                  - img [ref=e738]
+                  - text: Kettlebell
+                - generic [ref=e744]: intermediate
+          - link "Kettlebell Turkish Get-Up Kettlebell Turkish Get-Up Kettlebell advanced" [ref=e745] [cursor=pointer]:
+            - /url: /home/exercise/kettlebell-turkish-get-up
+            - img "Kettlebell Turkish Get-Up" [ref=e747]
+            - generic [ref=e748]:
+              - generic [ref=e749]: Kettlebell Turkish Get-Up
+              - generic [ref=e750]:
+                - generic [ref=e751]:
+                  - img [ref=e752]
+                  - text: Kettlebell
+                - generic [ref=e758]: advanced
+          - link "Kettlebell Windmill Kettlebell Windmill Kettlebell advanced" [ref=e759] [cursor=pointer]:
+            - /url: /home/exercise/kettlebell-windmill
+            - img "Kettlebell Windmill" [ref=e761]
+            - generic [ref=e762]:
+              - generic [ref=e763]: Kettlebell Windmill
+              - generic [ref=e764]:
+                - generic [ref=e765]:
+                  - img [ref=e766]
+                  - text: Kettlebell
+                - generic [ref=e772]: advanced
+          - link "L-Sit Hang L-Sit Hang Pull-up Bar advanced" [ref=e773] [cursor=pointer]:
+            - /url: /home/exercise/l-sit-hang
+            - img "L-Sit Hang" [ref=e775]
+            - generic [ref=e776]:
+              - generic [ref=e777]: L-Sit Hang
+              - generic [ref=e778]:
+                - generic [ref=e779]:
+                  - img [ref=e780]
+                  - text: Pull-up Bar
+                - generic [ref=e786]: advanced
+          - link "Mountain Climbers Mountain Climbers None beginner" [ref=e787] [cursor=pointer]:
+            - /url: /home/exercise/mountain-climbers
+            - img "Mountain Climbers" [ref=e789]
+            - generic [ref=e790]:
+              - generic [ref=e791]: Mountain Climbers
+              - generic [ref=e792]:
+                - generic [ref=e793]:
+                  - img [ref=e794]
+                  - text: None
+                - generic [ref=e800]: beginner
+          - link "Pike Push-up Pike Push-up None intermediate" [ref=e801] [cursor=pointer]:
+            - /url: /home/exercise/pike-push-up
+            - img "Pike Push-up" [ref=e803]
+            - generic [ref=e804]:
+              - generic [ref=e805]: Pike Push-up
+              - generic [ref=e806]:
+                - generic [ref=e807]:
+                  - img [ref=e808]
+                  - text: None
+                - generic [ref=e814]: intermediate
+          - link "Plank Plank Bodyweight beginner" [ref=e815] [cursor=pointer]:
+            - /url: /home/exercise/plank
+            - img "Plank" [ref=e817]
+            - generic [ref=e818]:
+              - generic [ref=e819]: Plank
+              - generic [ref=e820]:
+                - generic [ref=e821]:
+                  - img [ref=e822]
+                  - text: Bodyweight
+                - generic [ref=e825]: beginner
+          - link "Pull-up Pull-up Pull-up Bar advanced" [ref=e826] [cursor=pointer]:
+            - /url: /home/exercise/pull-up
+            - img "Pull-up" [ref=e828]
+            - generic [ref=e829]:
+              - generic [ref=e830]: Pull-up
+              - generic [ref=e831]:
+                - generic [ref=e832]:
+                  - img [ref=e833]
+                  - text: Pull-up Bar
+                - generic [ref=e839]: advanced
+          - link "Push-Up Push-Up Bodyweight beginner" [ref=e840] [cursor=pointer]:
+            - /url: /home/exercise/push-up
+            - img "Push-Up" [ref=e842]
+            - generic [ref=e843]:
+              - generic [ref=e844]: Push-Up
+              - generic [ref=e845]:
+                - generic [ref=e846]:
+                  - img [ref=e847]
+                  - text: Bodyweight
+                - generic [ref=e850]: beginner
+          - link "Reverse Lunges Reverse Lunges None beginner" [ref=e851] [cursor=pointer]:
+            - /url: /home/exercise/reverse-lunges
+            - img "Reverse Lunges" [ref=e853]
+            - generic [ref=e854]:
+              - generic [ref=e855]: Reverse Lunges
+              - generic [ref=e856]:
+                - generic [ref=e857]:
+                  - img [ref=e858]
+                  - text: None
+                - generic [ref=e864]: beginner
+          - link "Russian Twists Russian Twists None intermediate" [ref=e865] [cursor=pointer]:
+            - /url: /home/exercise/russian-twists
+            - img "Russian Twists" [ref=e867]
+            - generic [ref=e868]:
+              - generic [ref=e869]: Russian Twists
+              - generic [ref=e870]:
+                - generic [ref=e871]:
+                  - img [ref=e872]
+                  - text: None
+                - generic [ref=e878]: intermediate
+          - link "Side Plank Side Plank None intermediate" [ref=e879] [cursor=pointer]:
+            - /url: /home/exercise/side-plank
+            - img "Side Plank" [ref=e881]
+            - generic [ref=e882]:
+              - generic [ref=e883]: Side Plank
+              - generic [ref=e884]:
+                - generic [ref=e885]:
+                  - img [ref=e886]
+                  - text: None
+                - generic [ref=e892]: intermediate
+          - link "Superman Superman None beginner" [ref=e893] [cursor=pointer]:
+            - /url: /home/exercise/superman
+            - img "Superman" [ref=e895]
+            - generic [ref=e896]:
+              - generic [ref=e897]: Superman
+              - generic [ref=e898]:
+                - generic [ref=e899]:
+                  - img [ref=e900]
+                  - text: None
+                - generic [ref=e906]: beginner
+          - link "Toes to Bar Toes to Bar Pull-up Bar advanced" [ref=e907] [cursor=pointer]:
+            - /url: /home/exercise/toes-to-bar
+            - img "Toes to Bar" [ref=e909]
+            - generic [ref=e910]:
+              - generic [ref=e911]: Toes to Bar
+              - generic [ref=e912]:
+                - generic [ref=e913]:
+                  - img [ref=e914]
+                  - text: Pull-up Bar
+                - generic [ref=e920]: advanced
+          - link "Triceps Dips on Chair Triceps Dips on Chair Chair intermediate" [ref=e921] [cursor=pointer]:
+            - /url: /home/exercise/triceps-dips-on-chair
+            - img "Triceps Dips on Chair" [ref=e923]
+            - generic [ref=e924]:
+              - generic [ref=e925]: Triceps Dips on Chair
+              - generic [ref=e926]:
+                - generic [ref=e927]:
+                  - img [ref=e928]
+                  - text: Chair
+                - generic [ref=e934]: intermediate
+          - link "V-Ups V-Ups None advanced" [ref=e935] [cursor=pointer]:
+            - /url: /home/exercise/v-ups
+            - img "V-Ups" [ref=e937]
+            - generic [ref=e938]:
+              - generic [ref=e939]: V-Ups
+              - generic [ref=e940]:
+                - generic [ref=e941]:
+                  - img [ref=e942]
+                  - text: None
+                - generic [ref=e948]: advanced
+  - button "Open Next.js Dev Tools" [ref=e954] [cursor=pointer]:
+    - img [ref=e955]
+  - alert [ref=e958]

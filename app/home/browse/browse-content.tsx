@@ -4,12 +4,15 @@ import type { ComponentType, SVGProps } from "react";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { Dumbbell, Search, SlidersHorizontal, User } from "lucide-react";
-import { ExerciseMedia } from "@/components/ui/ExerciseMedia";
-import type { Exercise, Equipment } from "@/types/database";
+import { ExerciseMediaV2 } from "@/components/ui/ExerciseMediaV2";
+import { getWorkoutLocationOptionState } from "@/lib/browse-workout-location";
+import type { Category, Exercise, Equipment, WorkoutLocation } from "@/types/database";
 
 type Props = {
   equipment: Equipment[];
   exercises: Exercise[];
+  categories: Category[];
+  defaultWorkoutLocation: WorkoutLocation;
 };
 
 type FilterChip = {
@@ -29,7 +32,22 @@ const filterChips: FilterChip[] = [
     key: "resistance-band",
     matches: (equipment) => equipment?.slug === "resistance-bands" || equipment?.slug === "resistance-band",
   },
-  { label: "Machine", key: "machine", matches: (equipment) => equipment?.slug === "machine" },
+  { label: "Cable", key: "cable", matches: (equipment) => equipment?.slug === "cable-machine" },
+  {
+    label: "Machine",
+    key: "machine",
+    matches: (equipment) => (
+      equipment?.slug === "smith-machine" ||
+      equipment?.slug === "bench-press-machine" ||
+      equipment?.slug === "leg-press-machine"
+    ),
+  },
+];
+
+const workoutLocationOptions: { label: string; value: WorkoutLocation }[] = [
+  { label: "Home", value: "home" },
+  { label: "Gym", value: "gym" },
+  { label: "Both", value: "both" },
 ];
 
 const difficultyClasses = {
@@ -46,6 +64,10 @@ function equipmentIcon(equipment: Equipment | null): ComponentType<SVGProps<SVGS
   return equipment?.slug === "bodyweight" ? User : Dumbbell;
 }
 
+function resolveWorkoutLocation(category: Category | null): WorkoutLocation {
+  return category?.slug === "gym-workout" ? "gym" : "home";
+}
+
 function ExerciseArtworkFallback() {
   return (
     <svg viewBox="0 0 210 145" xmlns="http://www.w3.org/2000/svg" className="h-full w-full">
@@ -59,10 +81,11 @@ function ExerciseArtworkFallback() {
   );
 }
 
-export function BrowseContent({ equipment, exercises }: Props) {
+export function BrowseContent({ equipment, exercises, categories, defaultWorkoutLocation }: Props) {
   const [query, setQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
   const [selectedChip, setSelectedChip] = useState<string>("all");
+  const [selectedWorkoutLocation, setSelectedWorkoutLocation] = useState<WorkoutLocation>(defaultWorkoutLocation);
 
   useEffect(() => {
     const timeout = window.setTimeout(() => {
@@ -77,21 +100,30 @@ export function BrowseContent({ equipment, exercises }: Props) {
     [equipment],
   );
 
+  const categoriesById = useMemo(
+    () => new Map(categories.map((item) => [item.id, item])),
+    [categories],
+  );
+
   const filteredExercises = useMemo(() => {
     const activeChip = filterChips.find((chip) => chip.key === selectedChip) ?? filterChips[0];
     const normalizedQuery = normalize(debouncedQuery);
 
     return exercises.filter((exercise) => {
       const matchedEquipment = equipmentById.get(exercise.equipment_id ?? "") ?? null;
+      const matchedCategory = categoriesById.get(exercise.category_id ?? "") ?? null;
       const chipMatches = activeChip.matches(matchedEquipment);
+      const exerciseWorkoutLocation = resolveWorkoutLocation(matchedCategory);
+      const locationMatches = selectedWorkoutLocation === "both" || exerciseWorkoutLocation === selectedWorkoutLocation;
 
-      if (!chipMatches) return false;
+      if (!chipMatches || !locationMatches) return false;
       if (!normalizedQuery) return true;
 
       const searchableText = [
         exercise.name,
         exercise.difficulty,
         matchedEquipment?.name ?? "",
+        matchedCategory?.name ?? "",
         ...exercise.primary_muscles,
         ...exercise.secondary_muscles,
       ]
@@ -100,10 +132,40 @@ export function BrowseContent({ equipment, exercises }: Props) {
 
       return searchableText.includes(normalizedQuery);
     });
-  }, [debouncedQuery, equipmentById, exercises, selectedChip]);
+  }, [categoriesById, debouncedQuery, equipmentById, exercises, selectedChip, selectedWorkoutLocation]);
 
   return (
     <div className="px-8 py-6">
+      <div className="mb-4 flex flex-wrap gap-[7px]">
+        {workoutLocationOptions.map((option) => {
+          const { active, disabled } = getWorkoutLocationOptionState(selectedWorkoutLocation, option.value);
+
+          return (
+            <button
+              key={option.value}
+              type="button"
+              aria-pressed={active}
+              disabled={disabled}
+              onClick={() => setSelectedWorkoutLocation(option.value)}
+              className="border text-[13px] font-medium"
+              style={{
+                padding: "7px 15px",
+                borderRadius: "7px",
+                border: active ? "var(--border-accent)" : "var(--border-subtle)",
+                background: active ? "var(--color-accent-dim)" : "var(--bg-2)",
+                color: active ? "var(--color-accent)" : "var(--color-text-secondary)",
+                opacity: disabled ? 0.45 : 1,
+                cursor: disabled ? "not-allowed" : "pointer",
+                fontFamily: "var(--font-body)",
+                transition: "var(--transition-fast)",
+              }}
+            >
+              {option.label}
+            </button>
+          );
+        })}
+      </div>
+
       <div
         className="mb-[14px] flex h-[44px] items-center gap-[10px] border bg-[var(--bg-2)] px-[14px]"
         style={{ border: "var(--border-subtle)", borderRadius: "10px" }}
@@ -181,8 +243,9 @@ export function BrowseContent({ equipment, exercises }: Props) {
                   event.currentTarget.style.transform = "translateY(0)";
                 }}
               >
-                <ExerciseMedia
+                <ExerciseMediaV2
                   slug={exercise.slug}
+                  name={exercise.name}
                   videoUrl={null}
                   mode="image-first"
                   alt={exercise.name}

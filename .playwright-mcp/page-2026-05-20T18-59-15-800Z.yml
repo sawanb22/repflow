@@ -1,0 +1,64 @@
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e29] [cursor=pointer]:
+    - img [ref=e30]
+  - alert [ref=e33]
+  - generic [ref=e38]:
+    - generic [ref=e39]:
+      - button "Change accent color" [ref=e42] [cursor=pointer]:
+        - generic [ref=e43]: Theme
+        - img [ref=e45]
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - img [ref=e172]
+          - generic [ref=e53]: goals?
+        - generic [ref=e54]:
+          - img [ref=e236]
+          - generic [ref=e59]: train?
+        - generic [ref=e60]:
+          - img [ref=e261]
+          - generic [ref=e65]: access?
+        - generic [ref=e66]:
+          - generic [ref=e70]: "4"
+          - generic [ref=e71]: schedule?
+        - generic [ref=e72]:
+          - generic [ref=e76]: "5"
+          - generic [ref=e77]: level?
+        - generic [ref=e78]:
+          - generic [ref=e82]: "6"
+          - generic [ref=e83]: considerations?
+        - generic [ref=e84]:
+          - generic [ref=e88]: "7"
+          - generic [ref=e89]: Done
+    - generic [ref=e264]:
+      - generic [ref=e265]:
+        - heading "What's your workout schedule?" [level=2] [ref=e266]
+        - paragraph [ref=e267]: Be honest — consistency beats intensity
+      - generic [ref=e269]:
+        - generic [ref=e270]:
+          - paragraph [ref=e271]: DAYS PER WEEK
+          - generic [ref=e272]:
+            - button "1" [ref=e273]
+            - button "2" [ref=e274]
+            - button "3" [ref=e275]
+            - button "4" [ref=e276]
+            - button "5" [ref=e277]
+            - button "6" [ref=e278]
+            - button "7" [ref=e279]
+          - paragraph [ref=e280]: 3 days
+        - generic [ref=e281]:
+          - paragraph [ref=e282]:
+            - img [ref=e283]
+            - text: WORKOUT DURATION
+          - generic [ref=e286]:
+            - button "15m" [ref=e287]
+            - button "30m" [ref=e288]
+            - button "45m" [ref=e289]
+            - button "60m" [ref=e290]
+            - button "90m" [ref=e291]
+      - generic [ref=e292]:
+        - button "Back" [ref=e293]:
+          - img [ref=e294]
+          - text: Back
+        - button "Next" [ref=e296]:
+          - text: Next
+          - img [ref=e297]

@@ -1,0 +1,34 @@
+[    1354ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "username"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:3000/auth/login:0
+[    1471ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    1567ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  152806ms] [LOG] %c[18:52:57.900] [INFO] [Login] Attempting sign-in for jackson1511185@gmail.com color: #8b5cf6 @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  154983ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://rdjynmilnmijjjcjsxdt.supabase.co/auth/v1/token?grant_type=password:0
+[  154985ms] [LOG] %c[18:53:00.080] [ERROR] [Login] Sign-in failed: Invalid login credentials color: #ef4444; font-weight: bold {status: 400, code: invalid_credentials} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  263796ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  264286ms] [LOG] [Fast Refresh] done in 604ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  264480ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "username"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:3000/auth/signup:0
+[  305037ms] [LOG] %c[18:55:30.132] [INFO] [Signup] Attempting sign-up for jackson1511185@gmail.com color: #8b5cf6 @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  305990ms] [ERROR] Failed to load resource: the server responded with a status of 422 () @ https://rdjynmilnmijjjcjsxdt.supabase.co/auth/v1/signup:0
+[  305992ms] [LOG] %c[18:55:31.087] [ERROR] [Signup] Sign-up failed: User already registered color: #ef4444; font-weight: bold {status: 422, code: user_already_exists} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  343903ms] [LOG] %c[18:56:08.999] [INFO] [Signup] Attempting sign-up for bhardwaj0sawan@gmail.com color: #8b5cf6 @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  344470ms] [LOG] %c[18:56:09.565] [INFO] [Signup] Sign-up successful color: #8b5cf6 {userId: 78d20d78-1c80-4651-b4e7-46b642674bcb, session: created} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  346212ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  347861ms] [LOG] [Fast Refresh] done in 1756ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  348037ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  348103ms] [LOG] [Fast Refresh] done in 168ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  398646ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  398898ms] [LOG] [Fast Refresh] done in 363ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  414438ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  414528ms] [LOG] [Fast Refresh] done in 152ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  483892ms] [WARNING] 'rgba(var(--color-accent-rgb), 0.30)' is not an animatable color. Use the equivalent color code instead.. For more information and steps for solving, visit https://motion.dev/troubleshooting/color-not-animatable @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  484015ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  484068ms] [LOG] [Fast Refresh] done in 161ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  512335ms] [WARNING] 'rgba(var(--color-accent-rgb), 0.30)' is not an animatable color. Use the equivalent color code instead.. For more information and steps for solving, visit https://motion.dev/troubleshooting/color-not-animatable @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  529691ms] [WARNING] 'rgba(var(--color-accent-rgb), 0.30)' is not an animatable color. Use the equivalent color code instead.. For more information and steps for solving, visit https://motion.dev/troubleshooting/color-not-animatable @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  565974ms] [WARNING] 'rgba(var(--color-accent-rgb), 0.30)' is not an animatable color. Use the equivalent color code instead.. For more information and steps for solving, visit https://motion.dev/troubleshooting/color-not-animatable @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  578947ms] [WARNING] 'rgba(var(--color-accent-rgb), 0.30)' is not an animatable color. Use the equivalent color code instead.. For more information and steps for solving, visit https://motion.dev/troubleshooting/color-not-animatable @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  589113ms] [WARNING] 'rgba(var(--color-accent-rgb), 0.30)' is not an animatable color. Use the equivalent color code instead.. For more information and steps for solving, visit https://motion.dev/troubleshooting/color-not-animatable @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  601892ms] [LOG] %c[19:00:26.987] [INFO] [Onboarding] Submitting preferences color: #8b5cf6 {fitness_goals: Array(1), training_style: home, equipment_list: Array(1), workout_days_per_week: 3, workout_duration_min: 30} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  603545ms] [LOG] %c[19:00:28.641] [INFO] [Onboarding] Preferences saved color: #8b5cf6 @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  605641ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fpush-up.jpg&w=640&q=75:0
+[  605646ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fplank.jpg&w=640&q=75:0

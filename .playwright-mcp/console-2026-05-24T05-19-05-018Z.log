@@ -1,0 +1,217 @@
+[    2991ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    3094ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    3628ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbanded-chest-press.jpg&w=640&q=75:0
+[    3633ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Falternating-foot-jump-rope.jpg&w=640&q=75:0
+[    3633ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbanded-bicep-curl.jpg&w=640&q=75:0
+[    3639ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbanded-lateral-walk.jpg&w=640&q=75:0
+[    3639ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbanded-glute-bridge.jpg&w=640&q=75:0
+[    3646ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbicep-curl.jpg&w=640&q=75:0
+[    3791ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    3959ms] [LOG] [Fast Refresh] done in 270ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    4006ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fboxer-step-jump-rope.jpg&w=640&q=75:0
+[    4011ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbanded-seated-row.jpg&w=640&q=75:0
+[    4011ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbanded-overhead-press.jpg&w=640&q=75:0
+[    4012ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbanded-triceps-pushdown.jpg&w=640&q=75:0
+[    4012ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbanded-hip-extension.jpg&w=640&q=75:0
+[    4030ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbodyweight-squat.jpg&w=640&q=75:0
+[    4158ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    4223ms] [LOG] [Fast Refresh] done in 173ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    4342ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbanded-squat.jpg&w=640&q=75:0
+[    4362ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbanded-pull-apart.jpg&w=640&q=75:0
+[    4372ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbear-crawl.jpg&w=640&q=75:0
+[    4379ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbanded-chest-press.png&w=640&q=75:0
+[    4379ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbanded-bicep-curl.png&w=640&q=75:0
+[    4385ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Falternating-foot-jump-rope.png&w=640&q=75:0
+[    4469ms] [WARNING] Image with src "/exercises/bicep-curl.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    4523ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    4585ms] [LOG] [Fast Refresh] done in 171ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    4649ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbanded-lateral-walk.png&w=640&q=75:0
+[    4663ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbanded-glute-bridge.png&w=640&q=75:0
+[    4666ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbanded-seated-row.png&w=640&q=75:0
+[    4715ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbanded-triceps-pushdown.png&w=640&q=75:0
+[    4764ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbanded-overhead-press.png&w=640&q=75:0
+[    4851ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    4875ms] [LOG] [Fast Refresh] done in 129ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    4884ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbear-crawl.png&w=640&q=75:0
+[    4982ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    5094ms] [LOG] [Fast Refresh] done in 218ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    5095ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fburpees.jpg&w=640&q=75:0
+[    5192ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fchin-up.jpg&w=640&q=75:0
+[    5196ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdouble-unders.jpg&w=640&q=75:0
+[    5207ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-bent-over-row.jpg&w=640&q=75:0
+[    5215ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-calf-raise.jpg&w=640&q=75:0
+[    5320ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    5341ms] [LOG] [Fast Refresh] done in 125ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    5362ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-floor-press.jpg&w=640&q=75:0
+[    5416ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-forward-lunge.jpg&w=640&q=75:0
+[    5449ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    5564ms] [LOG] [Fast Refresh] done in 222ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    5618ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-goblet-squat.jpg&w=640&q=75:0
+[    5635ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-lateral-raise.jpg&w=640&q=75:0
+[    5660ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-overhead-press.jpg&w=640&q=75:0
+[    5691ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-renegade-row.jpg&w=640&q=75:0
+[    5763ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    5873ms] [LOG] [Fast Refresh] done in 211ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    5899ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-reverse-fly.jpg&w=640&q=75:0
+[    5946ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-romanian-deadlift.jpg&w=640&q=75:0
+[    5984ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    6092ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-shrugs.jpg&w=640&q=75:0
+[    6114ms] [LOG] [Fast Refresh] done in 232ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    6117ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-step-up.jpg&w=640&q=75:0
+[    6132ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-thruster.jpg&w=640&q=75:0
+[    6195ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-triceps-extension.jpg&w=640&q=75:0
+[    6219ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    6254ms] [LOG] [Fast Refresh] done in 141ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    6305ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fforward-lunges.jpg&w=640&q=75:0
+[    6362ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    6379ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fglute-bridge.jpg&w=640&q=75:0
+[    6410ms] [LOG] [Fast Refresh] done in 155ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    6492ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fhanging-leg-raise.jpg&w=640&q=75:0
+[    6529ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fhigh-knees-jump-rope.jpg&w=640&q=75:0
+[    6561ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fjump-rope-basic.jpg&w=640&q=75:0
+[    6661ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fkettlebell-clean-and-press.jpg&w=640&q=75:0
+[    6684ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    6773ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fkettlebell-figure-8.jpg&w=640&q=75:0
+[    6774ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fkettlebell-goblet-squat.jpg&w=640&q=75:0
+[    6775ms] [LOG] [Fast Refresh] done in 208ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    6871ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fburpees.png&w=640&q=75:0
+[    6933ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    7042ms] [LOG] [Fast Refresh] done in 214ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    7125ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fchin-up.png&w=640&q=75:0
+[    7129ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdouble-unders.png&w=640&q=75:0
+[    7137ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-bent-over-row.png&w=640&q=75:0
+[    7140ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-calf-raise.png&w=640&q=75:0
+[    7160ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-floor-press.png&w=640&q=75:0
+[    7262ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    7305ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-forward-lunge.png&w=640&q=75:0
+[    7332ms] [LOG] [Fast Refresh] done in 174ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    7398ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-lateral-raise.png&w=640&q=75:0
+[    7432ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-overhead-press.png&w=640&q=75:0
+[    7437ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-renegade-row.png&w=640&q=75:0
+[    7464ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-reverse-fly.png&w=640&q=75:0
+[    7518ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    7595ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-shrugs.png&w=640&q=75:0
+[    7666ms] [LOG] [Fast Refresh] done in 263ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    7674ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-step-up.png&w=640&q=75:0
+[    7715ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-thruster.png&w=640&q=75:0
+[    7731ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-triceps-extension.png&w=640&q=75:0
+[    7740ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fforward-lunges.png&w=640&q=75:0
+[    7768ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fglute-bridge.png&w=640&q=75:0
+[    7877ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fhanging-leg-raise.png&w=640&q=75:0
+[    7926ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fkettlebell-clean-and-press.png&w=640&q=75:0
+[    7954ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fkettlebell-figure-8.png&w=640&q=75:0
+[   39154ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   39254ms] [LOG] [Fast Refresh] done in 207ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   39359ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fab-wheel-rollout.jpg&w=640&q=75:0
+[   39362ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Farnold-press.jpg&w=640&q=75:0
+[   39382ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fassault-bike.jpg&w=640&q=75:0
+[   39393ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fassisted-pull-up.jpg&w=640&q=75:0
+[   39407ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbarbell-bench-press.jpg&w=640&q=75:0
+[   39428ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbarbell-back-squat.jpg&w=640&q=75:0
+[   39513ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   39664ms] [LOG] [Fast Refresh] done in 257ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   39782ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbarbell-conventional-deadlift.jpg&w=640&q=75:0
+[   39799ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbarbell-curl.jpg&w=640&q=75:0
+[   39799ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbarbell-overhead-press.jpg&w=640&q=75:0
+[   39808ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fcable-bicep-curl.jpg&w=640&q=75:0
+[   39809ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbulgarian-split-squat.jpg&w=640&q=75:0
+[   39822ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbarbell-squat.jpg&w=640&q=75:0
+[   39930ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   40028ms] [LOG] [Fast Refresh] done in 205ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   40065ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbarbell-row.jpg&w=640&q=75:0
+[   40099ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fab-wheel-rollout.png&w=640&q=75:0
+[   40113ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbarbell-hip-thrust.jpg&w=640&q=75:0
+[   40121ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbarbell-front-squat.jpg&w=640&q=75:0
+[   40126ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fassault-bike.png&w=640&q=75:0
+[   40141ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Farnold-press.png&w=640&q=75:0
+[   40240ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   40379ms] [LOG] [Fast Refresh] done in 246ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   40396ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fassisted-pull-up.png&w=640&q=75:0
+[   40439ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbarbell-bench-press.png&w=640&q=75:0
+[   40445ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbarbell-back-squat.png&w=640&q=75:0
+[   40481ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbarbell-overhead-press.png&w=640&q=75:0
+[   40490ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbarbell-conventional-deadlift.png&w=640&q=75:0
+[   40502ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   40508ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbarbell-curl.png&w=640&q=75:0
+[   40642ms] [LOG] [Fast Refresh] done in 250ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   40746ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   40754ms] [LOG] [Fast Refresh] done in 111ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   40775ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fcable-bicep-curl.png&w=640&q=75:0
+[   40780ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbulgarian-split-squat.png&w=640&q=75:0
+[   40818ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbarbell-squat.png&w=640&q=75:0
+[   40839ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbarbell-row.png&w=640&q=75:0
+[   40845ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbarbell-hip-thrust.png&w=640&q=75:0
+[   40866ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fbarbell-front-squat.png&w=640&q=75:0
+[   40953ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   41036ms] [LOG] [Fast Refresh] done in 187ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   41143ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fcable-crossover.jpg&w=640&q=75:0
+[   41148ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fcable-crunch.jpg&w=640&q=75:0
+[   41156ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fcable-fly.jpg&w=640&q=75:0
+[   41194ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fcable-lateral-raise.jpg&w=640&q=75:0
+[   41228ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fcable-row.jpg&w=640&q=75:0
+[   41260ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fcable-tricep-pushdown.jpg&w=640&q=75:0
+[   41347ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   41382ms] [LOG] [Fast Refresh] done in 144ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   41507ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fcaptains-chair-leg-raise.jpg&w=640&q=75:0
+[   41531ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fclose-grip-bench-press.jpg&w=640&q=75:0
+[   41538ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdecline-barbell-press.jpg&w=640&q=75:0
+[   41559ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdecline-crunch.jpg&w=640&q=75:0
+[   41616ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-pullover.jpg&w=640&q=75:0
+[   41655ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Felliptical-trainer.jpg&w=640&q=75:0
+[   41747ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   41836ms] [LOG] [Fast Refresh] done in 190ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   41928ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fface-pulls.jpg&w=640&q=75:0
+[   41963ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Ffront-dumbbell-raise.jpg&w=640&q=75:0
+[   41967ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fglute-ham-raise.jpg&w=640&q=75:0
+[   41981ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fhack-squat.jpg&w=640&q=75:0
+[   42038ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fhammer-curl.jpg&w=640&q=75:0
+[   42062ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fhanging-knee-raise.jpg&w=640&q=75:0
+[   42173ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   42232ms] [LOG] [Fast Refresh] done in 174ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   42317ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fincline-dumbbell-curl.jpg&w=640&q=75:0
+[   42323ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fincline-dumbbell-press.jpg&w=640&q=75:0
+[   42323ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Flat-pulldown.jpg&w=640&q=75:0
+[   42339ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   42346ms] [LOG] [Fast Refresh] done in 114ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   42353ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Flateral-raise.jpg&w=640&q=75:0
+[   42424ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fleg-curl.jpg&w=640&q=75:0
+[   42477ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fleg-extension.jpg&w=640&q=75:0
+[   42546ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   42653ms] [LOG] [Fast Refresh] done in 207ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   42701ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fleg-press.jpg&w=640&q=75:0
+[   42712ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fcable-crossover.png&w=640&q=75:0
+[   42712ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fcable-crunch.png&w=640&q=75:0
+[   42741ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fcable-fly.png&w=640&q=75:0
+[   42784ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   42865ms] [LOG] [Fast Refresh] done in 190ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   42866ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fcable-lateral-raise.png&w=640&q=75:0
+[   42982ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   42999ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fcable-row.png&w=640&q=75:0
+[   43074ms] [LOG] [Fast Refresh] done in 197ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   43183ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fcable-tricep-pushdown.png&w=640&q=75:0
+[   43190ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fcaptains-chair-leg-raise.png&w=640&q=75:0
+[   43208ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fclose-grip-bench-press.png&w=640&q=75:0
+[   43214ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdecline-barbell-press.png&w=640&q=75:0
+[   43401ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdecline-crunch.png&w=640&q=75:0
+[   43504ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   43634ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fdumbbell-pullover.png&w=640&q=75:0
+[   43644ms] [LOG] [Fast Refresh] done in 246ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   43787ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Felliptical-trainer.png&w=640&q=75:0
+[   43788ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fface-pulls.png&w=640&q=75:0
+[   43788ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Ffront-dumbbell-raise.png&w=640&q=75:0
+[   43788ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fglute-ham-raise.png&w=640&q=75:0
+[   43838ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fhack-squat.png&w=640&q=75:0
+[   43930ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   44095ms] [LOG] [Fast Refresh] done in 276ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   44108ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fhammer-curl.png&w=640&q=75:0
+[   44126ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fincline-dumbbell-curl.png&w=640&q=75:0
+[   44127ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fhanging-knee-raise.png&w=640&q=75:0
+[   44127ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Flat-pulldown.png&w=640&q=75:0
+[   44127ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fincline-dumbbell-press.png&w=640&q=75:0
+[   44128ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Flateral-raise.png&w=640&q=75:0
+[   44232ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   44234ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fleg-curl.png&w=640&q=75:0
+[   44250ms] [LOG] [Fast Refresh] done in 128ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   44257ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fleg-extension.png&w=640&q=75:0
+[   44271ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=%2Fexercises%2Fleg-press.png&w=640&q=75:0

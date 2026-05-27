@@ -1,0 +1,16 @@
+32. [POST] https://rdjynmilnmijjjcjsxdt.supabase.co/auth/v1/token?grant_type=password => [400] 
+33. [GET] http://localhost:3000/auth/signup?_rsc=ykSr2mXZYH5tuaaG => [200] OK
+41. [POST] https://rdjynmilnmijjjcjsxdt.supabase.co/auth/v1/signup => [422] 
+42. [POST] https://rdjynmilnmijjjcjsxdt.supabase.co/auth/v1/signup => [200] 
+44. [GET] http://localhost:3000/auth/signup?_rsc=1PshwQXOpWn1zQAN => [307] Temporary Redirect
+45. [GET] http://localhost:3000/onboarding?_rsc=6laizg4i1CY6qdZw => [200] OK
+46. [GET] http://localhost:3000/onboarding => [200] OK
+52. [GET] http://localhost:3000/onboarding?_rsc=SImKYs_Xq9xvUvAz => [200] OK
+58. [GET] https://rdjynmilnmijjjcjsxdt.supabase.co/auth/v1/user => [200] 
+59. [GET] https://rdjynmilnmijjjcjsxdt.supabase.co/auth/v1/user => [200] 
+60. [GET] https://rdjynmilnmijjjcjsxdt.supabase.co/auth/v1/user => [200] 
+61. [GET] https://rdjynmilnmijjjcjsxdt.supabase.co/auth/v1/user => [200] 
+62. [GET] https://rdjynmilnmijjjcjsxdt.supabase.co/rest/v1/user_preferences?select=fitness_goals%2Ctraining_style%2Cequipment_list%2Cworkout_days_per_week%2Cworkout_duration_min%2Cexperience_level%2Climitations&user_id=eq.78d20d78-1c80-4651-b4e7-46b642674bcb => [200] 
+63. [GET] https://rdjynmilnmijjjcjsxdt.supabase.co/rest/v1/user_preferences?select=fitness_goals%2Ctraining_style%2Cequipment_list%2Cworkout_days_per_week%2Cworkout_duration_min%2Cexperience_level%2Climitations&user_id=eq.78d20d78-1c80-4651-b4e7-46b642674bcb => [200] 
+
+Note: 48 static requests not shown, run with "static" option to see them.

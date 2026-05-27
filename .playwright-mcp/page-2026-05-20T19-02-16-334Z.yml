@@ -1,0 +1,211 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e4]: RepFlow
+      - navigation [ref=e5]:
+        - link "Dashboard" [ref=e6] [cursor=pointer]:
+          - /url: /home
+          - img [ref=e7]
+          - generic [ref=e12]: Dashboard
+        - link "Exercises" [ref=e13] [cursor=pointer]:
+          - /url: /home/browse
+          - img [ref=e14]
+          - generic [ref=e17]: Exercises
+        - link "Workouts" [ref=e18] [cursor=pointer]:
+          - /url: /home/plan
+          - img [ref=e19]
+          - generic [ref=e25]: Workouts
+        - link "Progress" [ref=e26] [cursor=pointer]:
+          - /url: /home/progress
+          - img [ref=e27]
+          - generic [ref=e29]: Progress
+        - link "Settings" [ref=e31] [cursor=pointer]:
+          - /url: /home/settings
+          - img [ref=e32]
+          - generic [ref=e35]: Settings
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - generic [ref=e38]: Current Plan
+          - generic [ref=e39]: No active plan
+          - generic [ref=e41]: Create a plan to start tracking workouts
+        - link "BH Bhardwaj0sawan Beginner Member" [ref=e42] [cursor=pointer]:
+          - /url: /home/settings
+          - generic [ref=e43]: BH
+          - generic [ref=e44]:
+            - generic [ref=e45]: Bhardwaj0sawan
+            - generic [ref=e46]: Beginner Member
+          - img [ref=e47]
+    - main [ref=e51]:
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - button "Home" [pressed] [ref=e54] [cursor=pointer]
+          - button "Gym" [disabled] [ref=e55]
+          - button "Both" [disabled] [ref=e56]
+        - generic [ref=e57]:
+          - img [ref=e58]
+          - textbox "Search exercises" [ref=e61]:
+            - /placeholder: Search exercises, muscles, equipment…
+          - img [ref=e62] [cursor=pointer]
+        - generic [ref=e63]:
+          - button "All" [pressed] [ref=e64]
+          - button "Bodyweight" [ref=e65]
+          - button "Dumbbells" [ref=e66]
+          - button "Kettlebell" [ref=e67]
+          - button "Barbell" [ref=e68]
+          - button "Resistance Band" [ref=e69]
+          - button "Cable" [ref=e70]
+          - button "Machine" [ref=e71]
+        - generic [ref=e72]:
+          - link "Banded Hip Extension Banded Hip Extension Resistance Bands beginner" [ref=e73] [cursor=pointer]:
+            - /url: /home/exercise/banded-hip-extension
+            - img "Banded Hip Extension" [ref=e75]
+            - generic [ref=e76]:
+              - generic [ref=e77]: Banded Hip Extension
+              - generic [ref=e78]:
+                - generic [ref=e79]:
+                  - img [ref=e80]
+                  - text: Resistance Bands
+                - generic [ref=e86]: beginner
+          - link "Banded Pull-Apart Banded Pull-Apart Resistance Bands beginner" [ref=e87] [cursor=pointer]:
+            - /url: /home/exercise/banded-pull-apart
+            - img "Banded Pull-Apart" [ref=e89]
+            - generic [ref=e90]:
+              - generic [ref=e91]: Banded Pull-Apart
+              - generic [ref=e92]:
+                - generic [ref=e93]:
+                  - img [ref=e94]
+                  - text: Resistance Bands
+                - generic [ref=e100]: beginner
+          - link "Banded Squat Banded Squat Bodyweight beginner" [ref=e101] [cursor=pointer]:
+            - /url: /home/exercise/banded-squat
+            - img "Banded Squat" [ref=e103]
+            - generic [ref=e104]:
+              - generic [ref=e105]: Banded Squat
+              - generic [ref=e106]:
+                - generic [ref=e107]:
+                  - img [ref=e108]
+                  - text: Bodyweight
+                - generic [ref=e111]: beginner
+          - link "Bicep Curl Bicep Curl Bodyweight advanced" [ref=e112] [cursor=pointer]:
+            - /url: /home/exercise/bicep-curl
+            - img "Bicep Curl" [ref=e114]
+            - generic [ref=e115]:
+              - generic [ref=e116]: Bicep Curl
+              - generic [ref=e117]:
+                - generic [ref=e118]:
+                  - img [ref=e119]
+                  - text: Bodyweight
+                - generic [ref=e122]: advanced
+          - link "Bodyweight Squat Bodyweight Squat Bodyweight beginner" [ref=e123] [cursor=pointer]:
+            - /url: /home/exercise/bodyweight-squat
+            - img "Bodyweight Squat" [ref=e125]
+            - generic [ref=e126]:
+              - generic [ref=e127]: Bodyweight Squat
+              - generic [ref=e128]:
+                - generic [ref=e129]:
+                  - img [ref=e130]
+                  - text: Bodyweight
+                - generic [ref=e133]: beginner
+          - link "Boxer Step Jump Rope Boxer Step Jump Rope Bodyweight intermediate" [ref=e134] [cursor=pointer]:
+            - /url: /home/exercise/boxer-step-jump-rope
+            - img "Boxer Step Jump Rope" [ref=e136]
+            - generic [ref=e137]:
+              - generic [ref=e138]: Boxer Step Jump Rope
+              - generic [ref=e139]:
+                - generic [ref=e140]:
+                  - img [ref=e141]
+                  - text: Bodyweight
+                - generic [ref=e144]: intermediate
+          - link "Dumbbell Goblet Squat Dumbbell Goblet Squat Dumbbells intermediate" [ref=e145] [cursor=pointer]:
+            - /url: /home/exercise/dumbbell-goblet-squat
+            - img "Dumbbell Goblet Squat" [ref=e147]
+            - generic [ref=e148]:
+              - generic [ref=e149]: Dumbbell Goblet Squat
+              - generic [ref=e150]:
+                - generic [ref=e151]:
+                  - img [ref=e152]
+                  - text: Dumbbells
+                - generic [ref=e158]: intermediate
+          - link "Dumbbell Romanian Deadlift Dumbbell Romanian Deadlift Dumbbells intermediate" [ref=e159] [cursor=pointer]:
+            - /url: /home/exercise/dumbbell-romanian-deadlift
+            - img "Dumbbell Romanian Deadlift" [ref=e161]
+            - generic [ref=e162]:
+              - generic [ref=e163]: Dumbbell Romanian Deadlift
+              - generic [ref=e164]:
+                - generic [ref=e165]:
+                  - img [ref=e166]
+                  - text: Dumbbells
+                - generic [ref=e172]: intermediate
+          - link "High Knees Jump Rope High Knees Jump Rope Dumbbells intermediate" [ref=e173] [cursor=pointer]:
+            - /url: /home/exercise/high-knees-jump-rope
+            - img "High Knees Jump Rope" [ref=e175]
+            - generic [ref=e176]:
+              - generic [ref=e177]: High Knees Jump Rope
+              - generic [ref=e178]:
+                - generic [ref=e179]:
+                  - img [ref=e180]
+                  - text: Dumbbells
+                - generic [ref=e186]: intermediate
+          - link "Jump Rope Basic Jump Rope Basic Jump Rope beginner" [ref=e187] [cursor=pointer]:
+            - /url: /home/exercise/jump-rope-basic
+            - img "Jump Rope Basic" [ref=e189]
+            - generic [ref=e190]:
+              - generic [ref=e191]: Jump Rope Basic
+              - generic [ref=e192]:
+                - generic [ref=e193]:
+                  - img [ref=e194]
+                  - text: Jump Rope
+                - generic [ref=e200]: beginner
+          - link "Kettlebell Goblet Squat Kettlebell Goblet Squat Kettlebell beginner" [ref=e201] [cursor=pointer]:
+            - /url: /home/exercise/kettlebell-goblet-squat
+            - img "Kettlebell Goblet Squat" [ref=e203]
+            - generic [ref=e204]:
+              - generic [ref=e205]: Kettlebell Goblet Squat
+              - generic [ref=e206]:
+                - generic [ref=e207]:
+                  - img [ref=e208]
+                  - text: Kettlebell
+                - generic [ref=e214]: beginner
+          - link "Kettlebell High Pull Kettlebell High Pull Bodyweight beginner" [ref=e215] [cursor=pointer]:
+            - /url: /home/exercise/kettlebell-high-pull
+            - img "Kettlebell High Pull" [ref=e217]
+            - generic [ref=e218]:
+              - generic [ref=e219]: Kettlebell High Pull
+              - generic [ref=e220]:
+                - generic [ref=e221]:
+                  - img [ref=e222]
+                  - text: Bodyweight
+                - generic [ref=e225]: beginner
+          - link "Kettlebell Swing Kettlebell Swing Kettlebell intermediate" [ref=e226] [cursor=pointer]:
+            - /url: /home/exercise/kettlebell-swing
+            - img "Kettlebell Swing" [ref=e228]
+            - generic [ref=e229]:
+              - generic [ref=e230]: Kettlebell Swing
+              - generic [ref=e231]:
+                - generic [ref=e232]:
+                  - img [ref=e233]
+                  - text: Kettlebell
+                - generic [ref=e239]: intermediate
+          - link "Plank Plank Bodyweight beginner" [ref=e240] [cursor=pointer]:
+            - /url: /home/exercise/plank
+            - img "Plank" [ref=e242]
+            - generic [ref=e243]:
+              - generic [ref=e244]: Plank
+              - generic [ref=e245]:
+                - generic [ref=e246]:
+                  - img [ref=e247]
+                  - text: Bodyweight
+                - generic [ref=e250]: beginner
+          - link "Push-Up Push-Up Bodyweight beginner" [ref=e251] [cursor=pointer]:
+            - /url: /home/exercise/push-up
+            - img "Push-Up" [ref=e253]
+            - generic [ref=e254]:
+              - generic [ref=e255]: Push-Up
+              - generic [ref=e256]:
+                - generic [ref=e257]:
+                  - img [ref=e258]
+                  - text: Bodyweight
+                - generic [ref=e261]: beginner
+  - button "Open Next.js Dev Tools" [ref=e267] [cursor=pointer]:
+    - img [ref=e268]
+  - alert [ref=e271]

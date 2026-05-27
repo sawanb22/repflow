@@ -1,6 +1,9 @@
 import { AppSidebar } from "@/components/ui/AppSidebar";
 import { getServerSupabase } from "@/lib/supabase-server";
+import { getPlanCompletionSummary } from "@/lib/workout-data";
+import { normalizeWorkoutPlanDays } from "@/lib/workout-helpers";
 import type { UserPreferences, UserProfile } from "@/types/database";
+import { RouteTransition } from "./route-transition";
 
 function formatDisplayName(profileName: string | null, email: string | null) {
   if (profileName && profileName.trim()) return profileName.trim();
@@ -35,13 +38,17 @@ export default async function HomeLayout({
     data: { user },
   } = await supabase.auth.getUser();
 
-  const [{ data: profile }, { data: prefs }] = await Promise.all([
+  const [{ data: profile }, { data: prefs }, planSummary] = await Promise.all([
     supabase.from("users_profile").select("name").eq("user_id", user!.id).maybeSingle(),
     supabase.from("user_preferences").select("experience_level").eq("user_id", user!.id).maybeSingle(),
+    getPlanCompletionSummary(supabase, user!.id),
   ]);
 
   const displayName = formatDisplayName((profile as Pick<UserProfile, "name"> | null)?.name ?? null, user?.email ?? null);
   const initials = getInitials(displayName).toUpperCase();
+  const plannedDays = planSummary.activePlan
+    ? Object.values(normalizeWorkoutPlanDays(planSummary.activePlan.days)).filter((day) => !day.is_rest).length
+    : 0;
 
   return (
     <div className="flex h-screen overflow-hidden bg-[var(--bg-0)] text-[var(--color-text-primary)]">
@@ -52,12 +59,14 @@ export default async function HomeLayout({
           role: formatRole((prefs as Pick<UserPreferences, "experience_level"> | null)?.experience_level ?? null),
         }}
         plan={{
-          name: "Strength Builder 8W",
-          weekLabel: "Week 5 of 8 · 62% complete",
-          progress: 62,
+          name: planSummary.activePlan?.name ?? "No active plan",
+          weekLabel: planSummary.activePlan
+            ? `${plannedDays} day${plannedDays === 1 ? "" : "s"} scheduled · ${planSummary.progress}% complete`
+            : "Create a plan to start tracking workouts",
+          progress: planSummary.activePlan ? planSummary.progress : 0,
         }}
       />
-      <main className="min-h-0 min-w-0 flex-1 overflow-y-auto">{children}</main>
+      <RouteTransition>{children}</RouteTransition>
     </div>
   );
 }

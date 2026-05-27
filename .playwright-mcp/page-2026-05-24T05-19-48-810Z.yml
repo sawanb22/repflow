@@ -1,0 +1,771 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e4]: RepFlow
+      - navigation [ref=e5]:
+        - link "Dashboard" [ref=e6] [cursor=pointer]:
+          - /url: /home
+          - img [ref=e7]
+          - generic [ref=e12]: Dashboard
+        - link "Exercises" [ref=e13] [cursor=pointer]:
+          - /url: /home/browse
+          - img [ref=e15]
+          - generic [ref=e18]: Exercises
+        - link "Workouts" [ref=e19] [cursor=pointer]:
+          - /url: /home/plan
+          - img [ref=e20]
+          - generic [ref=e26]: Workouts
+        - link "Progress" [ref=e27] [cursor=pointer]:
+          - /url: /home/progress
+          - img [ref=e28]
+          - generic [ref=e30]: Progress
+        - link "Settings" [ref=e32] [cursor=pointer]:
+          - /url: /home/settings
+          - img [ref=e33]
+          - generic [ref=e36]: Settings
+      - generic [ref=e37]:
+        - generic [ref=e38]:
+          - generic [ref=e39]: Current Plan
+          - generic [ref=e40]: Fat Loss Flow
+          - generic [ref=e43]: 3 days scheduled · 67% complete
+        - link "BH Bhardwaj0sawan Beginner Member" [ref=e44] [cursor=pointer]:
+          - /url: /home/settings
+          - generic [ref=e45]: BH
+          - generic [ref=e46]:
+            - generic [ref=e47]: Bhardwaj0sawan
+            - generic [ref=e48]: Beginner Member
+          - img [ref=e49]
+    - main [ref=e53]:
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - button "Home" [ref=e57] [cursor=pointer]
+          - button "Gym" [active] [pressed] [ref=e58] [cursor=pointer]
+          - button "Both" [ref=e59] [cursor=pointer]
+        - generic [ref=e60]:
+          - img [ref=e61]
+          - textbox "Search exercises" [ref=e64]:
+            - /placeholder: Search exercises, muscles, equipment…
+          - img [ref=e65] [cursor=pointer]
+        - generic [ref=e66]:
+          - button "All" [pressed] [ref=e67]
+          - button "Bodyweight" [ref=e68]
+          - button "Dumbbells" [ref=e69]
+          - button "Kettlebell" [ref=e70]
+          - button "Barbell" [ref=e71]
+          - button "Resistance Band" [ref=e72]
+          - button "Cable" [ref=e73]
+          - button "Machine" [ref=e74]
+        - generic [ref=e75]:
+          - link "Ab Wheel Rollout Ab Wheel advanced" [ref=e1119] [cursor=pointer]:
+            - /url: /home/exercise/ab-wheel-rollout
+            - img [ref=e1121]
+            - generic [ref=e1128]:
+              - generic [ref=e1129]: Ab Wheel Rollout
+              - generic [ref=e1130]:
+                - generic [ref=e1131]:
+                  - img [ref=e1132]
+                  - text: Ab Wheel
+                - generic [ref=e1138]: advanced
+          - link "Arnold Press Dumbbells intermediate" [ref=e1139] [cursor=pointer]:
+            - /url: /home/exercise/arnold-press
+            - img [ref=e1141]
+            - generic [ref=e1148]:
+              - generic [ref=e1149]: Arnold Press
+              - generic [ref=e1150]:
+                - generic [ref=e1151]:
+                  - img [ref=e1152]
+                  - text: Dumbbells
+                - generic [ref=e1158]: intermediate
+          - link "Assault Bike Assault Bike advanced" [ref=e1159] [cursor=pointer]:
+            - /url: /home/exercise/assault-bike
+            - img [ref=e1161]
+            - generic [ref=e1168]:
+              - generic [ref=e1169]: Assault Bike
+              - generic [ref=e1170]:
+                - generic [ref=e1171]:
+                  - img [ref=e1172]
+                  - text: Assault Bike
+                - generic [ref=e1178]: advanced
+          - link "Assisted Pull-up Machine beginner" [ref=e1179] [cursor=pointer]:
+            - /url: /home/exercise/assisted-pull-up
+            - img [ref=e1181]
+            - generic [ref=e1188]:
+              - generic [ref=e1189]: Assisted Pull-up
+              - generic [ref=e1190]:
+                - generic [ref=e1191]:
+                  - img [ref=e1192]
+                  - text: Machine
+                - generic [ref=e1198]: beginner
+          - link "Barbell Back Squat Barbell intermediate" [ref=e1199] [cursor=pointer]:
+            - /url: /home/exercise/barbell-back-squat
+            - img [ref=e1201]
+            - generic [ref=e1208]:
+              - generic [ref=e1209]: Barbell Back Squat
+              - generic [ref=e1210]:
+                - generic [ref=e1211]:
+                  - img [ref=e1212]
+                  - text: Barbell
+                - generic [ref=e1218]: intermediate
+          - link "Barbell Bench Press Barbell intermediate" [ref=e1219] [cursor=pointer]:
+            - /url: /home/exercise/barbell-bench-press
+            - img [ref=e1221]
+            - generic [ref=e1228]:
+              - generic [ref=e1229]: Barbell Bench Press
+              - generic [ref=e1230]:
+                - generic [ref=e1231]:
+                  - img [ref=e1232]
+                  - text: Barbell
+                - generic [ref=e1238]: intermediate
+          - link "Barbell Conventional Deadlift Barbell intermediate" [ref=e1239] [cursor=pointer]:
+            - /url: /home/exercise/barbell-conventional-deadlift
+            - img [ref=e1241]
+            - generic [ref=e1248]:
+              - generic [ref=e1249]: Barbell Conventional Deadlift
+              - generic [ref=e1250]:
+                - generic [ref=e1251]:
+                  - img [ref=e1252]
+                  - text: Barbell
+                - generic [ref=e1258]: intermediate
+          - link "Barbell Curl Barbell beginner" [ref=e1259] [cursor=pointer]:
+            - /url: /home/exercise/barbell-curl
+            - img [ref=e1261]
+            - generic [ref=e1268]:
+              - generic [ref=e1269]: Barbell Curl
+              - generic [ref=e1270]:
+                - generic [ref=e1271]:
+                  - img [ref=e1272]
+                  - text: Barbell
+                - generic [ref=e1278]: beginner
+          - link "Barbell Front Squat Barbell advanced" [ref=e1279] [cursor=pointer]:
+            - /url: /home/exercise/barbell-front-squat
+            - img [ref=e1281]
+            - generic [ref=e1288]:
+              - generic [ref=e1289]: Barbell Front Squat
+              - generic [ref=e1290]:
+                - generic [ref=e1291]:
+                  - img [ref=e1292]
+                  - text: Barbell
+                - generic [ref=e1298]: advanced
+          - link "Barbell Hip Thrust Barbell intermediate" [ref=e1299] [cursor=pointer]:
+            - /url: /home/exercise/barbell-hip-thrust
+            - img [ref=e1301]
+            - generic [ref=e1308]:
+              - generic [ref=e1309]: Barbell Hip Thrust
+              - generic [ref=e1310]:
+                - generic [ref=e1311]:
+                  - img [ref=e1312]
+                  - text: Barbell
+                - generic [ref=e1318]: intermediate
+          - link "Barbell Overhead Press Barbell intermediate" [ref=e1319] [cursor=pointer]:
+            - /url: /home/exercise/barbell-overhead-press
+            - img [ref=e1321]
+            - generic [ref=e1328]:
+              - generic [ref=e1329]: Barbell Overhead Press
+              - generic [ref=e1330]:
+                - generic [ref=e1331]:
+                  - img [ref=e1332]
+                  - text: Barbell
+                - generic [ref=e1338]: intermediate
+          - link "Barbell Row Barbell intermediate" [ref=e1339] [cursor=pointer]:
+            - /url: /home/exercise/barbell-row
+            - img [ref=e1341]
+            - generic [ref=e1348]:
+              - generic [ref=e1349]: Barbell Row
+              - generic [ref=e1350]:
+                - generic [ref=e1351]:
+                  - img [ref=e1352]
+                  - text: Barbell
+                - generic [ref=e1358]: intermediate
+          - link "Barbell Squat Barbell intermediate" [ref=e1359] [cursor=pointer]:
+            - /url: /home/exercise/barbell-squat
+            - img [ref=e1361]
+            - generic [ref=e1368]:
+              - generic [ref=e1369]: Barbell Squat
+              - generic [ref=e1370]:
+                - generic [ref=e1371]:
+                  - img [ref=e1372]
+                  - text: Barbell
+                - generic [ref=e1378]: intermediate
+          - link "Bulgarian Split Squat Dumbbells advanced" [ref=e1379] [cursor=pointer]:
+            - /url: /home/exercise/bulgarian-split-squat
+            - img [ref=e1381]
+            - generic [ref=e1388]:
+              - generic [ref=e1389]: Bulgarian Split Squat
+              - generic [ref=e1390]:
+                - generic [ref=e1391]:
+                  - img [ref=e1392]
+                  - text: Dumbbells
+                - generic [ref=e1398]: advanced
+          - link "Cable Bicep Curl Cable Machine beginner" [ref=e1399] [cursor=pointer]:
+            - /url: /home/exercise/cable-bicep-curl
+            - img [ref=e1401]
+            - generic [ref=e1408]:
+              - generic [ref=e1409]: Cable Bicep Curl
+              - generic [ref=e1410]:
+                - generic [ref=e1411]:
+                  - img [ref=e1412]
+                  - text: Cable Machine
+                - generic [ref=e1418]: beginner
+          - link "Cable Crossover Cable Machine intermediate" [ref=e1419] [cursor=pointer]:
+            - /url: /home/exercise/cable-crossover
+            - img [ref=e1421]
+            - generic [ref=e1428]:
+              - generic [ref=e1429]: Cable Crossover
+              - generic [ref=e1430]:
+                - generic [ref=e1431]:
+                  - img [ref=e1432]
+                  - text: Cable Machine
+                - generic [ref=e1438]: intermediate
+          - link "Cable Crunch Cable Machine beginner" [ref=e1439] [cursor=pointer]:
+            - /url: /home/exercise/cable-crunch
+            - img [ref=e1441]
+            - generic [ref=e1448]:
+              - generic [ref=e1449]: Cable Crunch
+              - generic [ref=e1450]:
+                - generic [ref=e1451]:
+                  - img [ref=e1452]
+                  - text: Cable Machine
+                - generic [ref=e1458]: beginner
+          - link "Cable Fly Cable Machine beginner" [ref=e1459] [cursor=pointer]:
+            - /url: /home/exercise/cable-fly
+            - img [ref=e1461]
+            - generic [ref=e1468]:
+              - generic [ref=e1469]: Cable Fly
+              - generic [ref=e1470]:
+                - generic [ref=e1471]:
+                  - img [ref=e1472]
+                  - text: Cable Machine
+                - generic [ref=e1478]: beginner
+          - link "Cable Lateral Raise Cable Machine intermediate" [ref=e1479] [cursor=pointer]:
+            - /url: /home/exercise/cable-lateral-raise
+            - img [ref=e1481]
+            - generic [ref=e1488]:
+              - generic [ref=e1489]: Cable Lateral Raise
+              - generic [ref=e1490]:
+                - generic [ref=e1491]:
+                  - img [ref=e1492]
+                  - text: Cable Machine
+                - generic [ref=e1498]: intermediate
+          - link "Cable Row Cable Machine beginner" [ref=e1499] [cursor=pointer]:
+            - /url: /home/exercise/cable-row
+            - img [ref=e1501]
+            - generic [ref=e1508]:
+              - generic [ref=e1509]: Cable Row
+              - generic [ref=e1510]:
+                - generic [ref=e1511]:
+                  - img [ref=e1512]
+                  - text: Cable Machine
+                - generic [ref=e1518]: beginner
+          - link "Cable Tricep Pushdown Cable Machine beginner" [ref=e1519] [cursor=pointer]:
+            - /url: /home/exercise/cable-tricep-pushdown
+            - img [ref=e1521]
+            - generic [ref=e1528]:
+              - generic [ref=e1529]: Cable Tricep Pushdown
+              - generic [ref=e1530]:
+                - generic [ref=e1531]:
+                  - img [ref=e1532]
+                  - text: Cable Machine
+                - generic [ref=e1538]: beginner
+          - link "Captains Chair Leg Raise Captains Chair intermediate" [ref=e1539] [cursor=pointer]:
+            - /url: /home/exercise/captains-chair-leg-raise
+            - img [ref=e1541]
+            - generic [ref=e1548]:
+              - generic [ref=e1549]: Captains Chair Leg Raise
+              - generic [ref=e1550]:
+                - generic [ref=e1551]:
+                  - img [ref=e1552]
+                  - text: Captains Chair
+                - generic [ref=e1558]: intermediate
+          - link "Close-Grip Bench Press Barbell intermediate" [ref=e1559] [cursor=pointer]:
+            - /url: /home/exercise/close-grip-bench-press
+            - img [ref=e1561]
+            - generic [ref=e1568]:
+              - generic [ref=e1569]: Close-Grip Bench Press
+              - generic [ref=e1570]:
+                - generic [ref=e1571]:
+                  - img [ref=e1572]
+                  - text: Barbell
+                - generic [ref=e1578]: intermediate
+          - link "Decline Barbell Press Barbell intermediate" [ref=e1579] [cursor=pointer]:
+            - /url: /home/exercise/decline-barbell-press
+            - img [ref=e1581]
+            - generic [ref=e1588]:
+              - generic [ref=e1589]: Decline Barbell Press
+              - generic [ref=e1590]:
+                - generic [ref=e1591]:
+                  - img [ref=e1592]
+                  - text: Barbell
+                - generic [ref=e1598]: intermediate
+          - link "Decline Crunch Decline Bench intermediate" [ref=e1599] [cursor=pointer]:
+            - /url: /home/exercise/decline-crunch
+            - img [ref=e1601]
+            - generic [ref=e1608]:
+              - generic [ref=e1609]: Decline Crunch
+              - generic [ref=e1610]:
+                - generic [ref=e1611]:
+                  - img [ref=e1612]
+                  - text: Decline Bench
+                - generic [ref=e1618]: intermediate
+          - link "Dumbbell Pullover Dumbbells intermediate" [ref=e1619] [cursor=pointer]:
+            - /url: /home/exercise/dumbbell-pullover
+            - img [ref=e1621]
+            - generic [ref=e1628]:
+              - generic [ref=e1629]: Dumbbell Pullover
+              - generic [ref=e1630]:
+                - generic [ref=e1631]:
+                  - img [ref=e1632]
+                  - text: Dumbbells
+                - generic [ref=e1638]: intermediate
+          - link "Elliptical Trainer Elliptical Trainer Elliptical beginner" [ref=e1639] [cursor=pointer]:
+            - /url: /home/exercise/elliptical-trainer
+            - img "Elliptical Trainer" [ref=e1641]
+            - generic [ref=e1642]:
+              - generic [ref=e1643]: Elliptical Trainer
+              - generic [ref=e1644]:
+                - generic [ref=e1645]:
+                  - img [ref=e1646]
+                  - text: Elliptical
+                - generic [ref=e1652]: beginner
+          - link "Face Pulls Face Pulls Cable Machine intermediate" [ref=e1653] [cursor=pointer]:
+            - /url: /home/exercise/face-pulls
+            - img "Face Pulls" [ref=e1655]
+            - generic [ref=e1656]:
+              - generic [ref=e1657]: Face Pulls
+              - generic [ref=e1658]:
+                - generic [ref=e1659]:
+                  - img [ref=e1660]
+                  - text: Cable Machine
+                - generic [ref=e1666]: intermediate
+          - link "Front Dumbbell Raise Front Dumbbell Raise Dumbbells beginner" [ref=e1667] [cursor=pointer]:
+            - /url: /home/exercise/front-dumbbell-raise
+            - img "Front Dumbbell Raise" [ref=e1669]
+            - generic [ref=e1670]:
+              - generic [ref=e1671]: Front Dumbbell Raise
+              - generic [ref=e1672]:
+                - generic [ref=e1673]:
+                  - img [ref=e1674]
+                  - text: Dumbbells
+                - generic [ref=e1680]: beginner
+          - link "Glute Ham Raise Glute Ham Raise Machine advanced" [ref=e1681] [cursor=pointer]:
+            - /url: /home/exercise/glute-ham-raise
+            - img "Glute Ham Raise" [ref=e1683]
+            - generic [ref=e1684]:
+              - generic [ref=e1685]: Glute Ham Raise
+              - generic [ref=e1686]:
+                - generic [ref=e1687]:
+                  - img [ref=e1688]
+                  - text: Machine
+                - generic [ref=e1694]: advanced
+          - link "Hack Squat Hack Squat Machine intermediate" [ref=e1695] [cursor=pointer]:
+            - /url: /home/exercise/hack-squat
+            - img "Hack Squat" [ref=e1697]
+            - generic [ref=e1698]:
+              - generic [ref=e1699]: Hack Squat
+              - generic [ref=e1700]:
+                - generic [ref=e1701]:
+                  - img [ref=e1702]
+                  - text: Machine
+                - generic [ref=e1708]: intermediate
+          - link "Hammer Curl Hammer Curl Dumbbells beginner" [ref=e1709] [cursor=pointer]:
+            - /url: /home/exercise/hammer-curl
+            - img "Hammer Curl" [ref=e1711]
+            - generic [ref=e1712]:
+              - generic [ref=e1713]: Hammer Curl
+              - generic [ref=e1714]:
+                - generic [ref=e1715]:
+                  - img [ref=e1716]
+                  - text: Dumbbells
+                - generic [ref=e1722]: beginner
+          - link "Hanging Knee Raise Hanging Knee Raise Pull-up Bar intermediate" [ref=e1723] [cursor=pointer]:
+            - /url: /home/exercise/hanging-knee-raise
+            - img "Hanging Knee Raise" [ref=e1725]
+            - generic [ref=e1726]:
+              - generic [ref=e1727]: Hanging Knee Raise
+              - generic [ref=e1728]:
+                - generic [ref=e1729]:
+                  - img [ref=e1730]
+                  - text: Pull-up Bar
+                - generic [ref=e1736]: intermediate
+          - link "Incline Dumbbell Curl Incline Dumbbell Curl Dumbbells intermediate" [ref=e1737] [cursor=pointer]:
+            - /url: /home/exercise/incline-dumbbell-curl
+            - img "Incline Dumbbell Curl" [ref=e1739]
+            - generic [ref=e1740]:
+              - generic [ref=e1741]: Incline Dumbbell Curl
+              - generic [ref=e1742]:
+                - generic [ref=e1743]:
+                  - img [ref=e1744]
+                  - text: Dumbbells
+                - generic [ref=e1750]: intermediate
+          - link "Incline Dumbbell Press Incline Dumbbell Press Dumbbells intermediate" [ref=e1751] [cursor=pointer]:
+            - /url: /home/exercise/incline-dumbbell-press
+            - img "Incline Dumbbell Press" [ref=e1753]
+            - generic [ref=e1754]:
+              - generic [ref=e1755]: Incline Dumbbell Press
+              - generic [ref=e1756]:
+                - generic [ref=e1757]:
+                  - img [ref=e1758]
+                  - text: Dumbbells
+                - generic [ref=e1764]: intermediate
+          - link "Lat Pulldown Lat Pulldown Cable Machine beginner" [ref=e1765] [cursor=pointer]:
+            - /url: /home/exercise/lat-pulldown
+            - img "Lat Pulldown" [ref=e1767]
+            - generic [ref=e1768]:
+              - generic [ref=e1769]: Lat Pulldown
+              - generic [ref=e1770]:
+                - generic [ref=e1771]:
+                  - img [ref=e1772]
+                  - text: Cable Machine
+                - generic [ref=e1778]: beginner
+          - link "Lateral Raise Lateral Raise Dumbbells beginner" [ref=e1779] [cursor=pointer]:
+            - /url: /home/exercise/lateral-raise
+            - img "Lateral Raise" [ref=e1781]
+            - generic [ref=e1782]:
+              - generic [ref=e1783]: Lateral Raise
+              - generic [ref=e1784]:
+                - generic [ref=e1785]:
+                  - img [ref=e1786]
+                  - text: Dumbbells
+                - generic [ref=e1792]: beginner
+          - link "Leg Curl Leg Curl Leg Press Machine beginner" [ref=e1793] [cursor=pointer]:
+            - /url: /home/exercise/leg-curl
+            - img "Leg Curl" [ref=e1795]
+            - generic [ref=e1796]:
+              - generic [ref=e1797]: Leg Curl
+              - generic [ref=e1798]:
+                - generic [ref=e1799]:
+                  - img [ref=e1800]
+                  - text: Leg Press Machine
+                - generic [ref=e1806]: beginner
+          - link "Leg Extension Leg Extension Machine beginner" [ref=e1807] [cursor=pointer]:
+            - /url: /home/exercise/leg-extension
+            - img "Leg Extension" [ref=e1809]
+            - generic [ref=e1810]:
+              - generic [ref=e1811]: Leg Extension
+              - generic [ref=e1812]:
+                - generic [ref=e1813]:
+                  - img [ref=e1814]
+                  - text: Machine
+                - generic [ref=e1820]: beginner
+          - link "Leg Press Leg Press Leg Press Machine beginner" [ref=e1821] [cursor=pointer]:
+            - /url: /home/exercise/leg-press
+            - img "Leg Press" [ref=e1823]
+            - generic [ref=e1824]:
+              - generic [ref=e1825]: Leg Press
+              - generic [ref=e1826]:
+                - generic [ref=e1827]:
+                  - img [ref=e1828]
+                  - text: Leg Press Machine
+                - generic [ref=e1834]: beginner
+          - link "Lying Leg Curl Lying Leg Curl Machine beginner" [ref=e1835] [cursor=pointer]:
+            - /url: /home/exercise/lying-leg-curl
+            - img "Lying Leg Curl" [ref=e1837]
+            - generic [ref=e1838]:
+              - generic [ref=e1839]: Lying Leg Curl
+              - generic [ref=e1840]:
+                - generic [ref=e1841]:
+                  - img [ref=e1842]
+                  - text: Machine
+                - generic [ref=e1848]: beginner
+          - link "Machine Chest Press Machine Chest Press Machine beginner" [ref=e1849] [cursor=pointer]:
+            - /url: /home/exercise/machine-chest-press
+            - img "Machine Chest Press" [ref=e1851]
+            - generic [ref=e1852]:
+              - generic [ref=e1853]: Machine Chest Press
+              - generic [ref=e1854]:
+                - generic [ref=e1855]:
+                  - img [ref=e1856]
+                  - text: Machine
+                - generic [ref=e1862]: beginner
+          - link "Machine Crunch Machine Crunch Machine beginner" [ref=e1863] [cursor=pointer]:
+            - /url: /home/exercise/machine-crunch
+            - img "Machine Crunch" [ref=e1865]
+            - generic [ref=e1866]:
+              - generic [ref=e1867]: Machine Crunch
+              - generic [ref=e1868]:
+                - generic [ref=e1869]:
+                  - img [ref=e1870]
+                  - text: Machine
+                - generic [ref=e1876]: beginner
+          - link "Machine Reverse Fly Machine Reverse Fly Machine beginner" [ref=e1877] [cursor=pointer]:
+            - /url: /home/exercise/machine-reverse-fly
+            - img "Machine Reverse Fly" [ref=e1879]
+            - generic [ref=e1880]:
+              - generic [ref=e1881]: Machine Reverse Fly
+              - generic [ref=e1882]:
+                - generic [ref=e1883]:
+                  - img [ref=e1884]
+                  - text: Machine
+                - generic [ref=e1890]: beginner
+          - link "Machine Shoulder Press Machine Shoulder Press Machine beginner" [ref=e1891] [cursor=pointer]:
+            - /url: /home/exercise/machine-shoulder-press
+            - img "Machine Shoulder Press" [ref=e1893]
+            - generic [ref=e1894]:
+              - generic [ref=e1895]: Machine Shoulder Press
+              - generic [ref=e1896]:
+                - generic [ref=e1897]:
+                  - img [ref=e1898]
+                  - text: Machine
+                - generic [ref=e1904]: beginner
+          - link "Machine Triceps Extension Machine Triceps Extension Machine beginner" [ref=e1905] [cursor=pointer]:
+            - /url: /home/exercise/machine-triceps-extension
+            - img "Machine Triceps Extension" [ref=e1907]
+            - generic [ref=e1908]:
+              - generic [ref=e1909]: Machine Triceps Extension
+              - generic [ref=e1910]:
+                - generic [ref=e1911]:
+                  - img [ref=e1912]
+                  - text: Machine
+                - generic [ref=e1918]: beginner
+          - link "Overhead Cable Extension Overhead Cable Extension Cable Machine intermediate" [ref=e1919] [cursor=pointer]:
+            - /url: /home/exercise/overhead-cable-extension
+            - img "Overhead Cable Extension" [ref=e1921]
+            - generic [ref=e1922]:
+              - generic [ref=e1923]: Overhead Cable Extension
+              - generic [ref=e1924]:
+                - generic [ref=e1925]:
+                  - img [ref=e1926]
+                  - text: Cable Machine
+                - generic [ref=e1932]: intermediate
+          - link "Overhead Press Overhead Press Barbell intermediate" [ref=e1933] [cursor=pointer]:
+            - /url: /home/exercise/overhead-press
+            - img "Overhead Press" [ref=e1935]
+            - generic [ref=e1936]:
+              - generic [ref=e1937]: Overhead Press
+              - generic [ref=e1938]:
+                - generic [ref=e1939]:
+                  - img [ref=e1940]
+                  - text: Barbell
+                - generic [ref=e1946]: intermediate
+          - link "Pec Deck Fly Pec Deck Fly Machine beginner" [ref=e1947] [cursor=pointer]:
+            - /url: /home/exercise/pec-deck-fly
+            - img "Pec Deck Fly" [ref=e1949]
+            - generic [ref=e1950]:
+              - generic [ref=e1951]: Pec Deck Fly
+              - generic [ref=e1952]:
+                - generic [ref=e1953]:
+                  - img [ref=e1954]
+                  - text: Machine
+                - generic [ref=e1960]: beginner
+          - link "Pendlay Row Pendlay Row Barbell advanced" [ref=e1961] [cursor=pointer]:
+            - /url: /home/exercise/pendlay-row
+            - img "Pendlay Row" [ref=e1963]
+            - generic [ref=e1964]:
+              - generic [ref=e1965]: Pendlay Row
+              - generic [ref=e1966]:
+                - generic [ref=e1967]:
+                  - img [ref=e1968]
+                  - text: Barbell
+                - generic [ref=e1974]: advanced
+          - link "Preacher Curl Preacher Curl EZ Bar intermediate" [ref=e1975] [cursor=pointer]:
+            - /url: /home/exercise/preacher-curl
+            - img "Preacher Curl" [ref=e1977]
+            - generic [ref=e1978]:
+              - generic [ref=e1979]: Preacher Curl
+              - generic [ref=e1980]:
+                - generic [ref=e1981]:
+                  - img [ref=e1982]
+                  - text: EZ Bar
+                - generic [ref=e1988]: intermediate
+          - link "Reverse Pec Deck Reverse Pec Deck Machine beginner" [ref=e1989] [cursor=pointer]:
+            - /url: /home/exercise/reverse-pec-deck
+            - img "Reverse Pec Deck" [ref=e1991]
+            - generic [ref=e1992]:
+              - generic [ref=e1993]: Reverse Pec Deck
+              - generic [ref=e1994]:
+                - generic [ref=e1995]:
+                  - img [ref=e1996]
+                  - text: Machine
+                - generic [ref=e2002]: beginner
+          - link "Romanian Deadlift Romanian Deadlift Barbell intermediate" [ref=e2003] [cursor=pointer]:
+            - /url: /home/exercise/romanian-deadlift
+            - img "Romanian Deadlift" [ref=e2005]
+            - generic [ref=e2006]:
+              - generic [ref=e2007]: Romanian Deadlift
+              - generic [ref=e2008]:
+                - generic [ref=e2009]:
+                  - img [ref=e2010]
+                  - text: Barbell
+                - generic [ref=e2016]: intermediate
+          - link "Rowing Machine Rowing Machine Rowing Machine intermediate" [ref=e2017] [cursor=pointer]:
+            - /url: /home/exercise/rowing-machine
+            - img "Rowing Machine" [ref=e2019]
+            - generic [ref=e2020]:
+              - generic [ref=e2021]: Rowing Machine
+              - generic [ref=e2022]:
+                - generic [ref=e2023]:
+                  - img [ref=e2024]
+                  - text: Rowing Machine
+                - generic [ref=e2030]: intermediate
+          - link "Russian Twist with Medicine Ball Russian Twist with Medicine Ball Medicine Ball intermediate" [ref=e2031] [cursor=pointer]:
+            - /url: /home/exercise/russian-twist-with-medicine-ball
+            - img "Russian Twist with Medicine Ball" [ref=e2033]
+            - generic [ref=e2034]:
+              - generic [ref=e2035]: Russian Twist with Medicine Ball
+              - generic [ref=e2036]:
+                - generic [ref=e2037]:
+                  - img [ref=e2038]
+                  - text: Medicine Ball
+                - generic [ref=e2044]: intermediate
+          - link "Seated Cable Row Seated Cable Row Cable Machine beginner" [ref=e2045] [cursor=pointer]:
+            - /url: /home/exercise/seated-cable-row
+            - img "Seated Cable Row" [ref=e2047]
+            - generic [ref=e2048]:
+              - generic [ref=e2049]: Seated Cable Row
+              - generic [ref=e2050]:
+                - generic [ref=e2051]:
+                  - img [ref=e2052]
+                  - text: Cable Machine
+                - generic [ref=e2058]: beginner
+          - link "Seated Calf Raise Seated Calf Raise Machine beginner" [ref=e2059] [cursor=pointer]:
+            - /url: /home/exercise/seated-calf-raise
+            - img "Seated Calf Raise" [ref=e2061]
+            - generic [ref=e2062]:
+              - generic [ref=e2063]: Seated Calf Raise
+              - generic [ref=e2064]:
+                - generic [ref=e2065]:
+                  - img [ref=e2066]
+                  - text: Machine
+                - generic [ref=e2072]: beginner
+          - link "Seated Dumbbell Press Seated Dumbbell Press Dumbbells intermediate" [ref=e2073] [cursor=pointer]:
+            - /url: /home/exercise/seated-dumbbell-press
+            - img "Seated Dumbbell Press" [ref=e2075]
+            - generic [ref=e2076]:
+              - generic [ref=e2077]: Seated Dumbbell Press
+              - generic [ref=e2078]:
+                - generic [ref=e2079]:
+                  - img [ref=e2080]
+                  - text: Dumbbells
+                - generic [ref=e2086]: intermediate
+          - link "Seated Leg Curl Seated Leg Curl Machine beginner" [ref=e2087] [cursor=pointer]:
+            - /url: /home/exercise/seated-leg-curl
+            - img "Seated Leg Curl" [ref=e2089]
+            - generic [ref=e2090]:
+              - generic [ref=e2091]: Seated Leg Curl
+              - generic [ref=e2092]:
+                - generic [ref=e2093]:
+                  - img [ref=e2094]
+                  - text: Machine
+                - generic [ref=e2100]: beginner
+          - link "Single-Arm Dumbbell Row Single-Arm Dumbbell Row Dumbbells intermediate" [ref=e2101] [cursor=pointer]:
+            - /url: /home/exercise/single-arm-dumbbell-row
+            - img "Single-Arm Dumbbell Row" [ref=e2103]
+            - generic [ref=e2104]:
+              - generic [ref=e2105]: Single-Arm Dumbbell Row
+              - generic [ref=e2106]:
+                - generic [ref=e2107]:
+                  - img [ref=e2108]
+                  - text: Dumbbells
+                - generic [ref=e2114]: intermediate
+          - link "Skull Crushers Skull Crushers EZ Bar intermediate" [ref=e2115] [cursor=pointer]:
+            - /url: /home/exercise/skull-crushers
+            - img "Skull Crushers" [ref=e2117]
+            - generic [ref=e2118]:
+              - generic [ref=e2119]: Skull Crushers
+              - generic [ref=e2120]:
+                - generic [ref=e2121]:
+                  - img [ref=e2122]
+                  - text: EZ Bar
+                - generic [ref=e2128]: intermediate
+          - link "Stair Climber Stair Climber Stair Climber intermediate" [ref=e2129] [cursor=pointer]:
+            - /url: /home/exercise/stair-climber
+            - img "Stair Climber" [ref=e2131]
+            - generic [ref=e2132]:
+              - generic [ref=e2133]: Stair Climber
+              - generic [ref=e2134]:
+                - generic [ref=e2135]:
+                  - img [ref=e2136]
+                  - text: Stair Climber
+                - generic [ref=e2142]: intermediate
+          - link "Standing Calf Raise Standing Calf Raise Machine beginner" [ref=e2143] [cursor=pointer]:
+            - /url: /home/exercise/standing-calf-raise
+            - img "Standing Calf Raise" [ref=e2145]
+            - generic [ref=e2146]:
+              - generic [ref=e2147]: Standing Calf Raise
+              - generic [ref=e2148]:
+                - generic [ref=e2149]:
+                  - img [ref=e2150]
+                  - text: Machine
+                - generic [ref=e2156]: beginner
+          - link "Stationary Bike Stationary Bike Stationary Bike beginner" [ref=e2157] [cursor=pointer]:
+            - /url: /home/exercise/stationary-bike
+            - img "Stationary Bike" [ref=e2159]
+            - generic [ref=e2160]:
+              - generic [ref=e2161]: Stationary Bike
+              - generic [ref=e2162]:
+                - generic [ref=e2163]:
+                  - img [ref=e2164]
+                  - text: Stationary Bike
+                - generic [ref=e2170]: beginner
+          - link "Straight-Arm Pulldown Straight-Arm Pulldown Cable Machine intermediate" [ref=e2171] [cursor=pointer]:
+            - /url: /home/exercise/straight-arm-pulldown
+            - img "Straight-Arm Pulldown" [ref=e2173]
+            - generic [ref=e2174]:
+              - generic [ref=e2175]: Straight-Arm Pulldown
+              - generic [ref=e2176]:
+                - generic [ref=e2177]:
+                  - img [ref=e2178]
+                  - text: Cable Machine
+                - generic [ref=e2184]: intermediate
+          - link "T-Bar Row T-Bar Row Barbell intermediate" [ref=e2185] [cursor=pointer]:
+            - /url: /home/exercise/t-bar-row
+            - img "T-Bar Row" [ref=e2187]
+            - generic [ref=e2188]:
+              - generic [ref=e2189]: T-Bar Row
+              - generic [ref=e2190]:
+                - generic [ref=e2191]:
+                  - img [ref=e2192]
+                  - text: Barbell
+                - generic [ref=e2198]: intermediate
+          - link "Treadmill Sprint Treadmill Sprint Treadmill advanced" [ref=e2199] [cursor=pointer]:
+            - /url: /home/exercise/treadmill-sprint
+            - img "Treadmill Sprint" [ref=e2201]
+            - generic [ref=e2202]:
+              - generic [ref=e2203]: Treadmill Sprint
+              - generic [ref=e2204]:
+                - generic [ref=e2205]:
+                  - img [ref=e2206]
+                  - text: Treadmill
+                - generic [ref=e2212]: advanced
+          - link "Triceps Rope Pushdown Triceps Rope Pushdown Cable Machine beginner" [ref=e2213] [cursor=pointer]:
+            - /url: /home/exercise/triceps-rope-pushdown
+            - img "Triceps Rope Pushdown" [ref=e2215]
+            - generic [ref=e2216]:
+              - generic [ref=e2217]: Triceps Rope Pushdown
+              - generic [ref=e2218]:
+                - generic [ref=e2219]:
+                  - img [ref=e2220]
+                  - text: Cable Machine
+                - generic [ref=e2226]: beginner
+          - link "Upright Row Upright Row Barbell intermediate" [ref=e2227] [cursor=pointer]:
+            - /url: /home/exercise/upright-row
+            - img "Upright Row" [ref=e2229]
+            - generic [ref=e2230]:
+              - generic [ref=e2231]: Upright Row
+              - generic [ref=e2232]:
+                - generic [ref=e2233]:
+                  - img [ref=e2234]
+                  - text: Barbell
+                - generic [ref=e2240]: intermediate
+          - link "Weighted Dips Weighted Dips Bodyweight advanced" [ref=e2241] [cursor=pointer]:
+            - /url: /home/exercise/weighted-dips
+            - img "Weighted Dips" [ref=e2243]
+            - generic [ref=e2244]:
+              - generic [ref=e2245]: Weighted Dips
+              - generic [ref=e2246]:
+                - generic [ref=e2247]:
+                  - img [ref=e2248]
+                  - text: Bodyweight
+                - generic [ref=e2251]: advanced
+          - link "Woodchoppers Woodchoppers Cable Machine intermediate" [ref=e2252] [cursor=pointer]:
+            - /url: /home/exercise/woodchoppers
+            - img "Woodchoppers" [ref=e2254]
+            - generic [ref=e2255]:
+              - generic [ref=e2256]: Woodchoppers
+              - generic [ref=e2257]:
+                - generic [ref=e2258]:
+                  - img [ref=e2259]
+                  - text: Cable Machine
+                - generic [ref=e2265]: intermediate
+  - button "Open Next.js Dev Tools" [ref=e954] [cursor=pointer]:
+    - img [ref=e955]
+  - alert [ref=e958]
