@@ -77,7 +77,7 @@ export default function SignupPage() {
 
   if (success) {
     return (
-      <PageWrapper>
+      <PageWrapper isAuth>
         <div className="space-y-6 text-center">
           <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-[var(--color-accent-dim)]">
             <Mail className="h-8 w-8 text-[var(--color-accent)]" />
@@ -111,7 +111,7 @@ export default function SignupPage() {
   }
 
   return (
-    <PageWrapper>
+    <PageWrapper isAuth>
       <Logo
         title="Create account"
         subtitle="Start your fitness journey with RepFlow"

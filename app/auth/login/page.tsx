@@ -57,7 +57,7 @@ export default function LoginPage() {
   };
 
   return (
-    <PageWrapper>
+    <PageWrapper isAuth>
       <Logo
         title="Welcome back"
         subtitle="Sign in to continue your journey"
